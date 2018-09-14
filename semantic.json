@@ -8,12 +8,12 @@
       "themes": "src/themes/"
     },
     "output": {
-      "packaged": "../dist/",
-      "uncompressed": "../dist/components/",
-      "compressed": "../dist/components/",
-      "themes": "../dist/themes/"
+      "packaged": "../dist/semantic-ui",
+      "uncompressed": "../dist/semantic-ui/components/",
+      "compressed": "../dist/semantic-ui/components/",
+      "themes": "../dist/semantic-ui/themes/"
     },
-    "clean": "../dist/"
+    "clean": "../dist/semantic-ui/"
   },
   "permission": false,
   "autoInstall": false,
