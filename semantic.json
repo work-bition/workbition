@@ -15,6 +15,13 @@
     },
     "clean": "../dist/semantic-ui/"
   },
+  "components": [
+   "reset",
+   "site",
+   "container",
+   "grid",
+   "menu"
+  ],
   "permission": false,
   "autoInstall": false,
   "rtl": false,
