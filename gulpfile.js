@@ -18,5 +18,7 @@ const gulp = require('gulp'),
           },
 
           files: "./dist/views/index.html"
-      });
-   });
+      })
+   })
+
+   gulp.task('serve', ["browser-sync"])
