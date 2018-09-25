@@ -1,3 +1,10 @@
 /*******************************
     User Variable Overrides
 *******************************/
+@border: 1px solid black;
+
+@iconOpacity: 1;
+
+@focusBorderColor: #2A6EA8;
+
+@placeholderFocusColor: black;

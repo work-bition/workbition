@@ -21,7 +21,9 @@
    "container",
    "grid",
    "menu",
-   "icon"
+   "icon",
+   "search",
+   "input"
   ],
   "permission": false,
   "autoInstall": false,

@@ -1,3 +1,14 @@
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.input > input {
+
+  letter-spacing: 0.18rem;
+
+}
+
+/* Focus */
+.ui.icon.input > input:focus ~ i.icon {
+  color: #2A6EA8;
+}
