@@ -1,9 +1,9 @@
 const gulp = require('gulp'),
       browserSync = require('browser-sync').create()
 
- let watch = require('./semantic/tasks/watch'),
-     build = require('./semantic/tasks/build'),
-     clean = require('./semantic/tasks/clean')
+const watch = require('./semantic/tasks/watch'),
+      build = require('./semantic/tasks/build'),
+      clean = require('./semantic/tasks/clean')
 
    // import semantic UI tasks with custom task names
    //导入semantic UI框架的gulp任务
@@ -18,13 +18,18 @@ const gulp = require('gulp'),
 
    // browserSync创建静态服务器并监视文件变化
    gulp.task('browser-sync', function() {
+
       browserSync.init({
+
           server: {
+
               baseDir: ["./dist/views", "./dist/styles", "./dist/semantic-ui", "./node_modules"]
+
           },
 
-          files: "./dist/views/index.html"
+          files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"]
       })
+
    })
 
-   gulp.task('serve', ["browser-sync"])
+   gulp.task('serve', ["browser-sync", "watch-ui"])
