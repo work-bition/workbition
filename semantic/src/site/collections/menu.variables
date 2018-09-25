@@ -1,3 +1,12 @@
 /*******************************
     User Variable Overrides
 *******************************/
+@margin: 0;
+
+@borderRadius: 0;
+
+@border: 0;
+
+@boxShadow: 0 1px 1px 0 rgba(34,36,38,.1);
+
+@medium: 1.25rem;
