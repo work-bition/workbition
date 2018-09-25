@@ -1,5 +1,7 @@
 const gulp = require('gulp'),
-      browserSync = require('browser-sync').create()
+      browserSync = require('browser-sync').create(),
+      sass        = require('gulp-sass'),
+      reload      = browserSync.reload
 
 const watch = require('./semantic/tasks/watch'),
       build = require('./semantic/tasks/build'),
@@ -16,6 +18,14 @@ const watch = require('./semantic/tasks/watch'),
    //确保清理任务完成后再进行构建
    gulp.task('build', ['clean-ui', 'build-ui'])
 
+   // scss编译后的css将注入到浏览器里实现更新
+   gulp.task('sass', function() {
+       return gulp.src("./develop/styles/**/*.scss")
+           .pipe(sass())
+           .pipe(gulp.dest("./dist/styles"))
+           .pipe(reload({stream: true}))
+   })
+
    // browserSync创建静态服务器并监视文件变化
    gulp.task('browser-sync', function() {
 
@@ -30,6 +40,9 @@ const watch = require('./semantic/tasks/watch'),
           files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"]
       })
 
+      gulp.watch("./develop/styles/**/*.scss", ['sass'])
+
    })
 
+   //监视入口指令
    gulp.task('serve', ["browser-sync", "watch-ui"])

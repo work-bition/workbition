@@ -1928,7 +1928,7 @@ Floated Menu / Item
   bottom: 0px;
   margin-bottom: 0em;
   top: 0px;
-  margin-top: 1.1rem;
+  margin-top: 1rem;
   border-radius: 0 0 0em 0em;
 }
 .ui.menu[class*="top attached"]:first-child {
@@ -1940,7 +1940,7 @@ Floated Menu / Item
   bottom: 0px;
   margin-top: 0em;
   top: 0px;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
   -webkit-box-shadow: none, none;
           box-shadow: none, none;
   border-radius: 0em 0em 0 0;
@@ -2001,7 +2001,7 @@ Floated Menu / Item
 
 /* Medium */
 .ui.menu {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .ui.vertical.menu {
   width: 15rem;
