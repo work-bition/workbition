@@ -3256,9 +3256,9 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   font-weight: normal;
-  border: 0;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.1);
-  box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.1);
+  border: 1px solid #ddd;
+  -webkit-box-shadow: none;
+  box-shadow: none;
   border-radius: 0;
   min-height: 2.85714286em;
 }
@@ -3779,8 +3779,8 @@ Floated Menu / Item
   -ms-flex-direction: column;
   flex-direction: column;
   background: #FFFFFF;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.1);
-  box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.1);
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 /*--- Item ---*/
@@ -5383,7 +5383,7 @@ Floated Menu / Item
   bottom: 0px;
   margin-bottom: 0em;
   top: 0px;
-  margin-top: 1.25rem;
+  margin-top: 1.1rem;
   border-radius: 0 0 0em 0em;
 }
 
@@ -5397,9 +5397,9 @@ Floated Menu / Item
   bottom: 0px;
   margin-top: 0em;
   top: 0px;
-  margin-bottom: 1.25rem;
-  -webkit-box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.1), none;
-  box-shadow: 0 1px 1px 0 rgba(34, 36, 38, 0.1), none;
+  margin-bottom: 1.1rem;
+  -webkit-box-shadow: none, none;
+  box-shadow: none, none;
   border-radius: 0em 0em 0 0;
 }
 
@@ -5470,7 +5470,7 @@ Floated Menu / Item
 /* Medium */
 
 .ui.menu {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .ui.vertical.menu {
@@ -5524,3 +5524,7 @@ Floated Menu / Item
 /*******************************
          Site Overrides
 *******************************/
+
+.ui.menu .item {
+  letter-spacing: 0.2rem;
+}

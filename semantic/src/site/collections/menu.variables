@@ -5,8 +5,8 @@
 
 @borderRadius: 0;
 
-@border: 0;
+@border: 1px solid #ddd;
 
-@boxShadow: 0 1px 1px 0 rgba(34,36,38,.1);
+@boxShadow: none;
 
-@medium: 1.25rem;
+@medium: 1.1rem;

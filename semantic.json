@@ -20,7 +20,8 @@
    "site",
    "container",
    "grid",
-   "menu"
+   "menu",
+   "icon"
   ],
   "permission": false,
   "autoInstall": false,
