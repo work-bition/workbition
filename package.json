@@ -17,5 +17,8 @@
     "gulp-babel": "^8.0.0",
     "gulp-sass": "^4.0.1",
     "semantic-ui": "^2.4.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
   }
 }
