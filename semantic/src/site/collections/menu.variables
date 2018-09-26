@@ -7,4 +7,14 @@
 
 @border: 1px solid #ddd;
 
-@boxShadow: none;
+@hoverItemBackground: white;
+
+@hoverItemTextColor: #2A6EA8;
+
+@activeItemBackground: #2A6EA8;
+
+@activeItemTextColor: white;
+
+@activeHoverItemBackground: #2A6EA8;
+
+@activeHoverItemColor: white;
