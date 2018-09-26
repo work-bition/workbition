@@ -1,5 +1,7 @@
 "use strict";
 
-var _jquery = _interopRequireDefault(require("../../node_modules/jquery/dist/jquery"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+$('#main-nav .left.menu .item').click(function (event) {
+  $('#main-nav .left.menu .active.item').removeClass('active');
+  var element = event.currentTarget;
+  $(element).addClass('active');
+});
