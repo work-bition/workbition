@@ -23,7 +23,8 @@
    "menu",
    "icon",
    "search",
-   "input"
+   "input",
+   "button"
   ],
   "permission": false,
   "autoInstall": false,
