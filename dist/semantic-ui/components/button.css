@@ -3842,3 +3842,8 @@
   background: -webkit-linear-gradient(135deg, #2185D0, #2A6EA8);
   background: linear-gradient(-45deg, #2185D0, #2A6EA8);
 }
+.ui.primary.button:hover {
+  -webkit-box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.12);
+          box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.12);
+  font-size: 188px;
+}

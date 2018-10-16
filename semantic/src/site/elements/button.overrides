@@ -12,3 +12,11 @@
 
 
 }
+
+.ui.primary.button:hover {
+
+  box-shadow:0 6px 6px 0 rgba(36,10,147,.12);
+
+  font-size: 188px;
+
+}
