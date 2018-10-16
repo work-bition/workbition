@@ -12199,7 +12199,7 @@ i.icon.youtube.square {
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   padding: 0.55rem;
   background: #FFFFFF;
-  border: 1px solid black;
+  border: 1px solid #2872ae;
   color: rgba(0, 0, 0, 0.87);
   border-radius: 0.28571429rem;
   -webkit-transition: border-color 0.1s ease, -webkit-box-shadow 0.1s ease;

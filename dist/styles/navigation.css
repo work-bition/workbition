@@ -5,10 +5,21 @@
   justify-content: space-between; }
   #header .content .divider_item {
     padding: 0 1rem 0 1rem; }
-  #header .content .register_item {
+  #header .content .right_wrap .register_item {
     display: inline-block; }
+  #header .content .right_wrap .ui.category.search.item {
+    display: inline-block; }
+    #header .content .right_wrap .ui.category.search.item .prompt {
+      visibility: hidden;
+      width: 0; }
 
-#main_nav .content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
+#main_nav {
+  border-top: 1px solid #2872ae;
+  background-color: #257cbf; }
+  #main_nav .content {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #main_nav .content .left.menu > a {
+      color: white; }

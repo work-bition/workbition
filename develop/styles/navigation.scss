@@ -15,20 +15,55 @@
 
   }
 
-  .register_item {
+  .right_wrap {
 
-    display: inline-block;
+    .register_item {
+
+      display: inline-block;
+
+    }
+
+    .ui.category.search.item {
+
+      display: inline-block;
+
+      .prompt {
+
+        visibility: hidden;
+
+        width: 0;
+
+      }
+
+
+    }
 
   }
 
 }
 
-#main_nav .content {
+#main_nav {
 
-  display: flex;
+  border-top: 1px solid #2872ae;
 
-  justify-content: space-between;
+  background-color: #257cbf;
 
-  align-items: center;
+  .content {
+
+    height: 3.5rem;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    .left.menu > a {
+
+      color: white;
+
+    }
+
+  }
 
 }
