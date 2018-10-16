@@ -10,13 +10,13 @@
 
   background: linear-gradient(-45deg,#2185D0,#2A6EA8);
 
+  margin-right: 0;
+
 
 }
 
 .ui.primary.button:hover {
 
   box-shadow:0 6px 6px 0 rgba(36,10,147,.12);
-
-  font-size: 188px;
 
 }

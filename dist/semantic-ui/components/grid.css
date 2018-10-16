@@ -189,7 +189,7 @@
     padding-right: 2em;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1262px) {
   .ui.page.grid {
     width: auto;
     margin-left: 0em;
@@ -198,7 +198,7 @@
     padding-right: 3%;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+@media only screen and (min-width: 1263px) and (max-width: 1919px) {
   .ui.page.grid {
     width: auto;
     margin-left: 0em;
@@ -759,7 +759,7 @@
 }
 
 /* Large Monitor Sizing Combinations */
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+@media only screen and (min-width: 1263px) and (max-width: 1919px) {
   .ui.grid > .row > [class*="one wide large screen"].column,
   .ui.grid > .column.row > [class*="one wide large screen"].column,
   .ui.grid > [class*="one wide large screen"].column,
@@ -1961,7 +1961,7 @@
 }
 
 /* Computer Only Hide */
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1262px) {
   .ui[class*="mobile only"].grid.grid.grid:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
@@ -1989,7 +1989,7 @@
 }
 
 /* Large Screen Only Hide */
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+@media only screen and (min-width: 1263px) and (max-width: 1919px) {
   .ui[class*="mobile only"].grid.grid.grid:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),

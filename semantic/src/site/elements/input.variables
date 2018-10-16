@@ -8,3 +8,5 @@
 @focusBorderColor: #2A6EA8;
 
 @placeholderFocusColor: black;
+
+@padding: 0.55rem;

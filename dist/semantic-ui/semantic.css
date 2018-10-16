@@ -826,7 +826,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Small Monitor */
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1262px) {
   .ui.container {
     width: 933px;
     margin-left: auto !important;
@@ -848,23 +848,23 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Large Monitor */
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1263px) {
   .ui.container {
-    width: 1127px;
+    width: 1190px;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
   .ui.grid.container {
-    width: calc( 1127px  +  2rem ) !important;
+    width: calc( 1190px  +  2rem ) !important;
   }
 
   .ui.relaxed.grid.container {
-    width: calc( 1127px  +  3rem ) !important;
+    width: calc( 1190px  +  3rem ) !important;
   }
 
   .ui.very.relaxed.grid.container {
-    width: calc( 1127px  +  5rem ) !important;
+    width: calc( 1190px  +  5rem ) !important;
   }
 }
 
@@ -1120,7 +1120,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1262px) {
   .ui.page.grid {
     width: auto;
     margin-left: 0em;
@@ -1130,7 +1130,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+@media only screen and (min-width: 1263px) and (max-width: 1919px) {
   .ui.page.grid {
     width: auto;
     margin-left: 0em;
@@ -1788,7 +1788,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Large Monitor Sizing Combinations */
 
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+@media only screen and (min-width: 1263px) and (max-width: 1919px) {
   .ui.grid > .row > [class*="one wide large screen"].column,
   .ui.grid > .column.row > [class*="one wide large screen"].column,
   .ui.grid > [class*="one wide large screen"].column,
@@ -3149,7 +3149,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Computer Only Hide */
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 992px) and (max-width: 1262px) {
   .ui[class*="mobile only"].grid.grid.grid:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
@@ -3181,7 +3181,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 
 /* Large Screen Only Hide */
 
-@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+@media only screen and (min-width: 1263px) and (max-width: 1919px) {
   .ui[class*="mobile only"].grid.grid.grid:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].row:not(.computer),
   .ui.grid.grid.grid > [class*="mobile only"].column:not(.computer),
@@ -12197,7 +12197,7 @@ i.icon.youtube.square {
   text-align: left;
   line-height: 1.21428571em;
   font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  padding: 0.67857143em 1em;
+  padding: 0.55rem;
   background: #FFFFFF;
   border: 1px solid black;
   color: rgba(0, 0, 0, 0.87);
@@ -17107,10 +17107,10 @@ i.icon.youtube.square {
   text-indent: 0.3rem;
   background: -webkit-linear-gradient(135deg, #2185D0, #2A6EA8);
   background: linear-gradient(-45deg, #2185D0, #2A6EA8);
+  margin-right: 0;
 }
 
 .ui.primary.button:hover {
   -webkit-box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.12);
   box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.12);
-  font-size: 188px;
 }
