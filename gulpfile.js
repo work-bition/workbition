@@ -29,7 +29,7 @@
       .pipe(gulp.dest("./dist/styles"))
 
       .pipe(reload({stream: true}))
-      
+
   })
 
   //使用Babel处理完JS文件后返回流
@@ -58,7 +58,9 @@
               baseDir: ["./dist/views", "./dist/styles", "./dist/scripts", "./dist/semantic-ui", "./node_modules"]
           },
 
-          files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"]
+          files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"],
+
+          browser: ["google chrome", "firefox", "safari"]
 
       })
 
