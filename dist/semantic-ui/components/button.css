@@ -3844,6 +3844,6 @@
   margin-right: 0;
 }
 .ui.primary.button:hover {
-  -webkit-box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.12);
-          box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.12);
+  -webkit-box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.13);
+          box-shadow: 0 6px 6px 0 rgba(36, 10, 147, 0.13);
 }
