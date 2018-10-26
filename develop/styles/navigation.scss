@@ -9,15 +9,32 @@
 
   justify-content: space-between;
 
-  .divider_item {
+  .logo_section .logo {
 
-    padding: 0 1rem 0 1rem;
+    width: 9rem;
+
+    height: auto;
 
   }
 
+
   .right_wrap {
 
-    .register_item {
+    .login_button {
+
+      color: #222;
+
+      letter-spacing: 0.4rem;
+
+    }
+
+    .divider_item {
+
+      padding: 0 1rem 0 1rem;
+
+    }
+
+    .register_button {
 
       display: inline-block;
 
@@ -34,6 +51,14 @@
         width: 0;
 
       }
+
+      .close.icon {
+
+        display: none;
+
+        position: relative;
+
+        right: 1.9rem;
 
 
     }
@@ -52,9 +77,43 @@
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    .left.menu {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      width: 65%;
+
+      .item.active {
+
+        color: #ffea75;
+
+      }
+
+    }
+
+    @media only screen and (max-width: 1265px) {
+
+      .left.menu {
+
+        width: 75%;
+
+      }
+
+    }
+
+    @media only screen and (max-width: 995px) {
+
+      .left.menu {
+
+        width: 100%;
+
+      }
+
+    }
 
     .left.menu > a {
 
