@@ -17,8 +17,28 @@
 
   }
 
+  @media only screen and (max-width: 1262px) {
+
+    .logo_section .logo {
+
+      transform: translateY(0.3rem);
+
+    }
+
+  }
+
 
   .right_wrap {
+
+    @media only screen and (max-width: 995px) {
+
+      .right.menu {
+
+        transform: translateX(1.6rem);
+
+      }
+
+    }
 
     .login_button {
 
@@ -44,6 +64,12 @@
 
       display: inline-block;
 
+      .search.icon.negative_mg_lft {
+
+        margin-left: -0.85rem;
+
+      }
+
       .prompt {
 
         visibility: hidden;
@@ -58,8 +84,10 @@
 
         position: relative;
 
-        right: 1.9rem;
+        right: 1.25rem;
 
+
+      }
 
     }
 

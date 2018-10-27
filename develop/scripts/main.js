@@ -36,6 +36,10 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click((event) =>
 
   $('#header .right.menu .ui.category.search.item i.close.icon')[0].style.display = 'inline-block'
 
+  /* adding class to search icon for negative margin */
+
+  $(event.currentTarget).addClass('negative_mg_lft')
+
   /* stopping the propagation */
 
   event.stopPropagation()
@@ -77,6 +81,11 @@ $('#header .right.menu .ui.category.search.item i.close.icon').click((event) => 
   /* adding 'link' class to search icon via jQuery */
 
   $('#header .right.menu .ui.category.search.item i.search.icon').addClass('link')
+
+  /* removing class from search icon for negative margin */
+
+  $('#header .right.menu .ui.category.search.item i.search.icon').removeClass('negative_mg_lft')
+
 
   /* stopping the propagation */
 
