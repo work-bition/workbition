@@ -9,6 +9,12 @@
 
   justify-content: space-between;
 
+  .logo_section {
+
+    transform: translateY(0.25rem);
+
+  }
+
   .logo_section .logo {
 
     width: 9rem;
@@ -17,15 +23,6 @@
 
   }
 
-  @media only screen and (max-width: 1262px) {
-
-    .logo_section .logo {
-
-      transform: translateY(0.3rem);
-
-    }
-
-  }
 
 
   .right_wrap {
@@ -64,6 +61,12 @@
 
       display: inline-block;
 
+      .search.icon {
+
+        transform: translateY(0.1rem);
+
+      }
+
       .search.icon.negative_mg_lft {
 
         margin-left: -0.85rem;
@@ -85,6 +88,8 @@
         position: relative;
 
         right: 1.25rem;
+
+        transform: translateY(0.05rem);
 
 
       }

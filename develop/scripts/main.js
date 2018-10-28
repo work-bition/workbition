@@ -86,7 +86,6 @@ $('#header .right.menu .ui.category.search.item i.close.icon').click((event) => 
 
   $('#header .right.menu .ui.category.search.item i.search.icon').removeClass('negative_mg_lft')
 
-
   /* stopping the propagation */
 
   event.stopPropagation()
