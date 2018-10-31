@@ -8,24 +8,9 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click((event) =>
 
   /* making search input visible */
 
-  let search_input = event.currentTarget.parentElement.children[1]
+  let search_input = $('#header .right.menu input.prompt')[0]
 
   search_input.style.visibility = 'visible'
-
-  if ( $(window).width() <= 768 ) {
-
-    search_input.style.width = '20rem'
-
-    alert($(window).width())
-
-  }
-
-  else {
-
-    search_input.style.width = '35rem'
-
-  }
-
 
   /* making login and register buttons invisible */
 
@@ -61,12 +46,11 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click((event) =>
 
 })
 
-
 $('#header .right.menu .ui.category.search.item i.close.icon').click((event) => {
 
   /* making search input invisible */
 
-  let search_input = event.currentTarget.parentElement.children[0].children[1]
+  let search_input = $('#header .right.menu input.prompt')[0]
 
   search_input.style.visibility = 'hidden'
 
@@ -114,14 +98,4 @@ $('#header .right.menu .ui.category.search.item .prompt').click((event) => {
 
   event.stopPropagation()
 
-});
-
-
-/* when clicking in the viewport, making the search input invisible */
-
-$('body').click((event) => {
-
-  /* programmatically trigger close icon click event */
-  $('#header .right.menu .ui.category.search.item i.close.icon').click()
-
-});
+})

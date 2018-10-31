@@ -5,17 +5,9 @@
 
 $('#header .right.menu .ui.category.search.item i.search.icon').click(function (event) {
   /* making search input visible */
-  var search_input = event.currentTarget.parentElement.children[1];
+  var search_input = $('#header .right.menu input.prompt')[0];
   search_input.style.visibility = 'visible';
-
-  if ($(window).width() <= 768) {
-    search_input.style.width = '20rem';
-    alert($(window).width());
-  } else {
-    search_input.style.width = '35rem';
-  }
   /* making login and register buttons invisible */
-
 
   var login_button = $('#header .right.menu .login_button');
   var divider = $('#header .right.menu .divider_item');
@@ -38,7 +30,7 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click(function (
 });
 $('#header .right.menu .ui.category.search.item i.close.icon').click(function (event) {
   /* making search input invisible */
-  var search_input = event.currentTarget.parentElement.children[0].children[1];
+  var search_input = $('#header .right.menu input.prompt')[0];
   search_input.style.visibility = 'hidden';
   search_input.style.width = '0';
   /* making close icon invisible */
@@ -68,10 +60,4 @@ $('#header .right.menu .ui.category.search.item i.close.icon').click(function (e
 $('#header .right.menu .ui.category.search.item .prompt').click(function (event) {
   /* stopping the propagation */
   event.stopPropagation();
-});
-/* when clicking in the viewport, making the search input invisible */
-
-$('body').click(function (event) {
-  /* programmatically trigger close icon click event */
-  $('#header .right.menu .ui.category.search.item i.close.icon').click();
 });

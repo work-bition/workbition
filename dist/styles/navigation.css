@@ -27,6 +27,8 @@
       display: inline-block; }
     #header .content .right_wrap .ui.category.search.item {
       display: inline-block;
+      /* When the width of the window is greater than 769px, chaging the width of the search input to 35rem */
+      /* When the width of the window is less than 768px, chaging the width of the search input to 20rem */
       /* css hack for IE browsers */
       /* fixing navigation icons offset problems in IE browsers */ }
       #header .content .right_wrap .ui.category.search.item .search.icon {
@@ -36,6 +38,12 @@
       #header .content .right_wrap .ui.category.search.item .prompt {
         visibility: hidden;
         width: 0; }
+      @media only screen and (min-width: 769px) {
+        #header .content .right_wrap .ui.category.search.item .search.icon.negative_mg_lft + .prompt {
+          width: 35rem !important; } }
+      @media only screen and (max-width: 768px) {
+        #header .content .right_wrap .ui.category.search.item .search.icon.negative_mg_lft + .prompt {
+          width: 20rem !important; } }
       #header .content .right_wrap .ui.category.search.item .close.icon {
         display: none;
         position: relative;
