@@ -7,8 +7,15 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click(function (
   /* making search input visible */
   var search_input = event.currentTarget.parentElement.children[1];
   search_input.style.visibility = 'visible';
-  search_input.style.width = '35rem';
+
+  if ($(window).width() <= 768) {
+    search_input.style.width = '20rem';
+    alert($(window).width());
+  } else {
+    search_input.style.width = '35rem';
+  }
   /* making login and register buttons invisible */
+
 
   var login_button = $('#header .right.menu .login_button');
   var divider = $('#header .right.menu .divider_item');

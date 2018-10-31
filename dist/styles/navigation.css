@@ -8,30 +8,46 @@
   #header .content .logo_section .logo {
     width: 9rem;
     height: auto; }
-  @media only screen and (max-width: 995px) {
-    #header .content .right_wrap .right.menu {
-      transform: translateX(1.6rem); } }
-  #header .content .right_wrap .login_button {
-    color: #222;
-    letter-spacing: 0.4rem; }
-  #header .content .right_wrap .divider_item {
-    padding: 0 1rem 0 1rem; }
-  #header .content .right_wrap .register_button {
-    display: inline-block; }
-  #header .content .right_wrap .ui.category.search.item {
-    display: inline-block; }
-    #header .content .right_wrap .ui.category.search.item .search.icon {
-      transform: translateY(0.1rem); }
-    #header .content .right_wrap .ui.category.search.item .search.icon.negative_mg_lft {
-      margin-left: -0.85rem; }
-    #header .content .right_wrap .ui.category.search.item .prompt {
-      visibility: hidden;
-      width: 0; }
-    #header .content .right_wrap .ui.category.search.item .close.icon {
-      display: none;
-      position: relative;
-      right: 1.25rem;
-      transform: translateY(0.05rem); }
+  #header .content .right_wrap {
+    /* css hack for IE browsers */
+    /* fixing navigation icons offset problems in IE browsers */ }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      #header .content .right_wrap .right.menu {
+        display: flex;
+        align-items: center; } }
+    @media only screen and (max-width: 995px) {
+      #header .content .right_wrap .right.menu {
+        transform: translateX(1.6rem); } }
+    #header .content .right_wrap .login_button {
+      color: #222;
+      letter-spacing: 0.4rem; }
+    #header .content .right_wrap .divider_item {
+      padding: 0 1rem 0 1rem; }
+    #header .content .right_wrap .register_button {
+      display: inline-block; }
+    #header .content .right_wrap .ui.category.search.item {
+      display: inline-block;
+      /* css hack for IE browsers */
+      /* fixing navigation icons offset problems in IE browsers */ }
+      #header .content .right_wrap .ui.category.search.item .search.icon {
+        transform: translateY(0.1rem); }
+      #header .content .right_wrap .ui.category.search.item .search.icon.negative_mg_lft {
+        margin-left: -0.85rem; }
+      #header .content .right_wrap .ui.category.search.item .prompt {
+        visibility: hidden;
+        width: 0; }
+      #header .content .right_wrap .ui.category.search.item .close.icon {
+        display: none;
+        position: relative;
+        right: 1.25rem;
+        transform: translateY(0.05rem); }
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        #header .content .right_wrap .ui.category.search.item .search.icon {
+          transform: translateY(0.25rem); }
+        #header .content .right_wrap .ui.category.search.item .search.icon.negative_mg_lft {
+          transform: translateY(0.1rem); }
+        #header .content .right_wrap .ui.category.search.item .close.icon {
+          transform: translateY(-0.65rem); } }
 
 #main_nav {
   background: linear-gradient(-45deg, #0f99d0, #2a6ea8); }

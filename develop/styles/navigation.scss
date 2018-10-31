@@ -27,6 +27,23 @@
 
   .right_wrap {
 
+    /* css hack for IE browsers */
+
+    /* fixing navigation icons offset problems in IE browsers */
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+       .right.menu {
+
+         display: flex;
+
+         align-items: center;
+
+        }
+
+    }
+
+
     @media only screen and (max-width: 995px) {
 
       .right.menu {
@@ -91,6 +108,32 @@
 
         transform: translateY(0.05rem);
 
+
+      }
+
+      /* css hack for IE browsers */
+
+      /* fixing navigation icons offset problems in IE browsers */
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+         .search.icon{
+
+           transform: translateY(0.25rem);
+
+         }
+
+         .search.icon.negative_mg_lft {
+
+           transform: translateY(0.1rem);
+
+         }
+
+         .close.icon {
+
+           transform: translateY(-0.65rem);
+
+         }
 
       }
 

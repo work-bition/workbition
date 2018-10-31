@@ -12,7 +12,20 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click((event) =>
 
   search_input.style.visibility = 'visible'
 
-  search_input.style.width = '35rem'
+  if ( $(window).width() <= 768 ) {
+
+    search_input.style.width = '20rem'
+
+    alert($(window).width())
+
+  }
+
+  else {
+
+    search_input.style.width = '35rem'
+
+  }
+
 
   /* making login and register buttons invisible */
 
@@ -47,6 +60,7 @@ $('#header .right.menu .ui.category.search.item i.search.icon').click((event) =>
 
 
 })
+
 
 $('#header .right.menu .ui.category.search.item i.close.icon').click((event) => {
 
