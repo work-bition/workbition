@@ -20,11 +20,11 @@
    "site",
    "container",
    "grid",
-   "menu",
    "icon",
    "search",
    "input",
-   "button"
+   "button",
+   "sidebar"
   ],
   "permission": false,
   "autoInstall": false,
