@@ -67,17 +67,22 @@
           transform: translateY(0.1rem); }
         #header .content .right_wrap .right.menu .ui.category.search.item .close.icon {
           transform: translateY(-0.65rem); } }
+    #header .content .right_wrap .right.menu .align.justify.link.icon {
+      display: none; }
   @media only screen and (max-width: 995px) {
     #header .content .right_wrap .right.menu {
       transform: translateX(1.6rem); } }
+  @media only screen and (max-width: 767px) {
+    #header .content .right_wrap .right.menu .align.justify.link.icon {
+      display: inline-block; } }
 
 @media only screen and (max-width: 767px) {
   #header .content {
     height: 3.5rem; }
     #header .content .logo_section .logo {
       width: 7rem; }
-  .right.menu .login_button, .right.menu .divider_item, .right.menu .register_button {
-    display: none !important; } }
+    #header .content .right.menu .login_button, #header .content .right.menu .divider_item, #header .content .right.menu .register_button {
+      display: none !important; } }
 
 #main_nav {
   background: linear-gradient(-45deg, #0f99d0, #2a6ea8); }
