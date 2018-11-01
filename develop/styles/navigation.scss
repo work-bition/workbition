@@ -197,6 +197,32 @@
 
 }
 
+@media only screen and (max-width: 767px) {
+
+  #header .content {
+
+    height: 3.5rem;
+
+    .logo_section .logo {
+
+      width: 7rem;
+
+    }
+
+  }
+
+  .right.menu {
+
+    .login_button, .divider_item, .register_button {
+
+      display: none!important;
+
+    }
+
+  }
+
+}
+
 #main_nav {
 
  background: linear-gradient(-45deg, #0f99d0, #2a6ea8);
