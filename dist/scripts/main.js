@@ -55,9 +55,23 @@ $('#header .right.menu .ui.category.search.item i.close.icon').click(function (e
 
   event.stopPropagation();
 });
-/* preventing body click event when click on search input */
+/* preventing the body click event when click on search input */
 
 $('#header .right.menu .ui.category.search.item .prompt').click(function (event) {
   /* stopping the propagation */
   event.stopPropagation();
 });
+/* when clicking in the viewport, making the search input invisible */
+
+$('body').click(function (event) {
+  /* programmatically trigger close icon click event */
+  $('#header .right.menu .ui.category.search.item i.close.icon').click();
+});
+/**
+* sidebar
+*/
+
+$('.ui.sidebar').sidebar({
+  transition: 'overlay',
+  mobileTransition: 'overlay'
+}).sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon');

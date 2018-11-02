@@ -1,0 +1,61 @@
+.ui.top.sidebar {
+
+  opacity: 1;
+
+  .content_wrapper {
+
+    background-color: #fff;
+
+    height: 100vh;
+
+    .sidebar_header {
+
+      height: 3.5rem;
+
+      border-bottom: #f2f2f2 solid 1px;
+
+    }
+
+    .menu ul {
+
+      list-style: none;
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      padding-left: 0;
+
+      margin: 1rem auto 1rem auto;
+
+      width: 10rem;
+
+      li {
+
+        flex-basis: 100vw;
+
+        padding-top:2rem;
+
+        a {
+
+          color: #000;
+
+          font-size: 1.1rem;
+
+        }
+
+        a.active {
+
+          color: #0a7dab;
+
+        }
+
+      }
+
+    }
+
+  }
+
+
+
+}

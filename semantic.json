@@ -24,7 +24,8 @@
    "search",
    "input",
    "button",
-   "sidebar"
+   "sidebar",
+   "menu"
   ],
   "permission": false,
   "autoInstall": false,
