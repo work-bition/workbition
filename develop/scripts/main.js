@@ -109,6 +109,12 @@
    /**
    * sidebar
    */
+   let resizeSidebarHeight = function(){
+
+     $('.ui.sidebar .content_wrapper').css('height', $(window).height())
+
+   }
+
    /* toggling the display of the sidebar */
    $('.ui.sidebar')
 
@@ -116,7 +122,18 @@
 
       transition: 'overlay',
 
-      mobileTransition: 'overlay'
+      mobileTransition: 'overlay',
+
+      onShow: () => {
+
+        /* resizing the height of the sidebar when the ios device is detected */
+        if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+
+          resizeSidebarHeight()
+
+        }
+
+      }
 
     })
 

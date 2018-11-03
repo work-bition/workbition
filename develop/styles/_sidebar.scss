@@ -1,4 +1,6 @@
-.ui.top.sidebar {
+.ui.sidebar {
+
+  transition-duration: 0.2s !important;
 
   opacity: 1;
 
@@ -17,6 +19,24 @@
       height: 3.5rem;
 
       border-bottom: #f2f2f2 solid 1px;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      a {
+
+        transform: translateY(0.2rem);
+
+        .logo {
+
+          width: 8rem;
+
+        }
+
+      }
 
     }
 
@@ -72,7 +92,7 @@
 
       border-bottom: #F2F2F2 solid 1px;
 
-      background-color: #fff;
+      background-color: #f7f8f9;
 
       height: 3.2rem;
 

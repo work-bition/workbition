@@ -74,11 +74,21 @@
   * sidebar
   */
 
+  var resizeSidebarHeight = function resizeSidebarHeight() {
+    $('.ui.sidebar .content_wrapper').css('height', $(window).height());
+  };
   /* toggling the display of the sidebar */
+
 
   $('.ui.sidebar').sidebar({
     transition: 'overlay',
-    mobileTransition: 'overlay'
+    mobileTransition: 'overlay',
+    onShow: function onShow() {
+      /* resizing the height of the sidebar when the ios device is detected */
+      if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+        resizeSidebarHeight();
+      }
+    }
   }).sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon');
   /* making the sidebar invisible */
 

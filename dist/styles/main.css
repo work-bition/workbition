@@ -1,34 +1,42 @@
-.ui.top.sidebar {
+.ui.sidebar {
+  transition-duration: 0.2s !important;
   opacity: 1; }
-  .ui.top.sidebar .content_wrapper {
+  .ui.sidebar .content_wrapper {
     background-color: #fff;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto; }
-    .ui.top.sidebar .content_wrapper .sidebar_header {
+    .ui.sidebar .content_wrapper .sidebar_header {
       height: 3.5rem;
-      border-bottom: #f2f2f2 solid 1px; }
-    .ui.top.sidebar .content_wrapper .menu {
+      border-bottom: #f2f2f2 solid 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .ui.sidebar .content_wrapper .sidebar_header a {
+        transform: translateY(0.2rem); }
+        .ui.sidebar .content_wrapper .sidebar_header a .logo {
+          width: 8rem; }
+    .ui.sidebar .content_wrapper .menu {
       padding-bottom: 3.2rem; }
-      .ui.top.sidebar .content_wrapper .menu ul {
+      .ui.sidebar .content_wrapper .menu ul {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
         padding-left: 0;
         margin: 1rem auto 1rem auto;
         width: 9.5rem; }
-        .ui.top.sidebar .content_wrapper .menu ul li {
+        .ui.sidebar .content_wrapper .menu ul li {
           flex-basis: 100vw;
           padding-top: 2.5rem; }
-          .ui.top.sidebar .content_wrapper .menu ul li a {
+          .ui.sidebar .content_wrapper .menu ul li a {
             color: #000;
             font-size: 1.1rem; }
-          .ui.top.sidebar .content_wrapper .menu ul li a.active {
+          .ui.sidebar .content_wrapper .menu ul li a.active {
             color: #0a7dab; }
-    .ui.top.sidebar .content_wrapper .close_layer {
+    .ui.sidebar .content_wrapper .close_layer {
       border-top: #F2F2F2 solid 1px;
       border-bottom: #F2F2F2 solid 1px;
-      background-color: #fff;
+      background-color: #f7f8f9;
       height: 3.2rem;
       line-height: 3.2rem;
       text-align: center;
@@ -38,7 +46,7 @@
       bottom: 0;
       left: 0;
       right: 0; }
-      .ui.top.sidebar .content_wrapper .close_layer a {
+      .ui.sidebar .content_wrapper .close_layer a {
         display: block;
         color: #757575; }
 
@@ -56,7 +64,6 @@
       transform: translateY(-0.5rem) !important; } }
 
 @media only screen and (max-width: 767px) {
-  /* TEMPORARY */
   #main_nav {
     display: none; } }
 
