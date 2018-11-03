@@ -1,119 +1,134 @@
-'use strict'
+(function(){
 
-/**
-* main navigation
-*/
-$('#header .right.menu .ui.category.search.item i.search.icon').click((event) => {
+  'use strict'
 
-  /* making search input visible */
+  /**
+  * main navigation
+  */
+  $('#header .right.menu .ui.category.search.item i.search.icon').click((event) => {
 
-  let search_input = $('#header .right.menu input.prompt')[0]
+    /* making search input visible */
 
-  search_input.style.visibility = 'visible'
+    let search_input = $('#header .right.menu input.prompt')[0]
 
-  /* making login and register buttons invisible */
+    search_input.style.visibility = 'visible'
 
-  let login_button = $('#header .right.menu .login_button')
+    /* making login and register buttons invisible */
 
-  let divider = $('#header .right.menu .divider_item')
+    let login_button = $('#header .right.menu .login_button')
 
-  let register_button = $('#header .right.menu .register_button')
+    let divider = $('#header .right.menu .divider_item')
 
-  login_button[0].style.display='none'
+    let register_button = $('#header .right.menu .register_button')
 
-  divider[0].style.display='none'
+    login_button[0].style.display='none'
 
-  register_button[0].style.display='none'
+    divider[0].style.display='none'
 
-  /* removing 'link' class via jQuery */
+    register_button[0].style.display='none'
 
-  $(event.currentTarget).removeClass('link')
+    /* removing 'link' class via jQuery */
 
-  /* making the close icon visible */
+    $(event.currentTarget).removeClass('link')
 
-  $('#header .right.menu .ui.category.search.item i.close.icon')[0].style.display = 'inline-block'
+    /* making the close icon visible */
 
-  /* adding class to search icon for negative margin */
+    $('#header .right.menu .ui.category.search.item i.close.icon')[0].style.display = 'inline-block'
 
-  $(event.currentTarget).addClass('negative_mg_lft')
+    /* adding class to search icon for negative margin */
 
-  /* stopping the propagation */
+    $(event.currentTarget).addClass('negative_mg_lft')
 
-  event.stopPropagation()
+    /* stopping the propagation */
 
-
-
-})
-$('#header .right.menu .ui.category.search.item i.close.icon').click((event) => {
-
-  /* making search input invisible */
-
-  let search_input = $('#header .right.menu input.prompt')[0]
-
-  search_input.style.visibility = 'hidden'
-
-  search_input.style.width = '0'
-
-  /* making close icon invisible */
-
-  let close_icon = event.currentTarget
-
-  close_icon.style.display = 'none'
-
-  /* making login and register buttons visible */
-
-  let login_button = $('#header .right.menu .login_button')
-
-  let divider = $('#header .right.menu .divider_item')
-
-  let register_button = $('#header .right.menu .register_button')
-
-  login_button[0].style.display='inline-block'
-
-  divider[0].style.display='inline-block'
-
-  register_button[0].style.display='inline-block'
-
-  /* adding 'link' class to search icon via jQuery */
-
-  $('#header .right.menu .ui.category.search.item i.search.icon').addClass('link')
-
-  /* removing class from search icon for negative margin */
-
-  $('#header .right.menu .ui.category.search.item i.search.icon').removeClass('negative_mg_lft')
-
-  /* stopping the propagation */
-
-  event.stopPropagation()
-
-})
-/* preventing the body click event when click on search input */
-$('#header .right.menu .ui.category.search.item .prompt').click((event) => {
-
-  /* stopping the propagation */
-  event.stopPropagation()
-
-})
- /* when clicking in the viewport, making the search input invisible */
- $('body').click((event) => {
-
-   /* programmatically trigger close icon click event */
-   $('#header .right.menu .ui.category.search.item i.close.icon').click()
-
- });
+    event.stopPropagation()
 
 
- /**
- * sidebar
- */
- $('.ui.sidebar')
-
-  .sidebar({
-
-    transition: 'overlay',
-
-    mobileTransition: 'overlay'
 
   })
+  $('#header .right.menu .ui.category.search.item i.close.icon').click((event) => {
 
-  .sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon')
+    /* making search input invisible */
+
+    let search_input = $('#header .right.menu input.prompt')[0]
+
+    search_input.style.visibility = 'hidden'
+
+    search_input.style.width = '0'
+
+    /* making close icon invisible */
+
+    let close_icon = event.currentTarget
+
+    close_icon.style.display = 'none'
+
+    /* making login and register buttons visible */
+
+    let login_button = $('#header .right.menu .login_button')
+
+    let divider = $('#header .right.menu .divider_item')
+
+    let register_button = $('#header .right.menu .register_button')
+
+    login_button[0].style.display='inline-block'
+
+    divider[0].style.display='inline-block'
+
+    register_button[0].style.display='inline-block'
+
+    /* adding 'link' class to search icon via jQuery */
+
+    $('#header .right.menu .ui.category.search.item i.search.icon').addClass('link')
+
+    /* removing class from search icon for negative margin */
+
+    $('#header .right.menu .ui.category.search.item i.search.icon').removeClass('negative_mg_lft')
+
+    /* stopping the propagation */
+
+    event.stopPropagation()
+
+  })
+  /* preventing the body click event when click on search input */
+  $('#header .right.menu .ui.category.search.item .prompt').click((event) => {
+
+    /* stopping the propagation */
+    event.stopPropagation()
+
+  })
+   /* when clicking in the viewport, making the search input invisible */
+   $('body').click((event) => {
+
+     /* programmatically trigger close icon click event */
+     $('#header .right.menu .ui.category.search.item i.close.icon').click()
+
+   });
+
+
+
+   /**
+   * sidebar
+   */
+   /* toggling the display of the sidebar */
+   $('.ui.sidebar')
+
+    .sidebar({
+
+      transition: 'overlay',
+
+      mobileTransition: 'overlay'
+
+    })
+
+    .sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon')
+
+    /* making the sidebar invisible */
+    $('.ui.sidebar .close_layer a').click((event) => {
+
+      $('.ui.sidebar')
+
+       .sidebar('hide')
+
+    })
+
+})()
