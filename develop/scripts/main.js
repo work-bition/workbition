@@ -138,6 +138,8 @@
 
       mobileTransition: 'overlay',
 
+      dimPage: false,
+
       onVisible: () => {
 
           resizeSidebarHeight()

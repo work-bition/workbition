@@ -69,6 +69,11 @@ body {
         letter-spacing: 0.4rem;
         text-indent: 0.4rem; }
 
+/** Sidebar Section **/
+@media only screen and (min-width: 768px) {
+  .ui.sidebar {
+    display: none; } }
+
 /** Header Section **/
 @media only screen and (max-width: 767px) {
   #header {
@@ -82,10 +87,6 @@ body {
   @media only screen and (max-width: 767px) and (-ms-high-contrast: active), only screen and (max-width: 767px) and (-ms-high-contrast: none) {
     #header .right.menu .close.link.icon {
       transform: translateY(-0.5rem) !important; } }
-
-@media only screen and (max-width: 767px) {
-  #main_nav {
-    display: none; } }
 
 #header .content {
   height: 5rem;
@@ -184,3 +185,7 @@ body {
         width: 100%; } }
     #main_nav .content .left.menu > a {
       color: white; }
+
+@media only screen and (max-width: 767px) {
+  #main_nav {
+    display: none; } }

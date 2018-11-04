@@ -94,6 +94,7 @@
   $('.ui.sidebar').sidebar({
     transition: 'overlay',
     mobileTransition: 'overlay',
+    dimPage: false,
     onVisible: function onVisible() {
       resizeSidebarHeight();
     }
