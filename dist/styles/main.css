@@ -1,11 +1,19 @@
+/** When opening the sidebar, stopping the body layer to move **/
+body {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+/** Sidebar Section **/
 .ui.sidebar {
-  transition-duration: 0.2s !important;
-  opacity: 1; }
+  /** animation speed for the popup of the sidebar **/
+  transition-duration: 0.2s !important; }
   .ui.sidebar .content_wrapper {
-    background-color: #fff;
+    /** preventing the second scroll to be shown up for desktop browsers **/
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto; }
+    background-color: #fff; }
     .ui.sidebar .content_wrapper .sidebar_header {
       height: 3.5rem;
       border-bottom: #f2f2f2 solid 1px;
@@ -17,7 +25,14 @@
         .ui.sidebar .content_wrapper .sidebar_header a .logo {
           width: 8rem; }
     .ui.sidebar .content_wrapper .menu {
-      padding-bottom: 3.2rem; }
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+      position: fixed;
+      top: 50px;
+      bottom: 50px;
+      overflow: auto;
+      overflow-x: hidden; }
       .ui.sidebar .content_wrapper .menu ul {
         list-style: none;
         display: flex;
@@ -33,6 +48,8 @@
             font-size: 1.1rem; }
           .ui.sidebar .content_wrapper .menu ul li a.active {
             color: #0a7dab; }
+          .ui.sidebar .content_wrapper .menu ul li:first-child {
+            padding-top: 0; }
     .ui.sidebar .content_wrapper .close_layer {
       border-top: #F2F2F2 solid 1px;
       border-bottom: #F2F2F2 solid 1px;
@@ -48,8 +65,11 @@
       right: 0; }
       .ui.sidebar .content_wrapper .close_layer a {
         display: block;
-        color: #757575; }
+        color: #757575;
+        letter-spacing: 0.4rem;
+        text-indent: 0.4rem; }
 
+/** Header Section **/
 @media only screen and (max-width: 767px) {
   #header {
     border-bottom: #f2f2f2 solid 1px;
@@ -143,6 +163,7 @@
     #header .content .right.menu .login_button, #header .content .right.menu .divider_item, #header .content .right.menu .register_button {
       display: none !important; } }
 
+/** Main Navigation Section **/
 #main_nav {
   background: linear-gradient(-45deg, #0f99d0, #2a6ea8); }
   #main_nav .content {

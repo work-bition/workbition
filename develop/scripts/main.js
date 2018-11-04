@@ -7,13 +7,13 @@
   */
   $('#header .right.menu .ui.category.search.item i.search.icon').click((event) => {
 
-    /* making search input visible */
+    /** making search input visible **/
 
     let search_input = $('#header .right.menu input.prompt')[0]
 
     search_input.style.visibility = 'visible'
 
-    /* making login and register buttons invisible */
+    /** making login and register buttons invisible **/
 
     let login_button = $('#header .right.menu .login_button')
 
@@ -27,19 +27,19 @@
 
     register_button[0].style.display='none'
 
-    /* removing 'link' class via jQuery */
+    /** removing 'link' class via jQuery **/
 
     $(event.currentTarget).removeClass('link')
 
-    /* making the close icon visible */
+    /** making the close icon visible **/
 
     $('#header .right.menu .ui.category.search.item i.close.icon')[0].style.display = 'inline-block'
 
-    /* adding class to search icon for negative margin */
+    /** adding class to search icon for negative margin **/
 
     $(event.currentTarget).addClass('negative_mg_lft')
 
-    /* stopping the propagation */
+    /** stopping the propagation **/
 
     event.stopPropagation()
 
@@ -89,15 +89,15 @@
     event.stopPropagation()
 
   })
-  /* preventing the body click event when click on search input */
+  /** preventing the body click event when click on search input **/
   $('#header .right.menu .ui.category.search.item .prompt').click((event) => {
 
     /* stopping the propagation */
     event.stopPropagation()
 
   })
-   /* when clicking in the viewport, making the search input invisible */
-   $('body').click((event) => {
+  /** when clicking in the viewport, making the search input invisible **/
+  $('body').click((event) => {
 
      /* programmatically trigger close icon click event */
      $('#header .right.menu .ui.category.search.item i.close.icon').click()
@@ -105,17 +105,31 @@
    });
 
 
-
    /**
    * sidebar
    */
+
+   /** Resizing the height for iOS devices **/
    let resizeSidebarHeight = function(){
 
-     $('.ui.sidebar .content_wrapper').css('height', $(window).height())
+     /* resizing the height of the sidebar when the ios device is detected */
+     if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+
+       $('.ui.sidebar .content_wrapper').css('height', $(window).height())
+
+     }
 
    }
 
-   /* toggling the display of the sidebar */
+   /** When chaging the orientation of the devices, closing the sidebar **/
+   $(window).on('orientationchange', function(event) {
+
+     /* making the sidebar invisible */
+     $('.ui.sidebar .close_layer a').click()
+
+   })
+
+   /** toggling the display of the sidebar **/
    $('.ui.sidebar')
 
     .sidebar({
@@ -124,14 +138,9 @@
 
       mobileTransition: 'overlay',
 
-      onShow: () => {
-
-        /* resizing the height of the sidebar when the ios device is detected */
-        if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+      onVisible: () => {
 
           resizeSidebarHeight()
-
-        }
 
       }
 
@@ -139,7 +148,7 @@
 
     .sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon')
 
-    /* making the sidebar invisible */
+    /** making the sidebar invisible **/
     $('.ui.sidebar .close_layer a').click((event) => {
 
       $('.ui.sidebar')

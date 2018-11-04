@@ -1,18 +1,32 @@
+
+/** When opening the sidebar, stopping the body layer to move **/
+body {
+
+  position: fixed;
+
+  width: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+}
+
+
+/** Sidebar Section **/
 .ui.sidebar {
 
+  /** animation speed for the popup of the sidebar **/
   transition-duration: 0.2s !important;
-
-  opacity: 1;
 
   .content_wrapper {
 
-    background-color: #fff;
-
+    /** preventing the second scroll to be shown up for desktop browsers **/
     height: 100vh;
 
-    overflow-x: hidden;
-
-    overflow-y: auto;
+    background-color: #fff;
 
     .sidebar_header {
 
@@ -42,7 +56,21 @@
 
     .menu {
 
-      padding-bottom: 3.2rem;
+      margin-top: 1rem;
+
+      margin-bottom: 1rem;
+
+      width: 100%;
+
+      position:fixed;
+
+      top:50px;
+
+      bottom:50px;
+
+      overflow:auto;
+
+      overflow-x: hidden;
 
       ul {
 
@@ -78,13 +106,19 @@
 
           }
 
+          &:first-child {
+
+            padding-top:0;
+
+          }
+
         }
+
+
 
       }
 
     }
-
-
 
     .close_layer {
 
@@ -118,12 +152,14 @@
 
         color: #757575;
 
+        letter-spacing: 0.4rem;
+
+        text-indent: 0.4rem;
+
       }
 
     }
 
   }
-
-
 
 }
