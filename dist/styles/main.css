@@ -25,6 +25,8 @@
         .ui.sidebar .content_wrapper .sidebar_header a .logo {
           width: 8rem; }
     .ui.sidebar .content_wrapper .menu {
+      font-size: 0.8rem;
+      border: 0;
       margin-top: 1rem;
       margin-bottom: 1rem;
       width: 100%;
@@ -39,15 +41,17 @@
         flex-wrap: wrap;
         padding-left: 0;
         margin: 1rem auto 1rem auto;
-        width: 9.5rem; }
+        width: 10.5rem; }
         .ui.sidebar .content_wrapper .menu ul li {
           flex-basis: 100vw;
-          padding-top: 2.5rem; }
+          padding-top: 0.5rem; }
           .ui.sidebar .content_wrapper .menu ul li a {
-            color: #000;
-            font-size: 1.1rem; }
+            color: #000; }
           .ui.sidebar .content_wrapper .menu ul li a.active {
-            color: #0a7dab; }
+            color: #0a7dab;
+            background-color: white !important; }
+            .ui.sidebar .content_wrapper .menu ul li a.active:hover {
+              color: #0a7dab; }
           .ui.sidebar .content_wrapper .menu ul li:first-child {
             padding-top: 0; }
     .ui.sidebar .content_wrapper .close_layer {
