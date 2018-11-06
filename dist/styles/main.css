@@ -25,10 +25,8 @@
         .ui.sidebar .content_wrapper .sidebar_header a .logo {
           width: 8rem; }
     .ui.sidebar .content_wrapper .menu {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       border: 0;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
       width: 100%;
       position: fixed;
       top: 50px;
