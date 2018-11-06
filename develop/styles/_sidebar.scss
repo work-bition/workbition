@@ -1,6 +1,6 @@
 
-/** When opening the sidebar, stopping the body layer to move **/
-body {
+/** When opening the sidebar, preventing the background layer from moving **/
+.fixed_layer {
 
   position: fixed;
 

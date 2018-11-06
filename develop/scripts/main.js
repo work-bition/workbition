@@ -142,7 +142,18 @@
 
       onVisible: () => {
 
-          resizeSidebarHeight()
+        /** Resizing the height for iOS devices **/
+        resizeSidebarHeight()
+
+        /** when opening the sidebar, preventing the body layer from moving **/
+        $('body').addClass('fixed_layer')
+
+      },
+
+      onHidden: () => {
+
+        /** when closing the sidebar, releasing the original state of the body layer **/
+        $('body').removeClass('fixed_layer')
 
       }
 
