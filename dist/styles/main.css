@@ -52,6 +52,11 @@
               color: #0a7dab; }
           .ui.sidebar .content_wrapper .menu ul li:first-child {
             padding-top: 0; }
+      .ui.sidebar .content_wrapper .menu .login_register_buttons {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem; }
+        .ui.sidebar .content_wrapper .menu .login_register_buttons .login_button {
+          margin-bottom: 1.5rem; }
     .ui.sidebar .content_wrapper .close_layer {
       border-top: #F2F2F2 solid 1px;
       border-bottom: #F2F2F2 solid 1px;
