@@ -10,6 +10,8 @@
     /** making search input visible **/
     var search_input = $('#header .right.menu input.prompt')[0];
     search_input.style.visibility = 'visible';
+    /** making search input get foucs **/
+
     search_input.focus();
     /** making login and register buttons invisible **/
 
@@ -75,6 +77,26 @@
   * main search bar
   */
 
+  $.fn.search.settings.error.noResults = '抱歉，我们未找到任何与您的搜索结果相关的课程。';
+
+  $.fn.search.settings.templates.message = function (message, type) {
+    var html = '';
+
+    if (message !== undefined && type !== undefined) {
+      html += '' + '<div class="message ' + type + '">'; // message type
+
+      if (type == 'empty') {
+        html += '' + '<div class="header">未找到课程</div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description">您可以<a href="#">点此</a>告知我们您感兴趣的课程，我们会考虑以后增添此课程。</div>';
+      } else {
+        html += ' <div class="description">' + message + '</div>';
+      }
+
+      html += '</div>';
+    }
+
+    return html;
+  };
+
   var content = [{
     title: 'Andorra'
   }, {
@@ -125,7 +147,12 @@
     title: 'Burundi'
   }];
   $('.ui.search').search({
-    source: content
+    source: content,
+
+    /** when closing the panel showing the results, clear search box input **/
+    onResultsClose: function onResultsClose() {
+      $('.ui.search .prompt').val('');
+    }
   });
   /**
   * sidebar
