@@ -15,21 +15,9 @@
     },
     "clean": "../dist/semantic-ui/"
   },
-  "components": [
-   "reset",
-   "site",
-   "container",
-   "grid",
-   "icon",
-   "search",
-   "input",
-   "button",
-   "sidebar",
-   "menu",
-   "api"
-  ],
+  "components": ["reset", "site", "container", "grid", "icon", "search", "input", "button", "sidebar", "menu", "api"],
   "permission": false,
   "autoInstall": false,
   "rtl": false,
-  "version": "2.4.0"
+  "version": "2.4.2"
 }
