@@ -25,7 +25,8 @@
    "input",
    "button",
    "sidebar",
-   "menu"
+   "menu",
+   "api"
   ],
   "permission": false,
   "autoInstall": false,

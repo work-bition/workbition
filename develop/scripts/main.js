@@ -5,13 +5,15 @@
   /**
   * main navigation
   */
-  $('#header .right.menu .ui.category.search.item i.search.icon').click((event) => {
+  $('#header .right.menu .ui.search.item i.search.icon').click((event) => {
 
     /** making search input visible **/
 
     let search_input = $('#header .right.menu input.prompt')[0]
 
     search_input.style.visibility = 'visible'
+
+    search_input.focus()
 
     /** making login and register buttons invisible **/
 
@@ -33,7 +35,7 @@
 
     /** making the close icon visible **/
 
-    $('#header .right.menu .ui.category.search.item i.close.icon')[0].style.display = 'inline-block'
+    $('#header .right.menu .ui.search.item i.close.icon')[0].style.display = 'inline-block'
 
     /** adding class to search icon for negative margin **/
 
@@ -46,7 +48,7 @@
 
 
   })
-  $('#header .right.menu .ui.category.search.item i.close.icon').click((event) => {
+  $('#header .right.menu .ui.search.item i.close.icon').click((event) => {
 
     /* making search input invisible */
 
@@ -78,11 +80,11 @@
 
     /* adding 'link' class to search icon via jQuery */
 
-    $('#header .right.menu .ui.category.search.item i.search.icon').addClass('link')
+    $('#header .right.menu .ui.search.item i.search.icon').addClass('link')
 
     /* removing class from search icon for negative margin */
 
-    $('#header .right.menu .ui.category.search.item i.search.icon').removeClass('negative_mg_lft')
+    $('#header .right.menu .ui.search.item i.search.icon').removeClass('negative_mg_lft')
 
     /* stopping the propagation */
 
@@ -90,7 +92,7 @@
 
   })
   /** preventing the body click event when click on search input **/
-  $('#header .right.menu .ui.category.search.item .prompt').click((event) => {
+  $('#header .right.menu .ui.search.item .prompt').click((event) => {
 
     /* stopping the propagation */
     event.stopPropagation()
@@ -100,9 +102,50 @@
   $('body').click((event) => {
 
      /* programmatically trigger close icon click event */
-     $('#header .right.menu .ui.category.search.item i.close.icon').click()
+     $('#header .right.menu .ui.search.item i.close.icon').click()
 
    });
+
+
+
+   /**
+   * main search bar
+   */
+   let content = [
+     { title: 'Andorra' },
+     { title: 'United Arab Emirates' },
+     { title: 'Afghanistan' },
+     { title: 'Antigua' },
+     { title: 'Anguilla' },
+     { title: 'Albania' },
+     { title: 'Armenia' },
+     { title: 'Netherlands Antilles' },
+     { title: 'Angola' },
+     { title: 'Argentina' },
+     { title: 'American Samoa' },
+     { title: 'Austria' },
+     { title: 'Australia' },
+     { title: 'Aruba' },
+     { title: 'Aland Islands' },
+     { title: 'Azerbaijan' },
+     { title: 'Bosnia' },
+     { title: 'Barbados' },
+     { title: 'Bangladesh' },
+     { title: 'Belgium' },
+     { title: 'Burkina Faso' },
+     { title: 'Bulgaria' },
+     { title: 'Bahrain' },
+     { title: 'Burundi' }
+   ]
+
+   $('.ui.search')
+
+     .search({
+
+       source: content
+
+     })
+
 
 
    /**

@@ -115,7 +115,7 @@
       padding: 0 1rem 0 1rem; }
     #header .content .right_wrap .right.menu .register_button {
       display: inline-block; }
-    #header .content .right_wrap .right.menu .ui.category.search.item {
+    #header .content .right_wrap .right.menu .ui.search.item {
       display: inline-block;
       /* When the width of the window is greater than 769px, chaging the width of the search input to 35rem */
       /* When the width of the window is less than 768px, chaging the width of the search input to 20rem */
@@ -123,36 +123,36 @@
       /* When the width of the window is less than 369px, chaging the width of the search input to 13rem */
       /* css hack for IE browsers */
       /* fixing navigation icons offset problems in IE browsers */ }
-      #header .content .right_wrap .right.menu .ui.category.search.item .search.icon {
+      #header .content .right_wrap .right.menu .ui.search.item .search.icon {
         transform: translateY(0.1rem); }
-      #header .content .right_wrap .right.menu .ui.category.search.item .search.icon.negative_mg_lft {
+      #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft {
         margin-left: -0.85rem; }
-      #header .content .right_wrap .right.menu .ui.category.search.item .prompt {
+      #header .content .right_wrap .right.menu .ui.search.item .prompt {
         visibility: hidden;
         width: 0; }
       @media only screen and (min-width: 769px) {
-        #header .content .right_wrap .right.menu .ui.category.search.item .search.icon.negative_mg_lft + .prompt {
+        #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft + .prompt {
           width: 35rem !important; } }
       @media only screen and (max-width: 768px) {
-        #header .content .right_wrap .right.menu .ui.category.search.item .search.icon.negative_mg_lft + .prompt {
+        #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft + .prompt {
           width: 20rem !important; } }
       @media only screen and (max-width: 467px) {
-        #header .content .right_wrap .right.menu .ui.category.search.item .search.icon.negative_mg_lft + .prompt {
+        #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft + .prompt {
           width: 13rem !important; } }
       @media only screen and (max-width: 369px) {
-        #header .content .right_wrap .right.menu .ui.category.search.item .search.icon.negative_mg_lft + .prompt {
+        #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft + .prompt {
           width: 9rem !important; } }
-      #header .content .right_wrap .right.menu .ui.category.search.item .close.icon {
+      #header .content .right_wrap .right.menu .ui.search.item .close.icon {
         display: none;
         position: relative;
         right: 1.25rem;
         transform: translateY(0.05rem); }
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        #header .content .right_wrap .right.menu .ui.category.search.item .search.icon {
+        #header .content .right_wrap .right.menu .ui.search.item .search.icon {
           transform: translateY(0.25rem); }
-        #header .content .right_wrap .right.menu .ui.category.search.item .search.icon.negative_mg_lft {
+        #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft {
           transform: translateY(0.1rem); }
-        #header .content .right_wrap .right.menu .ui.category.search.item .close.icon {
+        #header .content .right_wrap .right.menu .ui.search.item .close.icon {
           transform: translateY(-0.65rem); } }
     #header .content .right_wrap .right.menu .align.justify.link.icon {
       display: none; }
@@ -196,3 +196,7 @@
 @media only screen and (max-width: 767px) {
   #main_nav {
     display: none; } }
+
+/** making the 'X' icon and eye icon invisi  for IE10+ and Edge browsers **/
+::-ms-clear, ::-ms-reveal {
+  display: none; }
