@@ -294,6 +294,13 @@
 
       width: 65%;
 
+      .item i {
+
+        /** hiding i elements under the results panel of the search box when it opens in iOS devices **/
+        overflow: hidden;
+
+      }
+
       .item.active {
 
         color: #ffea75;
