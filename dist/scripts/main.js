@@ -77,25 +77,32 @@
   * main search bar
   */
 
-  $.fn.search.settings.error.noResults = '抱歉，我们未找到任何与您的搜索结果相关的课程。';
+  /** the message that needs to be passed when there's no search result returned **/
+
+  $.fn.search.settings.error.noResults = '抱歉～我们没找到任何能够匹配您搜索的课程。';
+  /** the html code generated when there's no search result returned **/
 
   $.fn.search.settings.templates.message = function (message, type) {
     var html = '';
 
     if (message !== undefined && type !== undefined) {
-      html += '' + '<div class="message ' + type + '">'; // message type
+      html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
 
       if (type == 'empty') {
-        html += '' + '<div class="header">未找到课程</div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description">您可以<a href="#">点此</a>告知我们您感兴趣的课程，我们会考虑以后增添此课程。</div>';
-      } else {
-        html += ' <div class="description">' + message + '</div>';
+        html += '' + '<div class="header">哎哟！没找到课程>_< </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="#">告诉我们</a>您感兴趣的课程吧，我们会根据反馈的情况决定是否在以后引入。</div>';
       }
+      /** other circumstances **/
+      else {
+          html += ' <div class="description">' + message + '</div>';
+        }
 
       html += '</div>';
     }
 
     return html;
   };
+  /** local search data **/
+
 
   var content = [{
     title: 'Andorra'
@@ -146,11 +153,14 @@
   }, {
     title: 'Burundi'
   }];
+  /** activate the search feature **/
+
   $('.ui.search').search({
     source: content,
 
     /** when closing the panel showing the results, clear search box input **/
     onResultsClose: function onResultsClose() {
+      /** clear search box input **/
       $('.ui.search .prompt').val('');
     }
   });
