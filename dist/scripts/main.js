@@ -89,7 +89,7 @@
       html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
 
       if (type == 'empty') {
-        html += '' + '<div class="header">矮油！没找到课程>_< </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="#">告诉我们</a>您感兴趣的内容，根据反馈我们可能在未来增设相关课程。</div>';
+        html += '' + '<div class="header">矮油！没找到课程>_< </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的内容，根据反馈我们可能在未来增设相关课程。</div>';
       }
       /** other circumstances **/
       else {
@@ -163,6 +163,19 @@
       /** clear search box input **/
       $('.ui.search .prompt').val('');
     }
+  });
+  /** hiding results panel of the search box  when clicking on it **/
+
+  $('.ui.search .results').click(function (event) {
+    /** hiding the results panel of the search bar **/
+    $('.ui.search').search('hide results');
+    /** making search input get foucs **/
+
+    var search_input = $('#header .right.menu input.prompt')[0];
+    search_input.focus();
+    /* stopping the propagation */
+
+    event.stopPropagation();
   });
   /**
   * sidebar

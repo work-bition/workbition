@@ -113,7 +113,6 @@
    /**
    * main search bar
    */
-
    /** the message that needs to be passed when there's no search result returned **/
    $.fn.search.settings.error.noResults = '抱歉～我们没找到任何能够匹配此搜索结果的课程。'
 
@@ -141,7 +140,7 @@
 
            + '<br />'
 
-           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="#">告诉我们</a>您感兴趣的内容，根据反馈我们可能在未来增设相关课程。</div>'
+           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的内容，根据反馈我们可能在未来增设相关课程。</div>'
 
        }
 
@@ -206,6 +205,22 @@
        }
 
      })
+
+   /** hiding results panel of the search box  when clicking on it **/
+   $('.ui.search .results').click((event) => {
+
+     /** hiding the results panel of the search bar **/
+     $('.ui.search').search('hide results')
+
+     /** making search input get foucs **/
+     let search_input = $('#header .right.menu input.prompt')[0]
+
+     search_input.focus()
+
+     /* stopping the propagation */
+     event.stopPropagation()
+
+   })
 
 
 
