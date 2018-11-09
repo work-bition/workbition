@@ -89,7 +89,7 @@
       html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
 
       if (type == 'empty') {
-        html += '' + '<div class="header">矮油！没找到课程>_< </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的内容，根据反馈我们可能在未来增加相关课程。</div>';
+        html += '' + '<div class="header">矮油！没找到课程>_< </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的内容，根据反馈我们可能在未来添加相关课程。</div>';
       }
       /** other circumstances **/
       else {
