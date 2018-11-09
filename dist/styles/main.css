@@ -1,4 +1,5 @@
-/** When opening the sidebar, preventing the background layer from moving **/
+/** When opening the sidebar, programmatically add this class to the background
+element in order to prevent the background layer from moving **/
 .fixed_layer {
   position: fixed;
   width: 100%;
@@ -76,7 +77,6 @@
         letter-spacing: 0.4rem;
         text-indent: 0.4rem; }
 
-/** Sidebar Section **/
 @media only screen and (min-width: 768px) {
   .ui.sidebar {
     display: none; } }
