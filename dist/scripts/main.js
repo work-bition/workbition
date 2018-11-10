@@ -90,11 +90,12 @@
 
   $('.ui.search').search({
     source: content,
-
-    /** when closing the panel showing the results, clear search box input **/
-    onResultsClose: function onResultsClose() {
-      /** clear search box input **/
-      $('.ui.search .prompt').val('');
+    onSearchQuery: function onSearchQuery(query) {
+      if ($.trim(query) === '') {
+        $('.ui.search').search('hide results');
+      } else {
+        $('.ui.search').search('search local', $.trim(query));
+      }
     }
   });
   /** when clicking on the search icon, make the search box visible **/
@@ -133,6 +134,9 @@
     /** if search results panel is open, just close it and do nothing else **/
     if ($('.ui.search').search('is visible')) {
       $('.ui.search').search('hide results');
+      /** clear the input in the search box **/
+
+      $('.ui.search .prompt').val('');
     }
     /** if search results panel is not open, make the search box invisble **/
     else {
@@ -169,7 +173,10 @@
   /** when clicking in the viewport, making the search input get focus **/
 
   $('body').click(function (event) {
+    /** clear the input in the search box **/
+    $('.ui.search .prompt').val('');
     /** making search input get foucs **/
+
     var search_input = $('#header .right.menu input.prompt')[0];
     search_input.focus();
   });

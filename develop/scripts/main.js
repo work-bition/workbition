@@ -5,7 +5,7 @@
    /**
    * main navigation
    */
-   
+
    /**
    * main search bar
    */
@@ -92,14 +92,22 @@
      .search({
 
        source: content,
+       
+       onSearchQuery: (query) => {
 
-       /** when closing the panel showing the results, clear search box input **/
-       onResultsClose: () => {
+         if($.trim(query)==='') {
 
-        /** clear search box input **/
-        $('.ui.search .prompt').val('')
+           $('.ui.search').search('hide results')
 
-      }
+         }
+
+         else {
+
+           $('.ui.search').search('search local', $.trim(query))
+
+         }
+
+       }
 
      })
 
@@ -158,6 +166,9 @@
 
        $('.ui.search').search('hide results')
 
+       /** clear the input in the search box **/
+       $('.ui.search .prompt').val('')
+
      }
 
      /** if search results panel is not open, make the search box invisble **/
@@ -211,6 +222,10 @@
 
    /** when clicking in the viewport, making the search input get focus **/
    $('body').click((event) => {
+
+
+     /** clear the input in the search box **/
+     $('.ui.search .prompt').val('')
 
      /** making search input get foucs **/
      let search_input = $('#header .right.menu input.prompt')[0]
