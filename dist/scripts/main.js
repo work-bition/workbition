@@ -92,7 +92,7 @@
     source: content,
     onSearchQuery: function onSearchQuery(query) {
       if ($.trim(query) === '') {
-        $('.ui.search').search('hide results');
+        $('.ui.search .results')[0].style.display = 'none';
       } else {
         $('.ui.search').search('search local', $.trim(query));
       }

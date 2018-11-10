@@ -92,12 +92,12 @@
      .search({
 
        source: content,
-       
+
        onSearchQuery: (query) => {
 
          if($.trim(query)==='') {
 
-           $('.ui.search').search('hide results')
+           $('.ui.search .results')[0].style.display='none'
 
          }
 
