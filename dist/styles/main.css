@@ -112,7 +112,15 @@ element in order to prevent the background layer from moving **/
         /* When the width of the window is less than 467px, chaging the width of the search input to 13rem */
         /* When the width of the window is less than 369px, chaging the width of the search input to 13rem */
         /* css hack for IE browsers */
-        /* fixing navigation icons offset problems in IE browsers */ }
+        /* fixing navigation icons offset problems in IE browsers */
+        /* When the width of the window is greater than 769px, chaging the width
+          of the results panel of the search box to 96% of that of its container */
+        /* When the width of the window is less than 768px, chaging the width
+          of the results panel of the search box to 93% of that of its container */
+        /* When the width of the window is less than 467px, chaging the width
+          of the results panel of the search box to 89% of that of its container */
+        /* When the width of the window is less than 369px, chaging the width
+          of the results panel of the search box to 84% of that of its container */ }
         #header .content .right_wrap .right.menu .ui.search.item .search.icon {
           transform: translateY(0.1rem); }
         #header .content .right_wrap .right.menu .ui.search.item .search.icon.negative_mg_lft {
@@ -146,6 +154,18 @@ element in order to prevent the background layer from moving **/
             transform: translateY(-0.65rem); } }
         #header .content .right_wrap .right.menu .ui.search.item .results .message.empty .header {
           font-size: 1.15rem; }
+        @media only screen and (min-width: 769px) {
+          #header .content .right_wrap .right.menu .ui.search.item .results {
+            width: 96%; } }
+        @media only screen and (max-width: 768px) {
+          #header .content .right_wrap .right.menu .ui.search.item .results {
+            width: 93%; } }
+        @media only screen and (max-width: 467px) {
+          #header .content .right_wrap .right.menu .ui.search.item .results {
+            width: 89%; } }
+        @media only screen and (max-width: 369px) {
+          #header .content .right_wrap .right.menu .ui.search.item .results {
+            width: 84%; } }
         #header .content .right_wrap .right.menu .ui.search.item .hide_results {
           visibility: hidden !important; }
       #header .content .right_wrap .right.menu .align.justify.link.icon {
