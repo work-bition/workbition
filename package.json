@@ -19,6 +19,7 @@
     "semantic-ui": "^2.4.2"
   },
   "dependencies": {
+    "enquire.js": "^2.1.6",
     "jquery": "^3.3.1"
   }
 }

@@ -255,7 +255,7 @@
 
 
    /**
-   * sidebar
+   * main sidebar
    */
 
    /** Resizing the height for iOS devices **/
@@ -316,6 +316,22 @@
       $('.ui.sidebar')
 
        .sidebar('hide')
+
+    })
+
+
+    /** when the width of the screen is greater than 768px, close the sidebar if it is open **/
+    enquire.register("screen and (min-width: 768px)", {
+
+      match() {
+
+        if ( $('.ui.sidebar').sidebar('is visible') ) {
+
+          $('.ui.sidebar .close_layer a').click()
+
+        }
+
+      }
 
     })
 

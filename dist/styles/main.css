@@ -77,10 +77,6 @@ element in order to prevent the background layer from moving **/
         letter-spacing: 0.4rem;
         text-indent: 0.4rem; }
 
-@media only screen and (min-width: 768px) {
-  .ui.sidebar {
-    display: none; } }
-
 /** Header Section **/
 #header .content {
   height: 5rem;
