@@ -15,7 +15,7 @@
     },
     "clean": "../dist/semantic-ui/"
   },
-  "components": ["reset", "site", "container", "grid", "icon", "search", "input", "button", "sidebar", "menu", "api"],
+  "components": ["reset", "site", "container", "grid", "icon", "search", "input", "button", "sidebar", "menu", "api", "transition"],
   "permission": false,
   "autoInstall": false,
   "rtl": false,
