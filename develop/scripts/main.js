@@ -97,11 +97,13 @@
 
          if($.trim(query)==='') {
 
-           $('.ui.search .results')[0].style.display='none'
+           $('.ui.search .results').addClass('hide_results')
 
          }
 
          else {
+
+           $('.ui.search .results').removeClass('hide_results')
 
            $('.ui.search').search('search local', $.trim(query))
 

@@ -146,6 +146,8 @@ element in order to prevent the background layer from moving **/
             transform: translateY(-0.65rem); } }
         #header .content .right_wrap .right.menu .ui.search.item .results .message.empty .header {
           font-size: 1.15rem; }
+        #header .content .right_wrap .right.menu .ui.search.item .hide_results {
+          visibility: hidden !important; }
       #header .content .right_wrap .right.menu .align.justify.link.icon {
         display: none; }
     @media only screen and (max-width: 995px) {
