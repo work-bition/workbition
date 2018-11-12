@@ -12,7 +12,7 @@
 
   /** the message that needs to be passed when there's no search result returned **/
 
-  $.fn.search.settings.error.noResults = '抱歉～我们没找到任何能够匹配此搜索结果的课程。';
+  $.fn.search.settings.error.noResults = '抱歉～您的搜索没匹配到任何结果。';
   /** the html code generated when there's no search result returned **/
 
   $.fn.search.settings.templates.message = function (message, type) {
@@ -22,7 +22,7 @@
       html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
 
       if (type == 'empty') {
-        html += '' + '<div class="header">矮油！没找到课程>_< </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的内容，根据反馈，我们可能在将来添加相关的课程。</div>';
+        html += '' + '<div class="header">没找到结果 </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来添加相关的内容。</div>';
       }
       /** other circumstances **/
       else {
