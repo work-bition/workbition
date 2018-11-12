@@ -212,6 +212,9 @@
   $(window).on('orientationchange', function (event) {
     /* making the sidebar invisible */
     $('.ui.sidebar .close_layer a').click();
+    /** making the results panel of the search box to be close **/
+
+    $('.ui.search').search('hide results');
   });
   /** toggling the display of the sidebar **/
 

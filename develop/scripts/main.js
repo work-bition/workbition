@@ -9,7 +9,6 @@
    /**
    * main search bar
    */
-
    /** the message that needs to be passed when there's no search result returned **/
    $.fn.search.settings.error.noResults = '抱歉～您的搜索没匹配到任何结果。'
 
@@ -275,6 +274,9 @@
 
      /* making the sidebar invisible */
      $('.ui.sidebar .close_layer a').click()
+
+     /** making the results panel of the search box to be close **/
+     $('.ui.search').search('hide results')
 
    })
 
