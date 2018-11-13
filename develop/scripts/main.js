@@ -260,8 +260,16 @@
    /** Resizing the height for iOS devices **/
    let resizeSidebarHeight = function(){
 
+     let u = navigator.userAgent
+
+     //iOS devices
+     let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+
+     //Android devices
+     let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1 
+
      /* resizing the height of the sidebar when the ios device is detected */
-     if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+     if ( isiOS || isAndroid ) {
 
        $('.ui.sidebar .content_wrapper').css('height', $(window).height())
 
