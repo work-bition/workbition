@@ -36,7 +36,7 @@
 
            + '<br />'
 
-           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来添加相关的内容。</div>'
+           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来增加相关的内容。</div>'
 
        }
 
