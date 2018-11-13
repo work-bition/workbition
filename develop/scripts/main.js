@@ -257,7 +257,7 @@
    * main sidebar
    */
 
-   /** Resizing the height for iOS devices **/
+   /** Resizing the height for iOS and Android devices **/
    let resizeSidebarHeight = function(){
 
      let u = navigator.userAgent
@@ -266,7 +266,7 @@
      let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
 
      //Android devices
-     let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1 
+     let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
 
      /* resizing the height of the sidebar when the ios device is detected */
      if ( isiOS || isAndroid ) {

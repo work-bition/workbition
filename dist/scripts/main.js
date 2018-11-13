@@ -198,7 +198,7 @@
   * main sidebar
   */
 
-  /** Resizing the height for iOS devices **/
+  /** Resizing the height for iOS and Android devices **/
 
   var resizeSidebarHeight = function resizeSidebarHeight() {
     var u = navigator.userAgent; //iOS devices
