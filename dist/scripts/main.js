@@ -87,6 +87,7 @@
   $('.ui.search').search({
     source: content,
     fullTextSearch: true,
+    transition: 'fade',
     onResultsOpen: function onResultsOpen() {
       $('#main_content .featured_carousel')[0].style.zIndex = -1;
     },

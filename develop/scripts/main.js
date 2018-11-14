@@ -91,6 +91,8 @@
 
        fullTextSearch: true,
 
+       transition: 'fade',
+
        onResultsOpen: () => {
 
          $('#main_content .featured_carousel')[0].style.zIndex = -1;
