@@ -1,14 +1,11 @@
 (function(){
 
-  'use strict'
+   'use strict'
 
    /**
-   * main navigation
+   * main navigation - search bar
    */
 
-   /**
-   * main search bar
-   */
    /** the message that needs to be passed when there's no search result returned **/
    $.fn.search.settings.error.noResults = '抱歉～您的搜索没匹配到任何结果。'
 
@@ -93,6 +90,18 @@
        source: content,
 
        fullTextSearch: true,
+
+       onResultsOpen: () => {
+
+         $('#main_content .featured_carousel')[0].style.zIndex = -1;
+
+       },
+
+       onResultsClose: () => {
+
+         $('#main_content .featured_carousel')[0].style.zIndex = 'auto';
+
+       },
 
        onSearchQuery: (query) => {
 
@@ -256,7 +265,7 @@
 
 
    /**
-   * main sidebar
+   * main navigation - sidebar
    */
 
    /** Resizing the height for iOS and Android devices **/

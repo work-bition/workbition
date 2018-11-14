@@ -3,11 +3,7 @@
 (function () {
   'use strict';
   /**
-  * main navigation
-  */
-
-  /**
-  * main search bar
+  * main navigation - search bar
   */
 
   /** the message that needs to be passed when there's no search result returned **/
@@ -91,6 +87,12 @@
   $('.ui.search').search({
     source: content,
     fullTextSearch: true,
+    onResultsOpen: function onResultsOpen() {
+      $('#main_content .featured_carousel')[0].style.zIndex = -1;
+    },
+    onResultsClose: function onResultsClose() {
+      $('#main_content .featured_carousel')[0].style.zIndex = 'auto';
+    },
     onSearchQuery: function onSearchQuery(query) {
       if ($.trim(query) === '') {
         $('.ui.search .results').addClass('hide_results');
@@ -196,7 +198,7 @@
     event.stopPropagation();
   });
   /**
-  * main sidebar
+  * main navigation - sidebar
   */
 
   /** Resizing the height for iOS and Android devices **/
