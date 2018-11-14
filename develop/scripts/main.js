@@ -93,6 +93,8 @@
 
        transition: 'fade',
 
+       maxResults: 10,
+
        onResultsOpen: () => {
 
          $('#main_content .featured_carousel')[0].style.zIndex = -1;
