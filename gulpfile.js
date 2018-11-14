@@ -55,7 +55,7 @@
       browserSync.init({
 
           server: {
-              baseDir: ["./dist/views", "./dist/styles", "./dist/scripts", "./dist/semantic-ui", "./node_modules"]
+              baseDir: ["./dist/views", "./dist/styles", "./dist/scripts", "./dist/semantic-ui", "./node_modules", "./dist/images"]
           },
 
           files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"],

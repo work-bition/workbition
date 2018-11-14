@@ -38,15 +38,15 @@
 
 
   var content = [{
-    title: 'Andorra'
+    title: '还要啥男朋友？！白领自拍指南'
   }, {
-    title: 'United Arab Emirates'
+    title: '不学你就out啦！财务工作必须掌握的20个Excel函数'
   }, {
-    title: 'Afghanistan'
+    title: '1Password——密码管理的终极解决方案'
   }, {
-    title: 'Antigua'
+    title: '5分钟设计出Excel的花式图表'
   }, {
-    title: 'Anguilla'
+    title: '精通Word排版的艺术'
   }, {
     title: 'Albania'
   }, {
@@ -90,6 +90,7 @@
 
   $('.ui.search').search({
     source: content,
+    fullTextSearch: true,
     onSearchQuery: function onSearchQuery(query) {
       if ($.trim(query) === '') {
         $('.ui.search .results').addClass('hide_results');
@@ -253,5 +254,33 @@
         $('.ui.sidebar .close_layer a').click();
       }
     }
+  });
+  /**
+  * featured carousel
+  */
+
+  $(document).ready(function () {
+    $('.featured_carousel').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 2,
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      }, {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1
+        }
+      }]
+    });
   });
 })();

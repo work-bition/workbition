@@ -234,6 +234,12 @@ element in order to prevent the background layer from moving **/
   #main_nav {
     display: none; } }
 
-/** making the 'X' icon and eye icon invisi  for IE10+ and Edge browsers **/
+#main_content .featured_carousel {
+  margin-top: 3rem; }
+  #main_content .featured_carousel img {
+    width: 50rem;
+    height: auto; }
+
+/** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
   display: none; }

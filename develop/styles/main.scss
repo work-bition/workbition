@@ -1,7 +1,9 @@
 @import 'sidebar';
 @import 'navigation';
+@import 'featured_carousel';
 
-/** making the 'X' icon and eye icon invisi  for IE10+ and Edge browsers **/
+
+/** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear,::-ms-reveal{
 
   display:none;
