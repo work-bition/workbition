@@ -106,7 +106,23 @@
   /** when clicking on the search icon, make the search box visible **/
 
   $('#header .right.menu .ui.search.item i.search.icon').click(function (event) {
+    /** if Android devices are detected, making the close icon a little bit larger **/
+
+    /** the reason why doing this is because the small close icon on Android devices is very hard to click **/
+    var u = navigator.userAgent; //Android devices
+
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+
+    if (isAndroid) {
+      /** the 'large' class can make the icon become large **/
+      $('#header .right.menu .ui.search .close.icon').addClass('large');
+      /** making the close icon in the correct position after adjusting its size **/
+
+      $('#header .right.menu .ui.search .close.icon')[0].style.transform = 'translateY(-0.05rem)';
+    }
     /** making search box visible **/
+
+
     var search_input = $('#header .right.menu input.prompt')[0];
     search_input.style.visibility = 'visible';
     /** making search input get foucs **/
