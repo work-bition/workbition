@@ -264,6 +264,8 @@
       centerMode: true,
       centerPadding: '60px',
       slidesToShow: 2,
+      autoplay: true,
+      autoplaySpeed: 1000,
       responsive: [{
         breakpoint: 768,
         settings: {

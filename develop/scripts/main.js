@@ -363,6 +363,10 @@
 
         slidesToShow: 2,
 
+        autoplay: true,
+
+        autoplaySpeed: 1000,
+
         responsive: [
 
           {
