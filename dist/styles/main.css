@@ -54,6 +54,7 @@ element in order to prevent the background layer from moving **/
           .ui.sidebar .content_wrapper .menu ul li:first-child {
             padding-top: 0; }
       .ui.sidebar .content_wrapper .menu .login_register_buttons {
+        transform: translateX(-0.15rem);
         margin-top: 2rem;
         margin-bottom: 1.5rem; }
         .ui.sidebar .content_wrapper .menu .login_register_buttons .login_button {
