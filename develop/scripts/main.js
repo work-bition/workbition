@@ -2,6 +2,17 @@
 
    'use strict'
 
+   /** detecting if it is iOS or Android devices **/
+   let u = navigator.userAgent
+
+   //iOS devices
+   let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
+
+   //Android devices
+   let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
+
+
+
    /**
    * main navigation - search bar
    */
@@ -254,6 +265,44 @@
 
    })
 
+   /** When the keyboard is close, resize the height of the sidebar for Android devices **/
+   $('#header .right.menu .ui.search.item .prompt').blur(function(){
+
+     if (isAndroid) {
+
+       /** delay the display of the sidebar after resizing the height of it **/
+       /** the reason why doing this is becasue only when the keyboard is close can you resize the height of the sidebar **/
+       setTimeout(" $('.ui.sidebar .content_wrapper').css('height', $(window).height())", 200)
+
+     }
+
+   })
+
+   /** when clicking the menu button, making the search bar invisible **/
+   $('#header .right.menu .menu_button .align.justify.icon').click((event) => {
+
+     /* making search input invisible */
+
+     let search_input = $('#header .right.menu input.prompt')[0]
+
+     search_input.style.visibility = 'hidden'
+
+     search_input.style.width = '0'
+
+     /* making close icon invisible */
+
+     let close_icon = $('#header .right.menu .ui.search .close.icon')[0]
+
+     close_icon.style.display = 'none'
+
+     /* adding 'link' class to search icon via jQuery */
+     $('#header .right.menu .ui.search.item i.search.icon').addClass('link')
+
+     /* removing class from search icon for negative margin */
+     $('#header .right.menu .ui.search.item i.search.icon').removeClass('negative_mg_lft')
+
+   })
+
    /** when clicking in the viewport, making the search input get focus **/
    $('body').click((event) => {
 
@@ -277,6 +326,9 @@
      /** making search input get foucs **/
      let search_input = $('#header .right.menu input.prompt')[0]
 
+     /** clear the input **/
+     $(search_input).val('')
+
      search_input.focus()
 
      /* stopping the propagation */
@@ -292,14 +344,6 @@
 
    /** Resizing the height for iOS and Android devices **/
    let resizeSidebarHeight = function(){
-
-     let u = navigator.userAgent
-
-     //iOS devices
-     let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/)
-
-     //Android devices
-     let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
 
      /* resizing the height of the sidebar when the ios device is detected */
      if ( isiOS || isAndroid ) {
