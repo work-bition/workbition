@@ -187,6 +187,9 @@ element in order to prevent the background layer from moving **/
     @media only screen and (max-width: 767px) {
       #header .header_content .right_wrap .right.menu .align.justify.link.icon {
         display: inline-block; } }
+  @media only screen and (min-width: 996px) {
+    #header .header_content .right_wrap {
+      margin-right: -1.75rem; } }
 
 @media only screen and (max-width: 767px) {
   #header .header_content {
