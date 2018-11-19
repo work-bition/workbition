@@ -243,9 +243,16 @@ element in order to prevent the background layer from moving **/
     display: none; } }
 
 #main_content .featured_carousel {
+  width: 70%;
   margin-top: 3rem; }
+  #main_content .featured_carousel .slick-arrow {
+    z-index: 2; }
+  #main_content .featured_carousel .slick-prev {
+    left: 2rem; }
+  #main_content .featured_carousel .slick-next {
+    right: 2rem; }
   #main_content .featured_carousel img {
-    width: 50rem;
+    width: 100%;
     height: auto; }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/

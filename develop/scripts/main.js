@@ -44,7 +44,7 @@
 
            + '<br />'
 
-           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来增加相关的内容。</div>'
+           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能会在将来增加相关的内容。</div>'
 
        }
 
@@ -427,53 +427,11 @@
 
       $('.featured_carousel').slick({
 
-        centerMode: true,
-
-        centerPadding: '60px',
-
-        slidesToShow: 2,
-
         autoplay: true,
 
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
 
-        responsive: [
-
-          {
-            breakpoint: 768,
-
-            settings: {
-
-              arrows: false,
-
-              centerMode: true,
-
-              centerPadding: '40px',
-
-              slidesToShow: 3
-
-            }
-
-          },
-
-          {
-
-            breakpoint: 480,
-
-            settings: {
-
-              arrows: false,
-
-              centerMode: true,
-
-              centerPadding: '40px',
-
-              slidesToShow: 1
-
-            }
-
-          }
-        ]
+        fade: true
 
       })
 

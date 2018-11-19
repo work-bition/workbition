@@ -25,7 +25,7 @@
       html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
 
       if (type == 'empty') {
-        html += '' + '<div class="header">没找到“<span style="color:#2a6ea8;font-style:italic;margin-left:0.1rem;margin-right:0.3rem;">' + $('.ui.search').search('get value') + '</span>”的搜索结果</div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来增加相关的内容。</div>';
+        html += '' + '<div class="header">没找到“<span style="color:#2a6ea8;font-style:italic;margin-left:0.1rem;margin-right:0.3rem;">' + $('.ui.search').search('get value') + '</span>”的搜索结果</div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能会在将来增加相关的内容。</div>';
       }
       /** other circumstances **/
       else {
@@ -309,28 +309,9 @@
 
   $(document).ready(function () {
     $('.featured_carousel').slick({
-      centerMode: true,
-      centerPadding: '60px',
-      slidesToShow: 2,
       autoplay: true,
-      autoplaySpeed: 1000,
-      responsive: [{
-        breakpoint: 768,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1
-        }
-      }]
+      autoplaySpeed: 2000,
+      fade: true
     });
   });
 })();
