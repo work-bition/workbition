@@ -36,7 +36,7 @@
 
          html += ''
 
-           + '<div class="header">没找到结果 </div class="header">'
+           + '<div class="header">没找到“<span style="color:#2a6ea8;font-style:italic;margin-left:0.1rem;margin-right:0.3rem;">' + $('.ui.search').search('get value') + '</span>”的搜索结果</div class="header">'
 
            + '<br />'
 
@@ -108,13 +108,13 @@
 
        onResultsOpen: () => {
 
-         $('#main_content .featured_carousel')[0].style.zIndex = -1;
+         $('#main_content .featured_carousel')[0].style.zIndex = -1
 
        },
 
        onResultsClose: () => {
 
-         $('#main_content .featured_carousel')[0].style.zIndex = 'auto';
+         $('#main_content .featured_carousel')[0].style.zIndex = 'auto'
 
        },
 
@@ -143,11 +143,6 @@
 
      /** if Android devices are detected, making the close icon a little bit larger **/
      /** the reason why doing this is because the small close icon on Android devices is very hard to click **/
-
-     let u = navigator.userAgent
-
-     //Android devices
-     let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
 
      if (isAndroid) {
 

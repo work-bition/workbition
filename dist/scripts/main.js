@@ -25,7 +25,7 @@
       html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
 
       if (type == 'empty') {
-        html += '' + '<div class="header">没找到结果 </div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来增加相关的内容。</div>';
+        html += '' + '<div class="header">没找到“<span style="color:#2a6ea8;font-style:italic;margin-left:0.1rem;margin-right:0.3rem;">' + $('.ui.search').search('get value') + '</span>”的搜索结果</div class="header">' + '<br />' + '<div class="description">' + message + '</div class="description">' + '<br />' + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们可能在将来增加相关的内容。</div>';
       }
       /** other circumstances **/
       else {
@@ -117,10 +117,6 @@
     /** if Android devices are detected, making the close icon a little bit larger **/
 
     /** the reason why doing this is because the small close icon on Android devices is very hard to click **/
-    var u = navigator.userAgent; //Android devices
-
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
-
     if (isAndroid) {
       /** the 'large' class can make the icon become large **/
       $('#header .right.menu .ui.search .close.icon').addClass('large');
