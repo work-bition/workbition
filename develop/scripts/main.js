@@ -423,9 +423,9 @@
     * featured carousel
     */
 
-    $(document).ready(function(){
-
-      $('.featured_carousel').slick({
+    /** activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
+    /** when it initiates, not allowing the arrows to be shown **/
+    $('.featured_carousel').slick({
 
         autoplay: true,
 
@@ -441,20 +441,50 @@
 
       })
 
-      $('.featured_carousel').hover(() => {
+    /** when the mouse hovers the carousel area, make the previous and next arrows to be shown with animation effects **/
+    $('.featured_carousel').hover(
 
-          /* Stuff to do when the mouse hovers the element */
-            $('.featured_carousel').slick('slickSetOption', 'arrows', true, true)
+      /* Stuff to do when the mouse hovers the element */
+      () => {
+
+        $('.featured_carousel').slick('slickSetOption', 'arrows', true, true)
+
+        $('.featured_carousel .prev.button').css({
+
+          'transform': 'translate(0.4rem, -50%)'
+
+        })
+
+        $('.featured_carousel .next.button').css({
+
+          'transform': 'translate(-0.4rem, -50%)'
+
+        })
 
       },
 
+      /* Stuff to do when the mouse leaves the element */
       () => {
 
-        /* Stuff to do when the mouse leaves the element */
-        $('.featured_carousel').slick('slickSetOption', 'arrows', false, true)
+        $('.featured_carousel .prev.button').css({
 
-      })
+          'transform': 'translate(-0.4rem, -50%)',
 
-    })
+          'opacity': '0'
+
+        })
+
+        $('.featured_carousel .next.button').css({
+
+          'transform': 'translate(0.4rem, -50%)',
+
+          'opacity': '0'
+
+        })
+
+      }
+
+    )
+
 
 })()

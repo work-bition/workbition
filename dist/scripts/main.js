@@ -307,21 +307,40 @@
   * featured carousel
   */
 
-  $(document).ready(function () {
-    $('.featured_carousel').slick({
-      autoplay: true,
-      autoplaySpeed: 2000,
-      fade: true,
-      arrows: false,
-      prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
-      nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
+  /** activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
+
+  /** when it initiates, not allowing the arrows to be shown **/
+
+  $('.featured_carousel').slick({
+    autoplay: true,
+    autoplaySpeed: 2000,
+    fade: true,
+    arrows: false,
+    prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
+    nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
+  });
+  /** when the mouse hovers the carousel area, make the previous and next arrows to be shown with animation effects **/
+
+  $('.featured_carousel').hover(
+  /* Stuff to do when the mouse hovers the element */
+  function () {
+    $('.featured_carousel').slick('slickSetOption', 'arrows', true, true);
+    $('.featured_carousel .prev.button').css({
+      'transform': 'translate(0.4rem, -50%)'
     });
-    $('.featured_carousel').hover(function () {
-      /* Stuff to do when the mouse hovers the element */
-      $('.featured_carousel').slick('slickSetOption', 'arrows', true, true);
-    }, function () {
-      /* Stuff to do when the mouse leaves the element */
-      $('.featured_carousel').slick('slickSetOption', 'arrows', false, true);
+    $('.featured_carousel .next.button').css({
+      'transform': 'translate(-0.4rem, -50%)'
+    });
+  },
+  /* Stuff to do when the mouse leaves the element */
+  function () {
+    $('.featured_carousel .prev.button').css({
+      'transform': 'translate(-0.4rem, -50%)',
+      'opacity': '0'
+    });
+    $('.featured_carousel .next.button').css({
+      'transform': 'translate(0.4rem, -50%)',
+      'opacity': '0'
     });
   });
 })();

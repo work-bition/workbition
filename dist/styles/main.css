@@ -259,9 +259,9 @@ element in order to prevent the background layer from moving **/
     #main_content .featured_carousel .ui.button:hover {
       background-color: rgba(31, 45, 61, 0.23); }
   #main_content .featured_carousel .prev.button {
-    left: 1rem; }
+    left: 0.7rem; }
   #main_content .featured_carousel .next.button {
-    right: 1rem; }
+    right: 0.7rem; }
   #main_content .featured_carousel img {
     width: 100%;
     height: auto; }
