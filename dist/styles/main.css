@@ -243,6 +243,7 @@ element in order to prevent the background layer from moving **/
     display: none; } }
 
 #main_content .featured_carousel {
+  cursor: pointer;
   width: 70%;
   margin-top: 2.5rem; }
   #main_content .featured_carousel .ui.button {
