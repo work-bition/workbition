@@ -5,23 +5,47 @@
 
     width: 70%;
 
-    margin-top:3rem;
+    margin-top:2.5rem;
 
-    .slick-arrow {
+    .ui.button {
+
+      position: absolute;
+
+      top: 50%;
+
+      width: 40px;
+
+      height: 40px;
 
       z-index: 2;
 
+      transform: translateY(-50%);
+
+      background-color: rgba(31,45,61,.11);
+
+      color: #fff;
+
+      text-align: center;
+
+      transition: all .3s ease 0s;
+
+      &:hover {
+
+        background-color: rgba(31,45,61,.23);
+
+      }
+
     }
 
-    .slick-prev {
+    .prev.button {
 
-      left: 2rem;
+      left: 1rem;
 
     }
 
-    .slick-next {
+    .next.button {
 
-      right: 2rem;
+      right: 1rem;
 
     }
 

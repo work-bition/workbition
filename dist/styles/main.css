@@ -244,13 +244,24 @@ element in order to prevent the background layer from moving **/
 
 #main_content .featured_carousel {
   width: 70%;
-  margin-top: 3rem; }
-  #main_content .featured_carousel .slick-arrow {
-    z-index: 2; }
-  #main_content .featured_carousel .slick-prev {
-    left: 2rem; }
-  #main_content .featured_carousel .slick-next {
-    right: 2rem; }
+  margin-top: 2.5rem; }
+  #main_content .featured_carousel .ui.button {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    transform: translateY(-50%);
+    background-color: rgba(31, 45, 61, 0.11);
+    color: #fff;
+    text-align: center;
+    transition: all .3s ease 0s; }
+    #main_content .featured_carousel .ui.button:hover {
+      background-color: rgba(31, 45, 61, 0.23); }
+  #main_content .featured_carousel .prev.button {
+    left: 1rem; }
+  #main_content .featured_carousel .next.button {
+    right: 1rem; }
   #main_content .featured_carousel img {
     width: 100%;
     height: auto; }
