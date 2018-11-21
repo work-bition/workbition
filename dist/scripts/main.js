@@ -2,6 +2,8 @@
 
 (function () {
   'use strict';
+  /** Mobile Device Detection **/
+
   /** detecting if it is iOS or Android devices **/
 
   var u = navigator.userAgent; //iOS devices
@@ -307,32 +309,58 @@
   * featured carousel
   */
 
-  /** activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
+  /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
 
-  /** when it initiates, not allowing the arrows to be shown **/
+  /** When it initiates, not allowing the arrows to be shown **/
 
   $('.featured_carousel').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
-    arrows: false,
+    arrows: true,
+    dots: true,
     prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
     nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
   });
-  /** when the mouse hovers the carousel area, make the previous and next arrows to be shown with animation effects **/
+  /** When the mouse hovers on the left arrow, stop it from moving **/
 
-  $('.featured_carousel').hover(
-  /* Stuff to do when the mouse hovers the element */
-  function () {
-    $('.featured_carousel').slick('slickSetOption', 'arrows', true, true);
+  $('.featured_carousel .prev.button').on('mouseover', function (event) {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(0.4rem, -50%)'
+      'transform': 'translate(0.4rem, -50%)',
+      'opacity': '1'
     });
     $('.featured_carousel .next.button').css({
-      'transform': 'translate(-0.4rem, -50%)'
+      'transform': 'translate(-0.4rem, -50%)',
+      'opacity': '1'
+    });
+  });
+  /** When the mouse hovers on the right arrow, stop it from moving **/
+
+  $('.featured_carousel .next.button').on('mouseover', function (event) {
+    $('.featured_carousel .prev.button').css({
+      'transform': 'translate(0.4rem, -50%)',
+      'opacity': '1'
+    });
+    $('.featured_carousel .next.button').css({
+      'transform': 'translate(-0.4rem, -50%)',
+      'opacity': '1'
+    });
+  });
+  /** When the mouse hovers on the carousel area, making the left and right arrows showing out there with fade animation effects **/
+
+  $('.featured_carousel .slick-list').hover(
+  /** When the mouse enters into the carousel area, making the arrows fade in **/
+  function () {
+    $('.featured_carousel .prev.button').css({
+      'transform': 'translate(0.4rem, -50%)',
+      'opacity': '1'
+    });
+    $('.featured_carousel .next.button').css({
+      'transform': 'translate(-0.4rem, -50%)',
+      'opacity': '1'
     });
   },
-  /* Stuff to do when the mouse leaves the element */
+  /** When the mouse leaves the carousel area, making the arrows fade out **/
   function () {
     $('.featured_carousel .prev.button').css({
       'transform': 'translate(-0.4rem, -50%)',

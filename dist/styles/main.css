@@ -1,12 +1,3 @@
-/** When opening the sidebar, programmatically add this class to the background
-element in order to prevent the background layer from moving **/
-.fixed_layer {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  right: 0; }
-
 /** Sidebar Section **/
 .ui.sidebar {
   /** animation speed for the popup of the sidebar **/
@@ -77,6 +68,15 @@ element in order to prevent the background layer from moving **/
         color: #757575;
         letter-spacing: 0.4rem;
         text-indent: 0.4rem; }
+
+/** When opening the sidebar, programmatically add this class to the background
+element in order to prevent the background layer from moving **/
+.fixed_layer {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0; }
 
 /** Header Section **/
 #header .header_content {
@@ -247,6 +247,7 @@ element in order to prevent the background layer from moving **/
   width: 70%;
   margin-top: 2.5rem; }
   #main_content .featured_carousel .ui.button {
+    opacity: 0;
     position: absolute;
     top: 50%;
     width: 40px;
@@ -263,6 +264,8 @@ element in order to prevent the background layer from moving **/
     left: 0.7rem; }
   #main_content .featured_carousel .next.button {
     right: 0.7rem; }
+  #main_content .featured_carousel .slick-dots {
+    cursor: default; }
   #main_content .featured_carousel img {
     width: 100%;
     height: auto; }

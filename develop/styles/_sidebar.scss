@@ -1,21 +1,3 @@
-
-/** When opening the sidebar, programmatically add this class to the background
-element in order to prevent the background layer from moving **/
-.fixed_layer {
-
-  position: fixed;
-
-  width: 100%;
-
-  top: 0;
-
-  left: 0;
-
-  right: 0;
-
-}
-
-
 /** Sidebar Section **/
 .ui.sidebar {
 
@@ -184,5 +166,21 @@ element in order to prevent the background layer from moving **/
     }
 
   }
+
+}
+
+/** When opening the sidebar, programmatically add this class to the background
+element in order to prevent the background layer from moving **/
+.fixed_layer {
+
+  position: fixed;
+
+  width: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
 
 }

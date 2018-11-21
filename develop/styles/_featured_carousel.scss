@@ -1,4 +1,3 @@
-
 #main_content {
 
   .featured_carousel {
@@ -10,6 +9,8 @@
     margin-top:2.5rem;
 
     .ui.button {
+
+      opacity: 0;
 
       position: absolute;
 
@@ -51,6 +52,11 @@
 
     }
 
+    .slick-dots {
+
+      cursor: default;
+
+    }
 
     img {
 

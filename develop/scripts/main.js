@@ -2,6 +2,7 @@
 
    'use strict'
 
+   /** Mobile Device Detection **/
    /** detecting if it is iOS or Android devices **/
    let u = navigator.userAgent
 
@@ -423,8 +424,8 @@
     * featured carousel
     */
 
-    /** activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
-    /** when it initiates, not allowing the arrows to be shown **/
+    /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
+    /** When it initiates, not allowing the arrows to be shown **/
     $('.featured_carousel').slick({
 
         autoplay: true,
@@ -433,7 +434,9 @@
 
         fade: true,
 
-        arrows: false,
+        arrows: true,
+
+        dots: true,
 
         prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
 
@@ -441,29 +444,71 @@
 
       })
 
-    /** when the mouse hovers the carousel area, make the previous and next arrows to be shown with animation effects **/
-    $('.featured_carousel').hover(
+    /** When the mouse hovers on the left arrow, stop it from moving **/
+    $('.featured_carousel .prev.button').on('mouseover', function(event) {
 
-      /* Stuff to do when the mouse hovers the element */
+      $('.featured_carousel .prev.button').css({
+
+        'transform': 'translate(0.4rem, -50%)',
+
+        'opacity': '1'
+
+      })
+
+      $('.featured_carousel .next.button').css({
+
+        'transform': 'translate(-0.4rem, -50%)',
+
+        'opacity': '1'
+
+      })
+
+    })
+
+    /** When the mouse hovers on the right arrow, stop it from moving **/
+    $('.featured_carousel .next.button').on('mouseover', function(event) {
+
+      $('.featured_carousel .prev.button').css({
+
+        'transform': 'translate(0.4rem, -50%)',
+
+        'opacity': '1'
+
+      })
+
+      $('.featured_carousel .next.button').css({
+
+        'transform': 'translate(-0.4rem, -50%)',
+
+        'opacity': '1'
+
+      })
+
+    })
+
+    /** When the mouse hovers on the carousel area, making the left and right arrows showing out there with fade animation effects **/
+    $('.featured_carousel .slick-list').hover(
+
+      /** When the mouse enters into the carousel area, making the arrows fade in **/
       () => {
-
-        $('.featured_carousel').slick('slickSetOption', 'arrows', true, true)
 
         $('.featured_carousel .prev.button').css({
 
-          'transform': 'translate(0.4rem, -50%)'
+          'transform': 'translate(0.4rem, -50%)',
+          'opacity': '1'
 
         })
 
         $('.featured_carousel .next.button').css({
 
-          'transform': 'translate(-0.4rem, -50%)'
+          'transform': 'translate(-0.4rem, -50%)',
+          'opacity': '1'
 
         })
 
       },
 
-      /* Stuff to do when the mouse leaves the element */
+      /** When the mouse leaves the carousel area, making the arrows fade out **/
       () => {
 
         $('.featured_carousel .prev.button').css({
@@ -485,6 +530,5 @@
       }
 
     )
-
 
 })()
