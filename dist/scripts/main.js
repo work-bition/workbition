@@ -334,6 +334,20 @@
       'opacity': '1'
     });
   });
+  /** Fix the problem that the arrows doesn't fade out, **/
+
+  /** when the mouse moves out of the left border of the carousel very quickly **/
+
+  $('.featured_carousel .prev.button').on('mouseleave', function (event) {
+    $('.featured_carousel .prev.button').css({
+      'transform': 'translate(-0.4rem, -50%)',
+      'opacity': '0'
+    });
+    $('.featured_carousel .next.button').css({
+      'transform': 'translate(0.4rem, -50%)',
+      'opacity': '0'
+    });
+  });
   /** When the mouse hovers on the right arrow, stop it from moving **/
 
   $('.featured_carousel .next.button').on('mouseover', function (event) {
@@ -344,6 +358,20 @@
     $('.featured_carousel .next.button').css({
       'transform': 'translate(-0.4rem, -50%)',
       'opacity': '1'
+    });
+  });
+  /** Fix the problem that arrows doesn't fade out, **/
+
+  /** when the mouse moves out of the right border of the carousel very quickly **/
+
+  $('.featured_carousel .next.button').on('mouseleave', function (event) {
+    $('.featured_carousel .prev.button').css({
+      'transform': 'translate(-0.4rem, -50%)',
+      'opacity': '0'
+    });
+    $('.featured_carousel .next.button').css({
+      'transform': 'translate(0.4rem, -50%)',
+      'opacity': '0'
     });
   });
   /** When the mouse hovers on the carousel area, making the left and right arrows showing out there with fade animation effects **/
