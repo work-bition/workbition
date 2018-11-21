@@ -245,7 +245,7 @@ element in order to prevent the background layer from moving **/
 #main_content .featured_carousel {
   cursor: pointer;
   width: 70%;
-  margin-top: 2.5rem; }
+  margin-top: 3rem; }
   #main_content .featured_carousel .ui.button {
     opacity: 0;
     position: absolute;
