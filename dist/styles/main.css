@@ -267,27 +267,23 @@ element in order to prevent the background layer from moving **/
   #main_content .featured_carousel .slick-dots {
     cursor: default; }
     #main_content .featured_carousel .slick-dots li {
-      margin: 0 0.5rem; }
+      transition: 0.3s all ease-in-out 0s;
+      border: 0;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background-color: #2a6ea8;
+      border-radius: 10px;
+      margin: 0 1rem; }
       #main_content .featured_carousel .slick-dots li.slick-active {
-        width: auto;
-        height: auto; }
-        #main_content .featured_carousel .slick-dots li.slick-active button {
-          border: 0;
-          margin: 2px;
-          display: inline-block;
-          width: 30px;
-          height: 6px;
-          border-radius: 10px;
-          background-color: #ffea75;
-          opacity: 1; }
-      #main_content .featured_carousel .slick-dots li button {
         border: 0;
         margin: 2px;
         display: inline-block;
-        width: 6px;
-        height: 6px;
-        background-color: #2a6ea8;
-        border-radius: 10px; }
+        width: 25px;
+        height: 12px;
+        border-radius: 10px;
+        background-color: #ffea75;
+        opacity: 1; }
       #main_content .featured_carousel .slick-dots li button:before {
         content: ''; }
   #main_content .featured_carousel img {
