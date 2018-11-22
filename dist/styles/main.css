@@ -265,6 +265,7 @@ element in order to prevent the background layer from moving **/
   #main_content .featured_carousel .next.button {
     right: 0.7rem; }
   #main_content .featured_carousel .slick-dots {
+    bottom: -30px;
     cursor: default; }
     #main_content .featured_carousel .slick-dots li {
       transition: 0.3s all ease-in-out 0s;
