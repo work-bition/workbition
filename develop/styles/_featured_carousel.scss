@@ -56,6 +56,64 @@
 
       cursor: default;
 
+      li {
+
+        margin: 0 0.5rem;
+
+        &.slick-active {
+
+          width: auto;
+
+          height: auto;
+
+          button {
+
+            border: 0;
+
+            margin: 2px;
+
+            display: inline-block;
+
+            width: 30px;
+
+            height: 6px;
+
+            border-radius: 10px;
+
+            background-color: #ffea75;
+
+            opacity: 1;
+
+          }
+
+        }
+
+        button {
+
+          border: 0;
+
+          margin: 2px;
+
+          display: inline-block;
+
+          width: 6px;
+
+          height: 6px;
+
+          background-color: #2a6ea8;
+
+          border-radius: 10px;
+
+        }
+
+        button:before {
+
+          content: '';
+
+        }
+
+      }
+
     }
 
     img {
