@@ -442,7 +442,7 @@
 
         nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
 
-      })
+    })
 
     /** When the mouse hovers on the left arrow, stop it from moving **/
     $('.featured_carousel .prev.button').on('mouseover', function(event) {
