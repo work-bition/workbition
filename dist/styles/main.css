@@ -277,7 +277,7 @@ element in order to prevent the background layer from moving **/
       margin: 0 1rem; }
       #main_content .featured_carousel .slick-dots li.slick-active {
         border: 0;
-        margin: 2px;
+        margin: 0 2px;
         display: inline-block;
         width: 25px;
         height: 12px;
