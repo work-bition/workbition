@@ -288,6 +288,7 @@ element in order to prevent the background layer from moving **/
       #main_content .featured_carousel .slick-dots li button:before {
         content: ''; }
   #main_content .featured_carousel img {
+    visibility: hidden;
     width: 100%;
     height: auto; }
 

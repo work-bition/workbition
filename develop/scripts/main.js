@@ -3,6 +3,7 @@
    'use strict'
 
    /** Mobile Device Detection **/
+   
    /** detecting if it is iOS or Android devices **/
    let u = navigator.userAgent
 
@@ -423,6 +424,14 @@
     /**
     * featured carousel
     */
+
+    /** Solve the problem that the images after the first one show out there out of the carousel area **/
+    /** befre the slick component takes effect when you refresh the page in the Chrome browser **/
+    $(document).ready(function() {
+
+      $('.featured_carousel img').css('visibility', 'visible');
+
+    })
 
     /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
     /** When it initiates, not allowing the arrows to be shown **/
