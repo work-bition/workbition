@@ -49,8 +49,8 @@
 
    )
 
-   // browserSync创建静态服务器并监视文件变化
-   gulp.task('browser-sync', function() {
+  // browserSync创建静态服务器并监视文件变化
+  gulp.task('browser-sync', function() {
 
       browserSync.init({
 
@@ -72,5 +72,5 @@
 
    })
 
-   //监视入口指令
-   gulp.task('serve', ["browser-sync", "watch-ui"])
+  //监视入口指令
+  gulp.task('serve', ["browser-sync", "watch-ui"])
