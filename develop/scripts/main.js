@@ -2,8 +2,35 @@
 
    'use strict'
 
+   /** Clone Some Html Codes for Reducing the Page Size **/
+
+   /** Cloning the logo section into sidebar **/
+   $('#header .logo_section a.logo_link')
+
+      .clone()/** optional parameter: includeEvents **/
+
+      .appendTo('#main_sidebar section.sidebar_header')
+
+   /** Cloning the items of the main navigation into sidebar **/
+   $('#main_nav .left.menu a.item')
+
+      .clone()/** optional parameter: includeEvents **/
+
+      .appendTo('#main_sidebar section.ui.menu ul')
+
+      .wrap('<li></li>')
+
+   /** Cloning the register button into sidebar **/
+   $('#header .right.menu .register_button')
+
+      .clone()/** optional parameter: includeEvents **/
+
+      .appendTo('#main_sidebar .ui.menu .login_register_buttons')
+
+
+
    /** Mobile Device Detection **/
-   
+
    /** detecting if it is iOS or Android devices **/
    let u = navigator.userAgent
 
