@@ -170,6 +170,16 @@
 
           .results {
 
+            .result {
+
+              .title {
+
+                line-height: 2rem;
+
+              }
+
+            }
+
             .message.empty {
 
               .header {
@@ -183,6 +193,34 @@
                 font-size: 1.15rem;
 
                 text-align: center;
+
+                span {
+
+                  line-height: 2rem;
+
+                  color:#2a6ea8;
+
+                  font-style:italic;
+
+                  margin-left:0.1rem;
+
+                  margin-right:0.3rem;
+
+                }
+
+              }
+
+              .description {
+
+                line-height: 2rem;
+
+                a {
+
+                  color:#2a6ea8;
+
+                  font-weight:bold;
+
+                }
 
               }
 

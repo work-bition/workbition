@@ -65,15 +65,15 @@
 
          html += ''
 
-           + '<div class="header">没找到“<span style="color:#2a6ea8;font-style:italic;margin-left:0.1rem;margin-right:0.3rem;">' + $('.ui.search').search('get value') + '</span>”的搜索结果</div class="header">'
+           + '<div class="header">没找到“<span>' + $('.ui.search').search('get value') + '</span>”的搜索结果</div>'
 
            + '<br />'
 
-           + '<div class="description">' + message + '</div class="description">'
+           + '<div class="description">' + message + '</div>'
 
            + '<br />'
 
-           + '<div class="description"><a style="color:#2a6ea8;font-weight:bold;" href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们有可能在将来增加相关的内容。</div>'
+           + '<div class="description"><a href="http://www.pingwest.com">告诉我们</a>您感兴趣的话题，根据反馈，我们有可能在将来增加相关的内容。</div>'
 
        }
 

@@ -155,6 +155,8 @@ element in order to prevent the background layer from moving **/
             transform: translateY(0.1rem); }
           #header .header_content .right_wrap .right.menu .ui.search.item .close.icon {
             transform: translateY(-0.65rem); } }
+        #header .header_content .right_wrap .right.menu .ui.search.item .results .result .title {
+          line-height: 2rem; }
         #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .header {
           /** avoid words overflowing the header container **/
           overflow-wrap: break-word;
@@ -162,6 +164,17 @@ element in order to prevent the background layer from moving **/
           word-wrap: break-word;
           font-size: 1.15rem;
           text-align: center; }
+          #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .header span {
+            line-height: 2rem;
+            color: #2a6ea8;
+            font-style: italic;
+            margin-left: 0.1rem;
+            margin-right: 0.3rem; }
+        #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .description {
+          line-height: 2rem; }
+          #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .description a {
+            color: #2a6ea8;
+            font-weight: bold; }
         @media only screen and (min-width: 769px) {
           #header .header_content .right_wrap .right.menu .ui.search.item .results {
             width: 96%; } }
