@@ -134,9 +134,21 @@
 
     .corner_banner {
 
-      height: 50%;
+      cursor: pointer;
+
+      width: auto;
+
+      height: 33.33%;
 
       border: 1px solid red;
+
+      img {
+
+        width: 57%;
+
+        height: auto;
+
+      }
 
     }
 
