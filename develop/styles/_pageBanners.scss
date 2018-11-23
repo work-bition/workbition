@@ -140,13 +140,30 @@
 
       height: 33.33%;
 
-      border: 1px solid red;
 
-      img {
 
-        width: 57%;
+      .card_image {
+
+        float: left;
+
+        width: 28.9%;
 
         height: auto;
+
+        margin-right: 1rem;
+
+      }
+
+      .card_content{
+
+        padding: 1rem;
+
+        h6 {
+
+          margin: 0;
+
+        }
+
 
       }
 

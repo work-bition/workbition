@@ -166,7 +166,6 @@ element in order to prevent the background layer from moving **/
           font-size: 1.15rem;
           text-align: center; }
           #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .header span {
-            font-size: 1.3rem;
             color: #2a6ea8;
             font-style: italic;
             margin-left: 0.1rem;
@@ -316,11 +315,16 @@ element in order to prevent the background layer from moving **/
     #main_content .page_banners .corner_banners .corner_banner {
       cursor: pointer;
       width: auto;
-      height: 33.33%;
-      border: 1px solid red; }
-      #main_content .page_banners .corner_banners .corner_banner img {
-        width: 57%;
-        height: auto; }
+      height: 33.33%; }
+      #main_content .page_banners .corner_banners .corner_banner .card_image {
+        float: left;
+        width: 28.9%;
+        height: auto;
+        margin-right: 1rem; }
+      #main_content .page_banners .corner_banners .corner_banner .card_content {
+        padding: 1rem; }
+        #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
+          margin: 0; }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
