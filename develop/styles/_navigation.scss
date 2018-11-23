@@ -184,6 +184,8 @@
 
               .header {
 
+                line-height: 2rem;
+
                 /** avoid words overflowing the header container **/
                 overflow-wrap: break-word;
 
@@ -195,8 +197,6 @@
                 text-align: center;
 
                 span {
-
-                  line-height: 2rem;
 
                   color:#2a6ea8;
 

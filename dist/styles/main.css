@@ -158,6 +158,7 @@ element in order to prevent the background layer from moving **/
         #header .header_content .right_wrap .right.menu .ui.search.item .results .result .title {
           line-height: 2rem; }
         #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .header {
+          line-height: 2rem;
           /** avoid words overflowing the header container **/
           overflow-wrap: break-word;
           /** support for IE browsers **/
@@ -165,7 +166,6 @@ element in order to prevent the background layer from moving **/
           font-size: 1.15rem;
           text-align: center; }
           #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .header span {
-            line-height: 2rem;
             color: #2a6ea8;
             font-style: italic;
             margin-left: 0.1rem;
