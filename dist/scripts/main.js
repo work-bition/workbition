@@ -116,10 +116,12 @@
     transition: 'fade',
     maxResults: 10,
     onResultsOpen: function onResultsOpen() {
-      $('#main_content .featured_carousel')[0].style.zIndex = -1;
+      $('#main_content .page_banners .featured_carousel')[0].style.zIndex = -1;
+      $('#main_content .page_banners .corner_banners')[0].style.zIndex = -1;
     },
     onResultsClose: function onResultsClose() {
-      $('#main_content .featured_carousel')[0].style.zIndex = 'auto';
+      $('#main_content .page_banners .featured_carousel')[0].style.zIndex = 'auto';
+      $('#main_content .page_banners .corner_banners')[0].style.zIndex = 'auto';
     },
     onSearchQuery: function onSearchQuery(query) {
       if ($.trim(query) === '') {

@@ -137,13 +137,17 @@
 
        onResultsOpen: () => {
 
-         $('#main_content .featured_carousel')[0].style.zIndex = -1
+         $('#main_content .page_banners .featured_carousel')[0].style.zIndex = -1
+
+         $('#main_content .page_banners .corner_banners')[0].style.zIndex = -1
 
        },
 
        onResultsClose: () => {
 
-         $('#main_content .featured_carousel')[0].style.zIndex = 'auto'
+         $('#main_content .page_banners .featured_carousel')[0].style.zIndex = 'auto'
+
+         $('#main_content .page_banners .corner_banners')[0].style.zIndex = 'auto'
 
        },
 
