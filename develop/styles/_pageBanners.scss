@@ -1,6 +1,8 @@
-#main_content {
+#main_content .page_banners {
 
-  .featured_carousel {
+  position: relative;
+
+  .main_banner.featured_carousel {
 
     cursor: pointer;
 
@@ -113,6 +115,28 @@
       width: 100%;
 
       height: auto;
+
+    }
+
+  }
+
+  .corner_banners {
+
+    position: absolute;
+
+    width: 30%;
+
+    height: 100%;
+
+    top: 0;
+
+    right: 0;
+
+    .corner_banner {
+
+      height: 50%;
+
+      border: 1px solid red;
 
     }
 

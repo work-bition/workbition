@@ -255,55 +255,66 @@ element in order to prevent the background layer from moving **/
   #main_nav {
     display: none; } }
 
-#main_content .featured_carousel {
-  cursor: pointer;
-  width: 70%;
-  margin-top: 3rem; }
-  #main_content .featured_carousel .ui.button {
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    width: 40px;
-    height: 40px;
-    z-index: 2;
-    transform: translateY(-50%);
-    background-color: rgba(31, 45, 61, 0.11);
-    color: #fff;
-    text-align: center;
-    transition: all .3s ease 0s; }
-    #main_content .featured_carousel .ui.button:hover {
-      background-color: rgba(31, 45, 61, 0.23); }
-  #main_content .featured_carousel .prev.button {
-    left: 0.7rem; }
-  #main_content .featured_carousel .next.button {
-    right: 0.7rem; }
-  #main_content .featured_carousel .slick-dots {
-    bottom: -30px;
-    cursor: default; }
-    #main_content .featured_carousel .slick-dots li {
-      transition: 0.3s all ease-in-out 0s;
-      border: 0;
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      background-color: #2a6ea8;
-      border-radius: 10px;
-      margin: 0 0.8rem; }
-      #main_content .featured_carousel .slick-dots li.slick-active {
+#main_content .page_banners {
+  position: relative; }
+  #main_content .page_banners .main_banner.featured_carousel {
+    cursor: pointer;
+    width: 70%;
+    margin-top: 3rem; }
+    #main_content .page_banners .main_banner.featured_carousel .ui.button {
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      width: 40px;
+      height: 40px;
+      z-index: 2;
+      transform: translateY(-50%);
+      background-color: rgba(31, 45, 61, 0.11);
+      color: #fff;
+      text-align: center;
+      transition: all .3s ease 0s; }
+      #main_content .page_banners .main_banner.featured_carousel .ui.button:hover {
+        background-color: rgba(31, 45, 61, 0.23); }
+    #main_content .page_banners .main_banner.featured_carousel .prev.button {
+      left: 0.7rem; }
+    #main_content .page_banners .main_banner.featured_carousel .next.button {
+      right: 0.7rem; }
+    #main_content .page_banners .main_banner.featured_carousel .slick-dots {
+      bottom: -30px;
+      cursor: default; }
+      #main_content .page_banners .main_banner.featured_carousel .slick-dots li {
+        transition: 0.3s all ease-in-out 0s;
         border: 0;
-        margin: 0 2px;
         display: inline-block;
-        width: 25px;
+        width: 12px;
         height: 12px;
+        background-color: #2a6ea8;
         border-radius: 10px;
-        background-color: #ffea75;
-        opacity: 1; }
-      #main_content .featured_carousel .slick-dots li button:before {
-        content: ''; }
-  #main_content .featured_carousel img {
-    visibility: hidden;
-    width: 100%;
-    height: auto; }
+        margin: 0 0.8rem; }
+        #main_content .page_banners .main_banner.featured_carousel .slick-dots li.slick-active {
+          border: 0;
+          margin: 0 2px;
+          display: inline-block;
+          width: 25px;
+          height: 12px;
+          border-radius: 10px;
+          background-color: #ffea75;
+          opacity: 1; }
+        #main_content .page_banners .main_banner.featured_carousel .slick-dots li button:before {
+          content: ''; }
+    #main_content .page_banners .main_banner.featured_carousel img {
+      visibility: hidden;
+      width: 100%;
+      height: auto; }
+  #main_content .page_banners .corner_banners {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    top: 0;
+    right: 0; }
+    #main_content .page_banners .corner_banners .corner_banner {
+      height: 50%;
+      border: 1px solid red; }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
