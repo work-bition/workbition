@@ -2,6 +2,8 @@
 
    'use strict'
 
+
+
    /** Clone Some Html Codes for Reducing the Page Size **/
 
    /** Cloning the logo section into sidebar **/
@@ -45,6 +47,29 @@
    /**
    * main navigation - search bar
    */
+
+   /** When using Chinese input, do not show search results before Chinese characters are spell out **/
+
+   /** flag showing whether Chinese characters are spell out **/
+   let chineseInput_flag = true
+
+   /** This event indicates that the alphabetic characters used for spelling Chinese words has been typed, **/
+   /** but Chinese words are not generated **/
+   $('.prompt').on('compositionstart',function(){
+
+       /** the state of combining Chinese words is not finished **/
+       chineseInput_flag = false
+
+   })
+
+   /** This event indicates that the alphabetic characters used for spelling Chinese words has been typed, **/
+   /** and all the relative Chinese words are generated **/
+   $('.prompt').on('compositionend',function(){
+
+      /** the state of combining Chinese words is finished **/
+       chineseInput_flag = true
+
+   })
 
    /** the message that needs to be passed when there's no search result returned **/
    $.fn.search.settings.error.noResults = '抱歉～您的搜索没匹配到任何结果。'
@@ -161,9 +186,26 @@
 
          else {
 
-           $('.ui.search .results').removeClass('hide_results')
+           setTimeout(function(){
 
-           $('.ui.search').search('search local', $.trim(query))
+
+               /** if the state of combining Chinese words is not finished, do not show any search results **/
+               if(!chineseInput_flag){
+
+                 $('.ui.search .results').addClass('hide_results')
+
+               }
+
+               /** if the state of combining Chinese words is finished, showing the relative search results **/
+               else {
+
+                 $('.ui.search .results').removeClass('hide_results')
+
+                 $('.ui.search').search('search local', $.trim(query))
+
+               }
+
+           }, 0)
 
          }
 
