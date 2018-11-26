@@ -125,7 +125,7 @@
      { title: '1Password——密码管理的终极解决方案' },
      { title: '5分钟设计出Excel的花式图表' },
      { title: '精通Word排版的艺术' },
-     { title: 'Albania' },
+     { title: 'Word PowerPoint Excel基础教程' },
      { title: 'Armenia' },
      { title: 'Netherlands Antilles' },
      { title: 'Angola' },

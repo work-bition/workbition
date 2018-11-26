@@ -155,8 +155,11 @@ element in order to prevent the background layer from moving **/
             transform: translateY(0.1rem); }
           #header .header_content .right_wrap .right.menu .ui.search.item .close.icon {
             transform: translateY(-0.65rem); } }
-        #header .header_content .right_wrap .right.menu .ui.search.item .results .result .title {
-          line-height: 2rem; }
+        #header .header_content .right_wrap .right.menu .ui.search.item .results .result {
+          letter-spacing: 0.15rem;
+          word-spacing: 0.25rem; }
+          #header .header_content .right_wrap .right.menu .ui.search.item .results .result .title {
+            line-height: 2rem; }
         #header .header_content .right_wrap .right.menu .ui.search.item .results .message.empty .header {
           line-height: 2rem;
           /** avoid words overflowing the header container **/
