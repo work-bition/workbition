@@ -293,10 +293,10 @@ element in order to prevent the background layer from moving **/
         height: 12px;
         background-color: #2a6ea8;
         border-radius: 10px;
-        margin: 0 0.8rem; }
+        margin: 0.8 0.8rem; }
         #main_content .page_banners .main_banner.featured_carousel .slick-dots li.slick-active {
           border: 0;
-          margin: 0 2px;
+          margin: 0.8 0.8px;
           display: inline-block;
           width: 25px;
           height: 12px;
