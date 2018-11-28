@@ -134,6 +134,26 @@
 
     .corner_banner {
 
+/*       border: 1px solid black; */
+
+      padding-top: 1rem;
+
+      padding-bottom:1rem;
+
+      box-sizing: border-box;
+
+      margin-top: 0!important;
+
+      margin-bottom: 0!important;
+
+      height: 33.333%!important;
+
+      margin: 1rem;
+
+      margin-right: 0;
+
+
+
       cursor: pointer;
 
       width: auto;
@@ -146,9 +166,11 @@
 
         float: left;
 
-        width: 28.9%;
+        width: 22%;
 
         height: auto;
+
+        margin-left: 1rem;
 
         margin-right: 1rem;
 
@@ -156,16 +178,34 @@
 
       .card_content{
 
-        padding: 1rem;
-
         h6 {
 
           margin: 0;
+
+          font-size: 1.1rem;
+
+          line-height: 2rem;
+
+        }
+
+        p {
+
+          color: #000;
+
+          font-size: 1.1rem;
+
+          line-height: 1.8rem;
 
         }
 
 
       }
+
+    }
+
+    .corner_banner3 {
+
+      padding-top: 1rem;
 
     }
 

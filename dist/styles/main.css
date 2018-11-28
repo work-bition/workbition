@@ -316,18 +316,34 @@ element in order to prevent the background layer from moving **/
     top: 0;
     right: 0; }
     #main_content .page_banners .corner_banners .corner_banner {
+      /*       border: 1px solid black; */
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      box-sizing: border-box;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      height: 33.333% !important;
+      margin: 1rem;
+      margin-right: 0;
       cursor: pointer;
       width: auto;
       height: 33.33%; }
       #main_content .page_banners .corner_banners .corner_banner .card_image {
         float: left;
-        width: 28.9%;
+        width: 22%;
         height: auto;
+        margin-left: 1rem;
         margin-right: 1rem; }
-      #main_content .page_banners .corner_banners .corner_banner .card_content {
-        padding: 1rem; }
-        #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
-          margin: 0; }
+      #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
+        margin: 0;
+        font-size: 1.1rem;
+        line-height: 2rem; }
+      #main_content .page_banners .corner_banners .corner_banner .card_content p {
+        color: #000;
+        font-size: 1.1rem;
+        line-height: 1.8rem; }
+    #main_content .page_banners .corner_banners .corner_banner3 {
+      padding-top: 1rem; }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
