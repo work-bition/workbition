@@ -64,11 +64,13 @@
 
     .slick-dots {
 
-      bottom: -30px;
+      bottom: 1rem;
 
       cursor: default;
 
       li {
+
+        opacity: 0.8;
 
         transition: 0.3s all ease-in-out 0s;
 
@@ -204,7 +206,7 @@
 
           color: #000;
 
-          font-size: 1.1rem;
+          font-size: 0.9rem;
 
           line-height: 1.8rem;
 
