@@ -2,6 +2,8 @@
 
   position: relative;
 
+  box-shadow: 0 8px 24px 0 rgba(82,94,102,.15);
+
   .main_banner.featured_carousel {
 
     cursor: pointer;
@@ -45,6 +47,12 @@
     .prev.button {
 
       left: 0.7rem;
+
+    }
+
+    .slick-list {
+
+      padding: 0.6rem;
 
     }
 
@@ -134,8 +142,6 @@
 
     .corner_banner {
 
-/*       border: 1px solid black; */
-
       padding-top: 1rem;
 
       padding-bottom:1rem;
@@ -166,7 +172,7 @@
 
         float: left;
 
-        width: 22%;
+        width: 23.6%;
 
         height: auto;
 
@@ -191,6 +197,8 @@
         }
 
         p {
+
+          padding-right: 2rem;
 
           text-align: justify;
 

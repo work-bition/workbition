@@ -259,7 +259,8 @@ element in order to prevent the background layer from moving **/
     display: none; } }
 
 #main_content .page_banners {
-  position: relative; }
+  position: relative;
+  box-shadow: 0 8px 24px 0 rgba(82, 94, 102, 0.15); }
   #main_content .page_banners .main_banner.featured_carousel {
     cursor: pointer;
     width: 70%;
@@ -280,6 +281,8 @@ element in order to prevent the background layer from moving **/
         background-color: rgba(31, 45, 61, 0.23); }
     #main_content .page_banners .main_banner.featured_carousel .prev.button {
       left: 0.7rem; }
+    #main_content .page_banners .main_banner.featured_carousel .slick-list {
+      padding: 0.6rem; }
     #main_content .page_banners .main_banner.featured_carousel .next.button {
       right: 0.7rem; }
     #main_content .page_banners .main_banner.featured_carousel .slick-dots {
@@ -316,7 +319,6 @@ element in order to prevent the background layer from moving **/
     top: 0;
     right: 0; }
     #main_content .page_banners .corner_banners .corner_banner {
-      /*       border: 1px solid black; */
       padding-top: 1rem;
       padding-bottom: 1rem;
       box-sizing: border-box;
@@ -330,7 +332,7 @@ element in order to prevent the background layer from moving **/
       height: 33.33%; }
       #main_content .page_banners .corner_banners .corner_banner .card_image {
         float: left;
-        width: 22%;
+        width: 23.6%;
         height: auto;
         margin-left: 1rem;
         margin-right: 1rem; }
@@ -340,6 +342,7 @@ element in order to prevent the background layer from moving **/
         font-size: 1.1rem;
         line-height: 2rem; }
       #main_content .page_banners .corner_banners .corner_banner .card_content p {
+        padding-right: 2rem;
         text-align: justify;
         color: #000;
         font-size: 1.1rem;
