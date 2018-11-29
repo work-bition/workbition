@@ -504,19 +504,20 @@
 
       $('.featured_carousel img').css('visibility', 'visible');
 
+      $('#main_content .page_banners').css('box-shadow', '0 8px 24px 0 rgba(82,94,102,.15)');
+
+      $('#main_content .page_banners .corner_banners .corner_banner').css('visibility', 'visible');
+
     })
 
     /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
-    /** When it initiates, not allowing the arrows to be shown **/
     $('.featured_carousel').slick({
-
+    
         autoplay: true,
 
         autoplaySpeed: 2000,
 
         fade: true,
-
-        arrows: true,
 
         dots: true,
 

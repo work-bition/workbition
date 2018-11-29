@@ -260,7 +260,7 @@ element in order to prevent the background layer from moving **/
 
 #main_content .page_banners {
   position: relative;
-  box-shadow: 0 8px 24px 0 rgba(82, 94, 102, 0.15); }
+  box-shadow: none; }
   #main_content .page_banners .main_banner.featured_carousel {
     cursor: pointer;
     width: 70%;
@@ -320,17 +320,17 @@ element in order to prevent the background layer from moving **/
     top: 0;
     right: 0; }
     #main_content .page_banners .corner_banners .corner_banner {
+      visibility: hidden;
       padding-top: 1rem;
       padding-bottom: 1rem;
       box-sizing: border-box;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
-      height: 33.333% !important;
       margin: 1rem;
       margin-right: 0;
       cursor: pointer;
       width: auto;
-      height: 33.33%; }
+      height: 33.333%; }
       #main_content .page_banners .corner_banners .corner_banner .card_image {
         float: left;
         width: 23.6%;
