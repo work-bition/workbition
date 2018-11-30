@@ -371,7 +371,7 @@
   /** befre the slick component takes effect when you refresh the page in the Chrome browser **/
 
   $(document).ready(function () {
-    $('.featured_carousel img').css('visibility', 'visible');
+    $('.featured_carousel .image_holder').css('visibility', 'visible');
     $('#main_content .page_banners').css('box-shadow', '0 8px 24px 0 rgba(82,94,102,.15)');
     $('#main_content .page_banners .corner_banners .corner_banner').css('visibility', 'visible');
   });

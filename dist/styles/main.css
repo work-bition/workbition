@@ -258,6 +258,7 @@ element in order to prevent the background layer from moving **/
   #main_nav {
     display: none; } }
 
+/** Page Banners Section **/
 #main_content .page_banners {
   position: relative;
   box-shadow: none; }
@@ -313,10 +314,24 @@ element in order to prevent the background layer from moving **/
           opacity: 1; }
         #main_content .page_banners .main_banner.featured_carousel .slick-dots li button:before {
           content: ''; }
-    #main_content .page_banners .main_banner.featured_carousel img {
+    #main_content .page_banners .main_banner.featured_carousel .image_holder {
       visibility: hidden;
+      background-size: cover !important;
       width: 100%;
-      height: auto; }
+      height: auto;
+      padding-top: 41.865%; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner1 {
+        background: url(featured_carousel/item1.png) 50% 50% no-repeat; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner2 {
+        background: url(featured_carousel/item2.png) 50% 50% no-repeat; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner3 {
+        background: url(featured_carousel/item3.png) 50% 50% no-repeat; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner4 {
+        background: url(featured_carousel/item4.png) 50% 50% no-repeat; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner5 {
+        background: url(featured_carousel/item5.png) 50% 50% no-repeat; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner6 {
+        background: url(featured_carousel/item6.png) 50% 50% no-repeat; }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
