@@ -509,7 +509,7 @@
 
 
     /**
-    * featured carousel
+    * Page Banners - Main Banner(featured carousel)
     */
 
     /** Solve the problem that the images after the first one show out there out of the carousel area **/
@@ -622,6 +622,39 @@
           'transform': 'translate(0.4rem, -50%)',
 
           'opacity': '0'
+
+        })
+
+      }
+
+    )
+
+
+
+    /**
+    * Page Banners - Corner Banners
+    */
+
+    /** When hovering on the corner banner, chaging the shape of the image in it by using CSS commands **/
+    $('#main_content .corner_banners .corner_banner').hover(
+
+      /** When the mouse enters into the corner banner area, turning the shape of the image into cornered square from circle **/
+      (event) => {
+
+        $(event.currentTarget).find('img').css({
+
+          'border-radius': '15%'
+
+        })
+
+      },
+
+      /** When the mouse leave the corner banner area, turning the shape of the image into circle from cornered square **/
+      (event) => {
+
+        $(event.currentTarget).find('img').css({
+
+          'border-radius': '50%'
 
         })
 

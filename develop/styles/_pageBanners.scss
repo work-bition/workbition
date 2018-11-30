@@ -223,6 +223,10 @@
 
       .card_image {
 
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+
+        border-radius: 50%;
+
         float: left;
 
         width: 27.315%;
@@ -232,6 +236,8 @@
         margin-left: 1rem;
 
         margin-right: 1rem;
+
+        transition: all .2s cubic-bezier(0, 0, 0.2, 1) 0s;
 
       }
 
