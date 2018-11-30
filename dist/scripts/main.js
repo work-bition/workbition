@@ -389,7 +389,7 @@
 
   $('.featured_carousel .prev.button').on('mouseover', function (event) {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(0.4rem, -50%)',
+      'transform': 'translate(1.2rem, -50%)',
       'opacity': '1'
     });
     $('.featured_carousel .next.button').css({
@@ -403,7 +403,7 @@
 
   $('.featured_carousel .prev.button').on('mouseleave', function (event) {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(-0.4rem, -50%)',
+      'transform': 'translate(0.4rem, -50%)',
       'opacity': '0'
     });
     $('.featured_carousel .next.button').css({
@@ -415,7 +415,7 @@
 
   $('.featured_carousel .next.button').on('mouseover', function (event) {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(0.4rem, -50%)',
+      'transform': 'translate(1.2rem, -50%)',
       'opacity': '1'
     });
     $('.featured_carousel .next.button').css({
@@ -429,7 +429,7 @@
 
   $('.featured_carousel .next.button').on('mouseleave', function (event) {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(-0.4rem, -50%)',
+      'transform': 'translate(0.4rem, -50%)',
       'opacity': '0'
     });
     $('.featured_carousel .next.button').css({
@@ -443,7 +443,7 @@
   /** When the mouse enters into the carousel area, making the arrows fade in **/
   function () {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(0.4rem, -50%)',
+      'transform': 'translate(1.2rem, -50%)',
       'opacity': '1'
     });
     $('.featured_carousel .next.button').css({
@@ -454,7 +454,7 @@
   /** When the mouse leaves the carousel area, making the arrows fade out **/
   function () {
     $('.featured_carousel .prev.button').css({
-      'transform': 'translate(-0.4rem, -50%)',
+      'transform': 'translate(0.4rem, -50%)',
       'opacity': '0'
     });
     $('.featured_carousel .next.button').css({

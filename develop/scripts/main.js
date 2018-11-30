@@ -546,7 +546,7 @@
 
       $('.featured_carousel .prev.button').css({
 
-        'transform': 'translate(0.4rem, -50%)',
+        'transform': 'translate(1.2rem, -50%)',
 
         'opacity': '1'
 
@@ -568,7 +568,7 @@
 
       $('.featured_carousel .prev.button').css({
 
-        'transform': 'translate(-0.4rem, -50%)',
+        'transform': 'translate(0.4rem, -50%)',
 
         'opacity': '0'
 
@@ -589,7 +589,7 @@
 
       $('.featured_carousel .prev.button').css({
 
-        'transform': 'translate(0.4rem, -50%)',
+        'transform': 'translate(1.2rem, -50%)',
 
         'opacity': '1'
 
@@ -611,7 +611,7 @@
 
       $('.featured_carousel .prev.button').css({
 
-        'transform': 'translate(-0.4rem, -50%)',
+        'transform': 'translate(0.4rem, -50%)',
 
         'opacity': '0'
 
@@ -635,7 +635,7 @@
 
         $('.featured_carousel .prev.button').css({
 
-          'transform': 'translate(0.4rem, -50%)',
+          'transform': 'translate(1.2rem, -50%)',
           'opacity': '1'
 
         })
@@ -654,7 +654,7 @@
 
         $('.featured_carousel .prev.button').css({
 
-          'transform': 'translate(-0.4rem, -50%)',
+          'transform': 'translate(0.4rem, -50%)',
 
           'opacity': '0'
 
