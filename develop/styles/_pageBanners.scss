@@ -10,6 +10,8 @@
 
     width: 70%;
 
+    height: auto;
+
     margin-top: 3rem;
 
     .ui.button {
@@ -52,7 +54,13 @@
 
     .slick-list {
 
+      border: #f2f2f2 solid 1px;
+
+      border-right: none;
+
       padding: 0.6rem;
+
+      padding-right:0;
 
     }
 
@@ -70,7 +78,7 @@
 
       li {
 
-        opacity: 0.8;
+        opacity: 1;
 
         transition: 0.3s all ease-in-out 0s;
 
@@ -132,6 +140,14 @@
 
   .corner_banners {
 
+    padding-top: 1rem;
+
+    padding-bottom: 1rem;
+
+    border: #f2f2f2 solid 1px;
+
+    border-left: none;
+
     position: absolute;
 
     width: 30%;
@@ -146,17 +162,15 @@
 
       visibility: hidden;
 
-      padding-top: 1rem;
+      padding-top: 0.5rem;
 
-      padding-bottom:1rem;
+      padding-bottom: 0.5rem;
 
       box-sizing: border-box;
 
       margin-top: 0!important;
 
       margin-bottom: 0!important;
-
-      margin: 1rem;
 
       margin-right: 0;
 
@@ -170,9 +184,9 @@
 
         float: left;
 
-        width: 23.6%;
+        width: 27.315%;
 
-        height: auto;
+        height: 100%;
 
         margin-left: 1rem;
 
@@ -182,13 +196,21 @@
 
       .card_content{
 
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        height: 100%;
+
         h6 {
 
           text-align: justify;
 
           margin: 0;
 
-          font-size: 1.1rem;
+          font-size: 1rem;
 
           line-height: 2rem;
 
@@ -210,12 +232,6 @@
 
 
       }
-
-    }
-
-    .corner_banner3 {
-
-      padding-top: 1rem;
 
     }
 

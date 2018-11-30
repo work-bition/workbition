@@ -137,12 +137,12 @@
     transition: 'fade',
     maxResults: 10,
     onResultsOpen: function onResultsOpen() {
-      $('#main_content .page_banners .featured_carousel')[0].style.zIndex = -1;
-      $('#main_content .page_banners .corner_banners')[0].style.zIndex = -1;
+      $('#main_content .page_banners')[0].style.zIndex = -1;
+      $('#main_content .page_banners')[0].style.zIndex = -1;
     },
     onResultsClose: function onResultsClose() {
-      $('#main_content .page_banners .featured_carousel')[0].style.zIndex = 'auto';
-      $('#main_content .page_banners .corner_banners')[0].style.zIndex = 'auto';
+      $('#main_content .page_banners')[0].style.zIndex = 'auto';
+      $('#main_content .page_banners')[0].style.zIndex = 'auto';
     },
     onSearchQuery: function onSearchQuery(query) {
       if ($.trim(query) === '') {
@@ -267,6 +267,14 @@
 
     var close_icon = $('#header .right.menu .ui.search .close.icon')[0];
     close_icon.style.display = 'none';
+    /* making login and register buttons visible */
+
+    var login_button = $('#header .right.menu .login_button');
+    var divider = $('#header .right.menu .divider_item');
+    var register_button = $('#header .right.menu .register_button');
+    login_button[0].style.display = 'inline-block';
+    divider[0].style.display = 'inline-block';
+    register_button[0].style.display = 'inline-block';
     /* adding 'link' class to search icon via jQuery */
 
     $('#header .right.menu .ui.search.item i.search.icon').addClass('link');

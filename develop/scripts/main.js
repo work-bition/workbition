@@ -162,17 +162,17 @@
 
        onResultsOpen: () => {
 
-         $('#main_content .page_banners .featured_carousel')[0].style.zIndex = -1
+         $('#main_content .page_banners')[0].style.zIndex = -1
 
-         $('#main_content .page_banners .corner_banners')[0].style.zIndex = -1
+         $('#main_content .page_banners')[0].style.zIndex = -1
 
        },
 
        onResultsClose: () => {
 
-         $('#main_content .page_banners .featured_carousel')[0].style.zIndex = 'auto'
+         $('#main_content .page_banners')[0].style.zIndex = 'auto'
 
-         $('#main_content .page_banners .corner_banners')[0].style.zIndex = 'auto'
+         $('#main_content .page_banners')[0].style.zIndex = 'auto'
 
        },
 
@@ -365,6 +365,20 @@
 
      close_icon.style.display = 'none'
 
+     /* making login and register buttons visible */
+
+     let login_button = $('#header .right.menu .login_button')
+
+     let divider = $('#header .right.menu .divider_item')
+
+     let register_button = $('#header .right.menu .register_button')
+
+     login_button[0].style.display='inline-block'
+
+     divider[0].style.display='inline-block'
+
+     register_button[0].style.display='inline-block'
+
      /* adding 'link' class to search icon via jQuery */
      $('#header .right.menu .ui.search.item i.search.icon').addClass('link')
 
@@ -512,7 +526,7 @@
 
     /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
     $('.featured_carousel').slick({
-    
+
         autoplay: true,
 
         autoplaySpeed: 2000,

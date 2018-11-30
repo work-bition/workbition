@@ -264,6 +264,7 @@ element in order to prevent the background layer from moving **/
   #main_content .page_banners .main_banner.featured_carousel {
     cursor: pointer;
     width: 70%;
+    height: auto;
     margin-top: 3rem; }
     #main_content .page_banners .main_banner.featured_carousel .ui.button {
       opacity: 0;
@@ -282,14 +283,17 @@ element in order to prevent the background layer from moving **/
     #main_content .page_banners .main_banner.featured_carousel .prev.button {
       left: 0.7rem; }
     #main_content .page_banners .main_banner.featured_carousel .slick-list {
-      padding: 0.6rem; }
+      border: #f2f2f2 solid 1px;
+      border-right: none;
+      padding: 0.6rem;
+      padding-right: 0; }
     #main_content .page_banners .main_banner.featured_carousel .next.button {
       right: 0.7rem; }
     #main_content .page_banners .main_banner.featured_carousel .slick-dots {
       bottom: 1rem;
       cursor: default; }
       #main_content .page_banners .main_banner.featured_carousel .slick-dots li {
-        opacity: 0.8;
+        opacity: 1;
         transition: 0.3s all ease-in-out 0s;
         border: 0;
         display: inline-block;
@@ -314,6 +318,10 @@ element in order to prevent the background layer from moving **/
       width: 100%;
       height: auto; }
   #main_content .page_banners .corner_banners {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: #f2f2f2 solid 1px;
+    border-left: none;
     position: absolute;
     width: 30%;
     height: 100%;
@@ -321,35 +329,37 @@ element in order to prevent the background layer from moving **/
     right: 0; }
     #main_content .page_banners .corner_banners .corner_banner {
       visibility: hidden;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
       box-sizing: border-box;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
-      margin: 1rem;
       margin-right: 0;
       cursor: pointer;
       width: auto;
       height: 33.333%; }
       #main_content .page_banners .corner_banners .corner_banner .card_image {
         float: left;
-        width: 23.6%;
-        height: auto;
+        width: 27.315%;
+        height: 100%;
         margin-left: 1rem;
         margin-right: 1rem; }
-      #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
-        text-align: justify;
-        margin: 0;
-        font-size: 1.1rem;
-        line-height: 2rem; }
-      #main_content .page_banners .corner_banners .corner_banner .card_content p {
-        padding-right: 2rem;
-        text-align: justify;
-        color: #000;
-        font-size: 0.9rem;
-        line-height: 1.8rem; }
-    #main_content .page_banners .corner_banners .corner_banner3 {
-      padding-top: 1rem; }
+      #main_content .page_banners .corner_banners .corner_banner .card_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%; }
+        #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
+          text-align: justify;
+          margin: 0;
+          font-size: 1rem;
+          line-height: 2rem; }
+        #main_content .page_banners .corner_banners .corner_banner .card_content p {
+          padding-right: 2rem;
+          text-align: justify;
+          color: #000;
+          font-size: 0.9rem;
+          line-height: 1.8rem; }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
