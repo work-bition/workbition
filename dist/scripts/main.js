@@ -385,9 +385,9 @@
     prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
     nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
   });
-  /** When the mouse hovers on the left arrow, stop it from moving **/
+  /** When the mouse hovers on the navigation dots and left and right arrow, stop it from moving **/
 
-  $('.featured_carousel .prev.button').on('mouseover', function (event) {
+  $('.featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').on('mouseover', function (event) {
     $('.featured_carousel .prev.button').css({
       'transform': 'translate(1.2rem, -50%)',
       'opacity': '1'
@@ -399,35 +399,9 @@
   });
   /** Fix the problem that the arrows doesn't fade out, **/
 
-  /** when the mouse moves out of the left border of the carousel very quickly **/
+  /** when the mouse moves out of the navigation dots and the left border and the right border of the carousel very quickly **/
 
-  $('.featured_carousel .prev.button').on('mouseleave', function (event) {
-    $('.featured_carousel .prev.button').css({
-      'transform': 'translate(0.4rem, -50%)',
-      'opacity': '0'
-    });
-    $('.featured_carousel .next.button').css({
-      'transform': 'translate(0.4rem, -50%)',
-      'opacity': '0'
-    });
-  });
-  /** When the mouse hovers on the right arrow, stop it from moving **/
-
-  $('.featured_carousel .next.button').on('mouseover', function (event) {
-    $('.featured_carousel .prev.button').css({
-      'transform': 'translate(1.2rem, -50%)',
-      'opacity': '1'
-    });
-    $('.featured_carousel .next.button').css({
-      'transform': 'translate(-0.4rem, -50%)',
-      'opacity': '1'
-    });
-  });
-  /** Fix the problem that arrows doesn't fade out, **/
-
-  /** when the mouse moves out of the right border of the carousel very quickly **/
-
-  $('.featured_carousel .next.button').on('mouseleave', function (event) {
+  $('.featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').on('mouseleave', function (event) {
     $('.featured_carousel .prev.button').css({
       'transform': 'translate(0.4rem, -50%)',
       'opacity': '0'
