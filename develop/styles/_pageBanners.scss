@@ -221,23 +221,75 @@
 
       height: 33.333%;
 
-      .card_image {
+      &.corner_banner1 {
 
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+        .card_image{
 
-        border-radius: 50%;
+          &.banner1 {
 
-        float: left;
+            background: url(corner_banners/item1.png) 50% 50% no-repeat;
+
+          }
+
+        }
+
+      }
+
+      &.corner_banner2 {
+
+        .card_image{
+
+          &.banner2 {
+
+            background: url(corner_banners/item2.jpg) 50% 50% no-repeat;
+
+          }
+
+        }
+
+      }
+
+      &.corner_banner3 {
+
+        .card_image{
+
+          &.banner3 {
+
+            background: url(corner_banners/item3.png) 50% 50% no-repeat;
+
+          }
+
+        }
+
+      }
+
+      .image_holder{
 
         width: 27.315%;
 
-        height: 100%;
+        .card_image {
 
-        margin-left: 1rem;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 
-        margin-right: 1rem;
+          border-radius: 50%;
 
-        transition: all .2s cubic-bezier(0, 0, 0.2, 1) 0s;
+          float: left;
+
+          background-size: cover!important;
+
+          padding-top: 100%;
+
+          width: 100%;
+
+          height: auto;
+
+          margin-left: 1rem;
+
+          margin-right: 1rem;
+
+          transition: all .3s cubic-bezier(0, 0, 0.2, 1) 0s;
+
+        }
 
       }
 

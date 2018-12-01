@@ -445,13 +445,13 @@
   $('#main_content .corner_banners .corner_banner').hover(
   /** When the mouse enters into the corner banner area, turning the shape of the image into cornered square from circle **/
   function (event) {
-    $(event.currentTarget).find('img').css({
+    $(event.currentTarget).find('.card_image').css({
       'border-radius': '15%'
     });
   },
   /** When the mouse leave the corner banner area, turning the shape of the image into circle from cornered square **/
   function (event) {
-    $(event.currentTarget).find('img').css({
+    $(event.currentTarget).find('.card_image').css({
       'border-radius': '50%'
     });
   });

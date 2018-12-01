@@ -353,15 +353,25 @@ element in order to prevent the background layer from moving **/
       cursor: pointer;
       width: auto;
       height: 33.333%; }
-      #main_content .page_banners .corner_banners .corner_banner .card_image {
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
-        border-radius: 50%;
-        float: left;
-        width: 27.315%;
-        height: 100%;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        transition: all 0.2s cubic-bezier(0, 0, 0.2, 1) 0s; }
+      #main_content .page_banners .corner_banners .corner_banner.corner_banner1 .card_image.banner1 {
+        background: url(corner_banners/item1.png) 50% 50% no-repeat; }
+      #main_content .page_banners .corner_banners .corner_banner.corner_banner2 .card_image.banner2 {
+        background: url(corner_banners/item2.jpg) 50% 50% no-repeat; }
+      #main_content .page_banners .corner_banners .corner_banner.corner_banner3 .card_image.banner3 {
+        background: url(corner_banners/item3.png) 50% 50% no-repeat; }
+      #main_content .page_banners .corner_banners .corner_banner .image_holder {
+        width: 27.315%; }
+        #main_content .page_banners .corner_banners .corner_banner .image_holder .card_image {
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+          border-radius: 50%;
+          float: left;
+          background-size: cover !important;
+          padding-top: 100%;
+          width: 100%;
+          height: auto;
+          margin-left: 1rem;
+          margin-right: 1rem;
+          transition: all 0.3s cubic-bezier(0, 0, 0.2, 1) 0s; }
       #main_content .page_banners .corner_banners .corner_banner .card_content {
         display: flex;
         flex-direction: column;
