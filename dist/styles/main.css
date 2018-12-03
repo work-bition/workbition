@@ -346,6 +346,19 @@ element in order to prevent the background layer from moving **/
         width: 100%;
         transition: all .2s ease;
         background-color: rgba(0, 0, 0, 0.2); }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder .header {
+        width: 100%;
+        font-size: 32px;
+        line-height: 1.5;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 60px;
+        text-shadow: 1px 1px 10px #000;
+        text-align: center;
+        font-weight: bold; }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
