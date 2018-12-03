@@ -385,7 +385,11 @@
     prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
     nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
   });
+  /** Fix the problem that the arrows doesn't fade out, **/
+
   /** When the mouse hovers on the navigation dots and left and right arrow, stop it from moving **/
+
+  /** and make the color of the overlay on the slick slides lighter **/
 
   $('.featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').on('mouseover', function (event) {
     $('.featured_carousel .prev.button').css({
@@ -396,10 +400,15 @@
       'transform': 'translate(-0.4rem, -50%)',
       'opacity': '1'
     });
+    $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
+      'background-color': 'rgba(0,0,0,0.05)'
+    });
   });
   /** Fix the problem that the arrows doesn't fade out, **/
 
   /** when the mouse moves out of the navigation dots and the left border and the right border of the carousel very quickly **/
+
+  /** and make the color of the overlay on the slick slides darker **/
 
   $('.featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').on('mouseleave', function (event) {
     $('.featured_carousel .prev.button').css({
@@ -410,8 +419,13 @@
       'transform': 'translate(0.4rem, -50%)',
       'opacity': '0'
     });
+    $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
+      'background-color': 'rgba(0,0,0,0.2)'
+    });
   });
   /** When the mouse hovers on the carousel area, making the left and right arrows showing out there with fade animation effects **/
+
+  /** and make the color of the overlay on the slick slides change between lighter and darker **/
 
   $('.featured_carousel .slick-list').hover(
   /** When the mouse enters into the carousel area, making the arrows fade in **/
@@ -424,6 +438,9 @@
       'transform': 'translate(-0.4rem, -50%)',
       'opacity': '1'
     });
+    $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
+      'background-color': 'rgba(0,0,0,0.05)'
+    });
   },
   /** When the mouse leaves the carousel area, making the arrows fade out **/
   function () {
@@ -434,6 +451,9 @@
     $('.featured_carousel .next.button').css({
       'transform': 'translate(0.4rem, -50%)',
       'opacity': '0'
+    });
+    $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
+      'background-color': 'rgba(0,0,0,0.2)'
     });
   });
   /**

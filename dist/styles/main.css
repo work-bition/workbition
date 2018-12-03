@@ -266,7 +266,10 @@ element in order to prevent the background layer from moving **/
     cursor: pointer;
     width: 70%;
     height: auto;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    /** Eliminating the blue border when clicking on the slides **/ }
+    #main_content .page_banners .main_banner.featured_carousel .slick-slide, #main_content .page_banners .main_banner.featured_carousel .slick-slide * {
+      outline: none !important; }
     #main_content .page_banners .main_banner.featured_carousel .ui.button {
       opacity: 0;
       position: absolute;
@@ -291,7 +294,7 @@ element in order to prevent the background layer from moving **/
     #main_content .page_banners .main_banner.featured_carousel .next.button {
       right: 0.7rem; }
     #main_content .page_banners .main_banner.featured_carousel .slick-dots {
-      bottom: 1rem;
+      bottom: 1.5rem;
       cursor: default; }
       #main_content .page_banners .main_banner.featured_carousel .slick-dots li {
         opacity: 1;
@@ -315,10 +318,14 @@ element in order to prevent the background layer from moving **/
         #main_content .page_banners .main_banner.featured_carousel .slick-dots li button:before {
           content: ''; }
     #main_content .page_banners .main_banner.featured_carousel .image_holder {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      display: block;
       visibility: hidden;
       background-size: cover !important;
       width: 100%;
-      height: auto;
       padding-top: 41.865%; }
       #main_content .page_banners .main_banner.featured_carousel .image_holder.banner1 {
         background: url(featured_carousel/item1.png) 50% 50% no-repeat; }
@@ -332,6 +339,13 @@ element in order to prevent the background layer from moving **/
         background: url(featured_carousel/item5.png) 50% 50% no-repeat; }
       #main_content .page_banners .main_banner.featured_carousel .image_holder.banner6 {
         background: url(featured_carousel/item6.png) 50% 50% no-repeat; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        transition: all .2s ease;
+        background-color: rgba(0, 0, 0, 0.2); }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
