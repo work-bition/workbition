@@ -263,6 +263,7 @@ element in order to prevent the background layer from moving **/
   position: relative;
   box-shadow: none; }
   #main_content .page_banners .featured_label {
+    opacity: 0.85;
     top: 9px;
     left: 9px;
     border-radius: 0;
@@ -357,17 +358,22 @@ element in order to prevent the background layer from moving **/
         background-color: rgba(0, 0, 0, 0.2); }
       #main_content .page_banners .main_banner.featured_carousel .image_holder .header {
         width: 100%;
-        font-size: 32px;
+        font-size: 2.6rem;
         line-height: 1.5;
         color: #fff;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        padding: 0 60px;
+        padding: 0 80px;
         text-shadow: 1px 1px 10px #000;
         text-align: center;
         font-weight: bold; }
+  @media only screen and (max-width: 991px) {
+    #main_content .page_banners .main_banner.featured_carousel {
+      width: 65%; }
+      #main_content .page_banners .main_banner.featured_carousel .image_holder .header {
+        font-size: 1.7rem; } }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -408,6 +414,12 @@ element in order to prevent the background layer from moving **/
           margin-left: 1rem;
           margin-right: 1rem;
           transition: all 0.3s cubic-bezier(0, 0, 0.2, 1) 0s; }
+      @media only screen and (max-width: 1262px) {
+        #main_content .page_banners .corner_banners .corner_banner .image_holder {
+          width: 26%; } }
+      @media only screen and (max-width: 991px) {
+        #main_content .page_banners .corner_banners .corner_banner .image_holder {
+          width: 19%; } }
       #main_content .page_banners .corner_banners .corner_banner .card_content {
         display: flex;
         flex-direction: column;
@@ -416,14 +428,31 @@ element in order to prevent the background layer from moving **/
         #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
           text-align: justify;
           margin: 0;
-          font-size: 1rem;
+          font-size: 1.2rem;
           line-height: 2rem; }
         #main_content .page_banners .corner_banners .corner_banner .card_content p {
           padding-right: 2rem;
           text-align: justify;
           color: #000;
-          font-size: 0.9rem;
+          font-size: 1rem;
           line-height: 1.8rem; }
+        @media only screen and (max-width: 1262px) {
+          #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
+            font-size: 1.1rem;
+            line-height: 2rem; }
+          #main_content .page_banners .corner_banners .corner_banner .card_content p {
+            line-height: 1.4rem;
+            font-size: 1rem; } }
+        @media only screen and (max-width: 991px) {
+          #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
+            font-size: 13px;
+            line-height: 1.4rem; }
+          #main_content .page_banners .corner_banners .corner_banner .card_content p {
+            line-height: 1.2rem;
+            font-size: 10px; } }
+  @media only screen and (max-width: 991px) {
+    #main_content .page_banners .corner_banners {
+      width: 35%; } }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {

@@ -7,6 +7,8 @@
 
   .featured_label {
 
+    opacity: 0.85;
+
     top: 9px;
 
     left: 9px;
@@ -226,7 +228,7 @@
 
         width: 100%;
 
-        font-size: 32px;
+        font-size: 2.6rem;
 
         line-height: 1.5;
 
@@ -240,13 +242,28 @@
 
         transform: translate(-50%,-50%);
 
-        padding: 0 60px;
+        padding: 0 80px;
 
         text-shadow: 1px 1px 10px #000;
 
         text-align: center;
 
         font-weight: bold;
+
+      }
+
+    }
+
+  }
+  @media only screen and (max-width: 991px) {
+
+    .main_banner.featured_carousel {
+
+      width: 65%;
+
+      .image_holder .header {
+
+        font-size: 1.7rem;
 
       }
 
@@ -367,6 +384,24 @@
         }
 
       }
+      @media only screen and (max-width: 1262px) {
+
+        .image_holder {
+
+          width: 26%;
+
+        }
+
+      }
+      @media only screen and (max-width: 991px) {
+
+        .image_holder {
+
+          width: 19%;
+
+        }
+
+      }
 
       .card_content{
 
@@ -384,12 +419,12 @@
 
           margin: 0;
 
-          font-size: 1rem;
+          font-size: 1.2rem;
 
           line-height: 2rem;
 
         }
-
+        
         p {
 
           padding-right: 2rem;
@@ -398,13 +433,60 @@
 
           color: #000;
 
-          font-size: 0.9rem;
+          font-size: 1rem;
 
           line-height: 1.8rem;
 
         }
+        @media only screen and (max-width: 1262px) {
+
+          h6 {
+
+            font-size: 1.1rem;
+
+            line-height: 2rem;
+
+          }
+
+          p {
+
+            line-height: 1.4rem;
+
+            font-size: 1rem;
+
+          }
+
+        }
+        @media only screen and (max-width: 991px) {
+
+          h6 {
+
+            font-size: 13px;
+
+            line-height: 1.4rem;
+
+          }
+
+          p {
+
+            line-height: 1.2rem;
+
+            font-size: 10px;
+
+          }
+
+        }
 
       }
+
+    }
+
+  }
+  @media only screen and (max-width: 991px) {
+
+    .corner_banners {
+
+      width: 35%;
 
     }
 
