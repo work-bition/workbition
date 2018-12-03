@@ -5,6 +5,26 @@
 
   box-shadow: none;
 
+  .featured_label {
+
+    top: 9px;
+
+    left: 9px;
+
+    border-radius: 0;
+
+    box-shadow: rgba(82, 94, 102, 0.15) 0px 8px 24px 0px;
+
+    letter-spacing: 0.2rem;
+
+    z-index: 1;
+
+    font-size: 1rem;
+
+    background-color: #0097d1!important;
+
+  }
+
   .main_banner.featured_carousel {
 
     cursor: pointer;
