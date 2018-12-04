@@ -374,6 +374,15 @@ element in order to prevent the background layer from moving **/
       width: 65%; }
       #main_content .page_banners .main_banner.featured_carousel .image_holder .header {
         font-size: 1.7rem; } }
+  @media only screen and (max-width: 767px) {
+    #main_content .page_banners .main_banner.featured_carousel {
+      width: 100%; }
+      #main_content .page_banners .main_banner.featured_carousel .slick-list {
+        padding-right: 0.6rem;
+        border-right: #f2f2f2 solid 1px;
+        padding-bottom: 7rem; }
+      #main_content .page_banners .main_banner.featured_carousel .slick-dots {
+        bottom: 8rem; } }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -416,7 +425,7 @@ element in order to prevent the background layer from moving **/
           transition: all 0.3s cubic-bezier(0, 0, 0.2, 1) 0s; }
       @media only screen and (max-width: 1262px) {
         #main_content .page_banners .corner_banners .corner_banner .image_holder {
-          width: 26%; } }
+          width: 25.8%; } }
       @media only screen and (max-width: 991px) {
         #main_content .page_banners .corner_banners .corner_banner .image_holder {
           width: 19%; } }
@@ -438,11 +447,11 @@ element in order to prevent the background layer from moving **/
           line-height: 1.8rem; }
         @media only screen and (max-width: 1262px) {
           #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
-            font-size: 1.1rem;
+            font-size: 14px;
             line-height: 2rem; }
           #main_content .page_banners .corner_banners .corner_banner .card_content p {
             line-height: 1.4rem;
-            font-size: 1rem; } }
+            font-size: 12px; } }
         @media only screen and (max-width: 991px) {
           #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
             font-size: 13px;
@@ -450,9 +459,25 @@ element in order to prevent the background layer from moving **/
           #main_content .page_banners .corner_banners .corner_banner .card_content p {
             line-height: 1.1rem;
             font-size: 12px; } }
+        @media only screen and (max-width: 767px) {
+          #main_content .page_banners .corner_banners .corner_banner .card_content p {
+            padding-right: 0; } }
   @media only screen and (max-width: 991px) {
     #main_content .page_banners .corner_banners {
       width: 35%; } }
+  @media only screen and (max-width: 767px) {
+    #main_content .page_banners .corner_banners {
+      width: 100%;
+      height: auto;
+      float: left;
+      padding-right: 1rem;
+      top: auto;
+      bottom: 0%;
+      border: none; }
+      #main_content .page_banners .corner_banners .corner_banner {
+        width: 33.333%;
+        height: auto;
+        float: left; } }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {

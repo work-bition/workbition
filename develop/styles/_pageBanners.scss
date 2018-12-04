@@ -270,6 +270,31 @@
     }
 
   }
+  @media only screen and (max-width: 767px) {
+
+    .main_banner.featured_carousel {
+
+      width: 100%;
+
+      .slick-list {
+
+        padding-right: 0.6rem;
+
+        border-right: #f2f2f2 solid 1px;
+
+        padding-bottom: 7rem;
+
+      }
+
+      .slick-dots {
+
+        bottom: 8rem;
+
+      }
+
+    }
+
+  }
 
   .corner_banners {
 
@@ -388,7 +413,7 @@
 
         .image_holder {
 
-          width: 26%;
+          width: 25.8%;
 
         }
 
@@ -442,7 +467,7 @@
 
           h6 {
 
-            font-size: 1.1rem;
+            font-size: 14px;
 
             line-height: 2rem;
 
@@ -452,7 +477,7 @@
 
             line-height: 1.4rem;
 
-            font-size: 1rem;
+            font-size: 12px;
 
           }
 
@@ -477,6 +502,16 @@
 
         }
 
+        @media only screen and (max-width: 767px) {
+
+          p {
+
+            padding-right: 0;
+
+          }
+
+        }
+
       }
 
     }
@@ -487,6 +522,37 @@
     .corner_banners {
 
       width: 35%;
+
+    }
+
+  }
+  @media only screen and (max-width: 767px) {
+
+    .corner_banners {
+
+      width: 100%;
+
+      height: auto;
+
+      float: left;
+
+      padding-right: 1rem;
+
+      top: auto;
+
+      bottom: 0%;
+
+      border: none;
+
+      .corner_banner {
+
+        width: 33.333%;
+
+        height: auto;
+
+        float: left;
+
+      }
 
     }
 
