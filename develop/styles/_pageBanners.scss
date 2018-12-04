@@ -259,21 +259,6 @@
 
     .main_banner.featured_carousel {
 
-      width: 65%;
-
-      .image_holder .header {
-
-        font-size: 1.7rem;
-
-      }
-
-    }
-
-  }
-  @media only screen and (max-width: 767px) {
-
-    .main_banner.featured_carousel {
-
       width: 100%;
 
       .slick-list {
@@ -498,14 +483,6 @@
 
             font-size: 12px;
 
-          }
-
-        }
-
-        @media only screen and (max-width: 767px) {
-
-          p {
-
             padding-right: 0;
 
           }
@@ -518,15 +495,6 @@
 
   }
   @media only screen and (max-width: 991px) {
-
-    .corner_banners {
-
-      width: 35%;
-
-    }
-
-  }
-  @media only screen and (max-width: 767px) {
 
     .corner_banners {
 

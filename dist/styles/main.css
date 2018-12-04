@@ -371,11 +371,6 @@ element in order to prevent the background layer from moving **/
         font-weight: bold; }
   @media only screen and (max-width: 991px) {
     #main_content .page_banners .main_banner.featured_carousel {
-      width: 65%; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder .header {
-        font-size: 1.7rem; } }
-  @media only screen and (max-width: 767px) {
-    #main_content .page_banners .main_banner.featured_carousel {
       width: 100%; }
       #main_content .page_banners .main_banner.featured_carousel .slick-list {
         padding-right: 0.6rem;
@@ -458,14 +453,9 @@ element in order to prevent the background layer from moving **/
             line-height: 1.6rem; }
           #main_content .page_banners .corner_banners .corner_banner .card_content p {
             line-height: 1.1rem;
-            font-size: 12px; } }
-        @media only screen and (max-width: 767px) {
-          #main_content .page_banners .corner_banners .corner_banner .card_content p {
+            font-size: 12px;
             padding-right: 0; } }
   @media only screen and (max-width: 991px) {
-    #main_content .page_banners .corner_banners {
-      width: 35%; } }
-  @media only screen and (max-width: 767px) {
     #main_content .page_banners .corner_banners {
       width: 100%;
       height: auto;
