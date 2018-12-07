@@ -456,6 +456,7 @@ element in order to prevent the background layer from moving **/
           font-size: 1.2rem;
           line-height: 2rem; }
         #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
+          padding-top: 0.3rem;
           padding-right: 2rem;
           text-align: justify;
           color: #000;
@@ -464,12 +465,14 @@ element in order to prevent the background layer from moving **/
   @media only screen and (max-width: 1262px) {
     #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
       width: 25.8%; }
-    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
-      font-size: 14px;
-      line-height: 2rem; }
-    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
-      line-height: 1.4rem;
-      font-size: 12px; } }
+    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
+      transform: translateY(-0.15rem); }
+      #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
+        font-size: 14px;
+        line-height: 2rem; }
+      #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
+        line-height: 1.4rem;
+        font-size: 12px; } }
   @media only screen and (max-width: 991px) {
     #main_content .page_banners .corner_banners {
       display: flex;
@@ -489,8 +492,10 @@ element in order to prevent the background layer from moving **/
           display: flex;
           align-items: center; }
           #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
+            transform: translateY(0.1rem);
             flex-basis: 7rem; }
           #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
+            transform: none;
             margin-left: 2rem; }
             #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
               font-size: 13px;
@@ -508,6 +513,7 @@ element in order to prevent the background layer from moving **/
         justify-content: center;
         flex-direction: column; }
         #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
+          transform: none;
           margin-bottom: 0.8rem;
           flex-basis: auto;
           width: 45%; }
@@ -521,7 +527,6 @@ element in order to prevent the background layer from moving **/
             font-size: 12px;
             line-height: 1.8rem; }
           #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
-            padding-top: 0.3rem;
             text-align: center;
             line-height: 1.5rem;
             letter-spacing: 1px; } }

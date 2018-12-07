@@ -520,6 +520,8 @@ $navDotsFromBottom: 2rem;
 
           p {
 
+            padding-top: 0.3rem;
+
             padding-right: 2rem;
 
             text-align: justify;
@@ -554,6 +556,8 @@ $navDotsFromBottom: 2rem;
             }
 
           .card_content {
+
+            transform: translateY(-0.15rem);
 
             h6 {
 
@@ -618,11 +622,15 @@ $navDotsFromBottom: 2rem;
 
           .image_holder {
 
+            transform: translateY(0.1rem);
+
             flex-basis: 7rem;
 
           }
 
           .card_content {
+
+            transform: none;
 
             margin-left: 2rem;
 
@@ -673,6 +681,8 @@ $navDotsFromBottom: 2rem;
 
           .image_holder {
 
+            transform: none;
+
             margin-bottom: 0.8rem;
 
             flex-basis: auto;
@@ -704,8 +714,6 @@ $navDotsFromBottom: 2rem;
             }
 
             p {
-
-              padding-top: 0.3rem;
 
               text-align: center;
 
