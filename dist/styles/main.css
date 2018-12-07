@@ -516,7 +516,7 @@ element in order to prevent the background layer from moving **/
           margin-left: 0;
           align-items: center; }
           #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
-            font-size: 1rem;
+            font-size: 12px;
             line-height: 1.8rem; }
           #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
             padding-top: 0.3rem;
