@@ -124,7 +124,7 @@
      { title: '不学你就out啦！财务工作必须掌握的20个Excel函数' },
      { title: '1Password——密码管理的终极解决方案' },
      { title: '5分钟设计出Excel的花式图表' },
-     { title: '精通Word排版的艺术' },
+     { title: '精通Word排版艺术' },
      { title: 'Word PowerPoint Excel基础教程' },
      { title: 'Armenia' },
      { title: 'Netherlands Antilles' },

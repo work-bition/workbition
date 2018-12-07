@@ -89,7 +89,7 @@
   }, {
     title: '5分钟设计出Excel的花式图表'
   }, {
-    title: '精通Word排版的艺术'
+    title: '精通Word排版艺术'
   }, {
     title: 'Word PowerPoint Excel基础教程'
   }, {

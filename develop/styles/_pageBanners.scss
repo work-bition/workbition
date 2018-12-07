@@ -26,6 +26,15 @@
     background-color: #0097d1!important;
 
   }
+  @media only screen and (max-width: 579px) {
+
+    .featured_label {
+
+      font-size: 10px;
+
+    }
+
+  }
 
   .main_banner.featured_carousel {
 
@@ -98,13 +107,15 @@
 
     .slick-dots {
 
-      bottom: 1.5rem;
+      top: calc(100% - 0.6rem - 2rem);
+
+      bottom: auto;
 
       cursor: default;
 
       li {
 
-        opacity: 1;
+        opacity: 0.7;
 
         transition: 0.3s all ease-in-out 0s;
 
@@ -137,8 +148,6 @@
           border-radius: 10px;
 
           background-color: #ffea75;
-
-          opacity: 1;
 
         }
 
@@ -255,11 +264,38 @@
     }
 
   }
+  @media only screen and (max-width: 1262px) {
+
+    .main_banner.featured_carousel {
+
+      .slick-list {
+
+        .image_holder {
+
+          .header {
+
+            font-size: 2.2rem;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
   @media only screen and (max-width: 991px) {
 
     .main_banner.featured_carousel {
 
       width: 100%;
+
+      .ui.button {
+
+        top: calc(calc(100% - 7.2rem + 0.6rem) / 2);
+
+      }
 
       .slick-list {
 
@@ -267,13 +303,60 @@
 
         border-right: #f2f2f2 solid 1px;
 
-        padding-bottom: 7rem;
+        padding-bottom: 7.2rem;
+
+        .image_holder {
+
+          .header {
+
+            font-size: 1.8rem;
+
+          }
+
+        }
 
       }
 
       .slick-dots {
 
-        bottom: 8rem;
+        top: calc(100% - 7.2rem - 2rem);
+
+        bottom: auto;
+
+      }
+
+    }
+
+  }
+  @media only screen and (max-width: 579px) {
+
+    .main_banner.featured_carousel {
+
+      .ui.button {
+
+        top: calc(calc(100% - 14rem + 0.6rem) / 2);
+
+      }
+
+      .slick-list {
+
+        padding-bottom: 14rem;
+
+        .image_holder .header {
+
+          font-size: 1.2rem;
+
+          padding: 0 60px;
+
+        }
+
+      }
+
+      .slick-dots {
+
+        top: calc(100% - 14rem - 2rem);
+
+        bottom: auto;
 
       }
 
@@ -329,7 +412,8 @@
 
           &.banner1 {
 
-            background: url(corner_banners/item1.png) 50% 50% no-repeat;
+            /** Removing no-repeat option in order to solve the problem that the edge of the rounded picture is to be cut **/
+            background: url(corner_banners/item1.png) 50% 50%;
 
           }
 
@@ -343,7 +427,8 @@
 
           &.banner2 {
 
-            background: url(corner_banners/item2.jpg) 50% 50% no-repeat;
+            /** Removing no-repeat option in order to solve the problem that the edge of the rounded picture is to be cut **/
+            background: url(corner_banners/item2.jpg) 50% 50%;
 
           }
 
@@ -357,7 +442,8 @@
 
           &.banner3 {
 
-            background: url(corner_banners/item3.png) 50% 50% no-repeat;
+            /** Removing no-repeat option in order to solve the problem that the edge of the rounded picture is to be cut **/
+            background: url(corner_banners/item3.png) 50% 50%;
 
           }
 
@@ -365,94 +451,55 @@
 
       }
 
-      .image_holder{
+      .card_area {
 
-        width: 27.315%;
+        .image_holder{
 
-        .card_image {
+          width: 27.315%;
 
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
+          .card_image {
 
-          border-radius: 50%;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
 
-          float: left;
+            border-radius: 50%;
 
-          background-size: cover!important;
+            float: left;
 
-          padding-top: 100%;
+            background-size: cover!important;
 
-          width: 100%;
+            padding-top: 100%;
 
-          height: auto;
+            width: 100%;
 
-          margin-left: 1rem;
+            height: auto;
 
-          margin-right: 1rem;
+            margin-left: 1rem;
 
-          transition: all .3s cubic-bezier(0, 0, 0.2, 1) 0s;
+            margin-right: 1rem;
 
-        }
+            transition: all .3s cubic-bezier(0, 0, 0.2, 1) 0s;
 
-      }
-      @media only screen and (max-width: 1262px) {
-
-        .image_holder {
-
-          width: 25.8%;
+          }
 
         }
 
-      }
-      @media only screen and (max-width: 991px) {
+        .card_content{
 
-        .image_holder {
+          display: flex;
 
-          width: 19%;
+          flex-direction: column;
 
-        }
+          justify-content: center;
 
-      }
-
-      .card_content{
-
-        display: flex;
-
-        flex-direction: column;
-
-        justify-content: center;
-
-        height: 100%;
-
-        h6 {
-
-          text-align: justify;
-
-          margin: 0;
-
-          font-size: 1.2rem;
-
-          line-height: 2rem;
-
-        }
-
-        p {
-
-          padding-right: 2rem;
-
-          text-align: justify;
-
-          color: #000;
-
-          font-size: 1rem;
-
-          line-height: 1.8rem;
-
-        }
-        @media only screen and (max-width: 1262px) {
+          height: 100%;
 
           h6 {
 
-            font-size: 14px;
+            text-align: justify;
+
+            margin: 0;
+
+            font-size: 1.2rem;
 
             line-height: 2rem;
 
@@ -460,30 +507,56 @@
 
           p {
 
-            line-height: 1.4rem;
+            padding-right: 2rem;
 
-            font-size: 12px;
+            text-align: justify;
+
+            color: #000;
+
+            font-size: 1rem;
+
+            line-height: 1.8rem;
 
           }
 
         }
-        @media only screen and (max-width: 991px) {
 
-          h6 {
+      }
 
-            font-size: 13px;
+    }
 
-            line-height: 1.6rem;
+  }
+  @media only screen and (max-width: 1262px) {
 
-          }
+    .corner_banners {
 
-          p {
+      .corner_banner {
 
-            line-height: 1.1rem;
+        .card_area {
 
-            font-size: 12px;
+            .image_holder {
 
-            padding-right: 0;
+              width: 25.8%;
+
+            }
+
+          .card_content {
+
+            h6 {
+
+              font-size: 14px;
+
+              line-height: 2rem;
+
+            }
+
+            p {
+
+              line-height: 1.4rem;
+
+              font-size: 12px;
+
+            }
 
           }
 
@@ -498,9 +571,13 @@
 
     .corner_banners {
 
+      display: flex;
+
+      align-items: center;
+
       width: 100%;
 
-      height: auto;
+      height: 7.3rem;
 
       float: left;
 
@@ -519,6 +596,116 @@
         height: auto;
 
         float: left;
+
+        .card_area {
+
+          display: flex;
+
+          align-items: center;
+
+          .image_holder {
+
+            flex-basis: 7rem;
+
+          }
+
+          .card_content {
+
+            margin-left: 2rem;
+
+            h6 {
+
+              font-size: 13px;
+
+              line-height: 1.6rem;
+
+            }
+
+            p {
+
+              line-height: 1.1rem;
+
+              font-size: 12px;
+
+              padding-right: 0;
+
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+  @media only screen and (max-width: 579px) {
+
+    .corner_banners {
+
+      padding-left: 1rem;
+
+      height: 14rem;
+
+      justify-content: center;
+
+      .corner_banner{
+
+        .card_area {
+
+          justify-content: center;
+
+          flex-direction: column;
+
+          .image_holder {
+
+            margin-bottom: 0.8rem;
+
+            flex-basis: auto;
+
+            width: 45%;
+
+            .card_image {
+
+              margin-left: 0;
+
+            }
+
+          }
+
+          .card_content {
+
+            width: 80%;
+
+            margin-left: 0;
+
+            align-items: center;
+
+            h6 {
+
+              font-size: 1rem;
+
+              line-height: 1.8rem;
+
+            }
+
+            p {
+
+              padding-top: 0.3rem;
+
+              text-align: center;
+
+              line-height: 1.5rem;
+
+              letter-spacing: 1px;
+
+            }
+
+          }
+
+        }
+
 
       }
 

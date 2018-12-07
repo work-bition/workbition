@@ -248,7 +248,7 @@ element in order to prevent the background layer from moving **/
     @media only screen and (max-width: 1262px) {
       #main_nav .content .left.menu {
         width: 75%; } }
-    @media only screen and (max-width: 995px) {
+    @media only screen and (max-width: 991px) {
       #main_nav .content .left.menu {
         width: 100%; } }
     #main_nav .content .left.menu > a {
@@ -272,6 +272,9 @@ element in order to prevent the background layer from moving **/
     z-index: 1;
     font-size: 1rem;
     background-color: #0097d1 !important; }
+  @media only screen and (max-width: 579px) {
+    #main_content .page_banners .featured_label {
+      font-size: 10px; } }
   #main_content .page_banners .main_banner.featured_carousel {
     cursor: pointer;
     width: 70%;
@@ -304,10 +307,11 @@ element in order to prevent the background layer from moving **/
     #main_content .page_banners .main_banner.featured_carousel .next.button {
       right: 0.7rem; }
     #main_content .page_banners .main_banner.featured_carousel .slick-dots {
-      bottom: 1.5rem;
+      top: calc(100% - 0.6rem - 2rem);
+      bottom: auto;
       cursor: default; }
       #main_content .page_banners .main_banner.featured_carousel .slick-dots li {
-        opacity: 1;
+        opacity: 0.7;
         transition: 0.3s all ease-in-out 0s;
         border: 0;
         display: inline-block;
@@ -323,8 +327,7 @@ element in order to prevent the background layer from moving **/
           width: 25px;
           height: 12px;
           border-radius: 10px;
-          background-color: #ffea75;
-          opacity: 1; }
+          background-color: #ffea75; }
         #main_content .page_banners .main_banner.featured_carousel .slick-dots li button:before {
           content: ''; }
     #main_content .page_banners .main_banner.featured_carousel .image_holder {
@@ -369,15 +372,34 @@ element in order to prevent the background layer from moving **/
         text-shadow: 1px 1px 10px #000;
         text-align: center;
         font-weight: bold; }
+  @media only screen and (max-width: 1262px) {
+    #main_content .page_banners .main_banner.featured_carousel .slick-list .image_holder .header {
+      font-size: 2.2rem; } }
   @media only screen and (max-width: 991px) {
     #main_content .page_banners .main_banner.featured_carousel {
       width: 100%; }
+      #main_content .page_banners .main_banner.featured_carousel .ui.button {
+        top: calc(calc(100% - 7.2rem + 0.6rem) / 2); }
       #main_content .page_banners .main_banner.featured_carousel .slick-list {
         padding-right: 0.6rem;
         border-right: #f2f2f2 solid 1px;
-        padding-bottom: 7rem; }
+        padding-bottom: 7.2rem; }
+        #main_content .page_banners .main_banner.featured_carousel .slick-list .image_holder .header {
+          font-size: 1.8rem; }
       #main_content .page_banners .main_banner.featured_carousel .slick-dots {
-        bottom: 8rem; } }
+        top: calc(100% - 7.2rem - 2rem);
+        bottom: auto; } }
+  @media only screen and (max-width: 579px) {
+    #main_content .page_banners .main_banner.featured_carousel .ui.button {
+      top: calc(calc(100% - 14rem + 0.6rem) / 2); }
+    #main_content .page_banners .main_banner.featured_carousel .slick-list {
+      padding-bottom: 14rem; }
+      #main_content .page_banners .main_banner.featured_carousel .slick-list .image_holder .header {
+        font-size: 1.2rem;
+        padding: 0 60px; }
+    #main_content .page_banners .main_banner.featured_carousel .slick-dots {
+      top: calc(100% - 14rem - 2rem);
+      bottom: auto; } }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -400,14 +422,17 @@ element in order to prevent the background layer from moving **/
       width: auto;
       height: 33.333%; }
       #main_content .page_banners .corner_banners .corner_banner.corner_banner1 .card_image.banner1 {
-        background: url(corner_banners/item1.png) 50% 50% no-repeat; }
+        /** Removing no-repeat option in order to solve the problem that the edge of the rounded picture is to be cut **/
+        background: url(corner_banners/item1.png) 50% 50%; }
       #main_content .page_banners .corner_banners .corner_banner.corner_banner2 .card_image.banner2 {
-        background: url(corner_banners/item2.jpg) 50% 50% no-repeat; }
+        /** Removing no-repeat option in order to solve the problem that the edge of the rounded picture is to be cut **/
+        background: url(corner_banners/item2.jpg) 50% 50%; }
       #main_content .page_banners .corner_banners .corner_banner.corner_banner3 .card_image.banner3 {
-        background: url(corner_banners/item3.png) 50% 50% no-repeat; }
-      #main_content .page_banners .corner_banners .corner_banner .image_holder {
+        /** Removing no-repeat option in order to solve the problem that the edge of the rounded picture is to be cut **/
+        background: url(corner_banners/item3.png) 50% 50%; }
+      #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
         width: 27.315%; }
-        #main_content .page_banners .corner_banners .corner_banner .image_holder .card_image {
+        #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder .card_image {
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13);
           border-radius: 50%;
           float: left;
@@ -418,47 +443,37 @@ element in order to prevent the background layer from moving **/
           margin-left: 1rem;
           margin-right: 1rem;
           transition: all 0.3s cubic-bezier(0, 0, 0.2, 1) 0s; }
-      @media only screen and (max-width: 1262px) {
-        #main_content .page_banners .corner_banners .corner_banner .image_holder {
-          width: 25.8%; } }
-      @media only screen and (max-width: 991px) {
-        #main_content .page_banners .corner_banners .corner_banner .image_holder {
-          width: 19%; } }
-      #main_content .page_banners .corner_banners .corner_banner .card_content {
+      #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 100%; }
-        #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
+        #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
           text-align: justify;
           margin: 0;
           font-size: 1.2rem;
           line-height: 2rem; }
-        #main_content .page_banners .corner_banners .corner_banner .card_content p {
+        #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
           padding-right: 2rem;
           text-align: justify;
           color: #000;
           font-size: 1rem;
           line-height: 1.8rem; }
-        @media only screen and (max-width: 1262px) {
-          #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
-            font-size: 14px;
-            line-height: 2rem; }
-          #main_content .page_banners .corner_banners .corner_banner .card_content p {
-            line-height: 1.4rem;
-            font-size: 12px; } }
-        @media only screen and (max-width: 991px) {
-          #main_content .page_banners .corner_banners .corner_banner .card_content h6 {
-            font-size: 13px;
-            line-height: 1.6rem; }
-          #main_content .page_banners .corner_banners .corner_banner .card_content p {
-            line-height: 1.1rem;
-            font-size: 12px;
-            padding-right: 0; } }
+  @media only screen and (max-width: 1262px) {
+    #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
+      width: 25.8%; }
+    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
+      font-size: 14px;
+      line-height: 2rem; }
+    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
+      line-height: 1.4rem;
+      font-size: 12px; } }
   @media only screen and (max-width: 991px) {
     #main_content .page_banners .corner_banners {
+      display: flex;
+      align-items: center;
       width: 100%;
-      height: auto;
+      height: 7.3rem;
       float: left;
       padding-right: 1rem;
       top: auto;
@@ -467,7 +482,47 @@ element in order to prevent the background layer from moving **/
       #main_content .page_banners .corner_banners .corner_banner {
         width: 33.333%;
         height: auto;
-        float: left; } }
+        float: left; }
+        #main_content .page_banners .corner_banners .corner_banner .card_area {
+          display: flex;
+          align-items: center; }
+          #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
+            flex-basis: 7rem; }
+          #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
+            margin-left: 2rem; }
+            #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
+              font-size: 13px;
+              line-height: 1.6rem; }
+            #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
+              line-height: 1.1rem;
+              font-size: 12px;
+              padding-right: 0; } }
+  @media only screen and (max-width: 579px) {
+    #main_content .page_banners .corner_banners {
+      padding-left: 1rem;
+      height: 14rem;
+      justify-content: center; }
+      #main_content .page_banners .corner_banners .corner_banner .card_area {
+        justify-content: center;
+        flex-direction: column; }
+        #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
+          margin-bottom: 0.8rem;
+          flex-basis: auto;
+          width: 45%; }
+          #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder .card_image {
+            margin-left: 0; }
+        #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
+          width: 80%;
+          margin-left: 0;
+          align-items: center; }
+          #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
+            font-size: 1rem;
+            line-height: 1.8rem; }
+          #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
+            padding-top: 0.3rem;
+            text-align: center;
+            line-height: 1.5rem;
+            letter-spacing: 1px; } }
 
 /** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
