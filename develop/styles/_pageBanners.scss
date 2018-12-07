@@ -1,4 +1,15 @@
 /** Page Banners Section **/
+
+/**Responsive Points: 1262px | 991px(Pad) | 579px(Mobile) **/
+
+$mainBannerPadding-normal: 0.6rem;
+
+$mainBannerPaddingBottom-pad: 7.2rem;
+
+$mainBannerPaddingBottom-mobile: 14rem;
+
+$navDotsFromBottom: 2rem;
+
 #main_content .page_banners {
 
   position: relative;
@@ -93,7 +104,7 @@
 
       border-right: none;
 
-      padding: 0.6rem;
+      padding: $mainBannerPadding-normal;
 
       padding-right:0;
 
@@ -107,7 +118,7 @@
 
     .slick-dots {
 
-      top: calc(100% - 0.6rem - 2rem);
+      top: calc(100% - #{$mainBannerPadding-normal} - #{$navDotsFromBottom});
 
       bottom: auto;
 
@@ -293,17 +304,17 @@
 
       .ui.button {
 
-        top: calc(calc(100% - 7.2rem + 0.6rem) / 2);
+        top: calc(calc(100% - #{$mainBannerPaddingBottom-pad} + #{$mainBannerPadding-normal}) / 2);
 
       }
 
       .slick-list {
 
-        padding-right: 0.6rem;
+        padding-right: $mainBannerPadding-normal;
 
         border-right: #f2f2f2 solid 1px;
 
-        padding-bottom: 7.2rem;
+        padding-bottom: $mainBannerPaddingBottom-pad;
 
         .image_holder {
 
@@ -319,7 +330,7 @@
 
       .slick-dots {
 
-        top: calc(100% - 7.2rem - 2rem);
+        top: calc(100% - #{$mainBannerPaddingBottom-pad} - #{$navDotsFromBottom});
 
         bottom: auto;
 
@@ -334,13 +345,13 @@
 
       .ui.button {
 
-        top: calc(calc(100% - 14rem + 0.6rem) / 2);
+        top: calc(calc(100% - #{$mainBannerPaddingBottom-mobile} + #{$mainBannerPadding-normal}) / 2);
 
       }
 
       .slick-list {
 
-        padding-bottom: 14rem;
+        padding-bottom: $mainBannerPaddingBottom-mobile;
 
         .image_holder .header {
 
@@ -354,7 +365,7 @@
 
       .slick-dots {
 
-        top: calc(100% - 14rem - 2rem);
+        top: calc(100% - #{$mainBannerPaddingBottom-mobile} - #{$navDotsFromBottom});
 
         bottom: auto;
 
@@ -579,7 +590,7 @@
 
       width: 100%;
 
-      height: 7.3rem;
+      height: $mainBannerPaddingBottom-pad;
 
       float: left;
 
@@ -648,7 +659,7 @@
 
       padding-left: 1rem;
 
-      height: 14rem;
+      height: $mainBannerPaddingBottom-mobile;
 
       justify-content: center;
 
