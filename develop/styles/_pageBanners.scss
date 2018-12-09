@@ -2,6 +2,8 @@
 
 /**Responsive Points: 1262px | 991px(Pad) | 579px(Mobile) **/
 
+$pageBannersBorder: #f2f2f2 solid 1px;
+
 $mainBannerPadding-normal: 0.6rem;
 
 $mainBannerPaddingBottom-pad: 7.2rem;
@@ -20,9 +22,9 @@ $navDotsFromBottom: 2rem;
 
     opacity: 0.85;
 
-    top: 9px;
+    top: calc(#{nth($pageBannersBorder,3)} + #{$mainBannerPadding-normal});
 
-    left: 9px;
+    left: calc(#{nth($pageBannersBorder,3)} + #{$mainBannerPadding-normal});
 
     border-radius: 0;
 
@@ -62,6 +64,8 @@ $navDotsFromBottom: 2rem;
 
     .ui.button {
 
+      margin-right: 0;
+
       opacity: 0;
 
       position: absolute;
@@ -94,13 +98,13 @@ $navDotsFromBottom: 2rem;
 
     .prev.button {
 
-      left: 0.7rem;
+      left: calc(#{$mainBannerPadding-normal} + #{nth($pageBannersBorder,3)});
 
     }
 
     .slick-list {
 
-      border: #f2f2f2 solid 1px;
+      border: $pageBannersBorder;
 
       border-right: none;
 
@@ -112,13 +116,13 @@ $navDotsFromBottom: 2rem;
 
     .next.button {
 
-      right: 0.7rem;
+      right: 0;
 
     }
 
     .slick-dots {
 
-      top: calc(100% - #{$mainBannerPadding-normal} - #{$navDotsFromBottom});
+      top: calc(100% - #{$mainBannerPadding-normal} - #{nth($pageBannersBorder,3)} - #{$navDotsFromBottom});
 
       bottom: auto;
 
@@ -304,7 +308,7 @@ $navDotsFromBottom: 2rem;
 
       .ui.button {
 
-        top: calc(calc(100% - #{$mainBannerPaddingBottom-pad} + #{$mainBannerPadding-normal}) / 2);
+        top: calc((100% - #{$mainBannerPaddingBottom-pad} + #{$mainBannerPadding-normal}) / 2);
 
       }
 
@@ -312,7 +316,7 @@ $navDotsFromBottom: 2rem;
 
         padding-right: $mainBannerPadding-normal;
 
-        border-right: #f2f2f2 solid 1px;
+        border-right: $pageBannersBorder;
 
         padding-bottom: $mainBannerPaddingBottom-pad;
 
@@ -328,9 +332,15 @@ $navDotsFromBottom: 2rem;
 
       }
 
+      .next.button {
+
+        right: calc(#{nth($pageBannersBorder,3)} + #{$mainBannerPadding-normal});
+
+      }
+
       .slick-dots {
 
-        top: calc(100% - #{$mainBannerPaddingBottom-pad} - #{$navDotsFromBottom});
+        top: calc(100% - #{$mainBannerPaddingBottom-pad} - #{nth($pageBannersBorder,3)} - #{$navDotsFromBottom});
 
         bottom: auto;
 
@@ -345,7 +355,7 @@ $navDotsFromBottom: 2rem;
 
       .ui.button {
 
-        top: calc(calc(100% - #{$mainBannerPaddingBottom-mobile} + #{$mainBannerPadding-normal}) / 2);
+        top: calc((100% - #{$mainBannerPaddingBottom-mobile} + #{$mainBannerPadding-normal}) / 2);
 
       }
 
@@ -365,7 +375,7 @@ $navDotsFromBottom: 2rem;
 
       .slick-dots {
 
-        top: calc(100% - #{$mainBannerPaddingBottom-mobile} - #{$navDotsFromBottom});
+        top: calc(100% - #{$mainBannerPaddingBottom-mobile} - #{nth($pageBannersBorder,3)} - #{$navDotsFromBottom});
 
         bottom: auto;
 
@@ -381,7 +391,7 @@ $navDotsFromBottom: 2rem;
 
     padding-bottom: 1rem;
 
-    border: #f2f2f2 solid 1px;
+    border: $pageBannersBorder;
 
     border-left: none;
 
@@ -594,7 +604,11 @@ $navDotsFromBottom: 2rem;
 
       width: 100%;
 
-      height: $mainBannerPaddingBottom-pad;
+      border-top: none!important;
+
+      border: #{nth($pageBannersBorder,3)} solid transparent;
+
+      height: calc(#{$mainBannerPaddingBottom-pad} + #{nth($pageBannersBorder,3)});
 
       float: left;
 
@@ -603,8 +617,6 @@ $navDotsFromBottom: 2rem;
       top: auto;
 
       bottom: 0%;
-
-      border: none;
 
       .corner_banner {
 
@@ -655,6 +667,16 @@ $navDotsFromBottom: 2rem;
           }
 
         }
+        /** Compatible for IE 11 browser **/
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+          .card_area {
+
+            display: block;
+
+          }
+
+        }
 
       }
 
@@ -667,7 +689,7 @@ $navDotsFromBottom: 2rem;
 
       padding-left: 1rem;
 
-      height: $mainBannerPaddingBottom-mobile;
+      height: calc(#{$mainBannerPaddingBottom-mobile} + #{nth($pageBannersBorder,3)});
 
       justify-content: center;
 

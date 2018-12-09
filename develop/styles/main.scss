@@ -3,7 +3,7 @@
 @import 'pageBanners';
 
 
-/** making the 'X' icon and eye icon invisible for IE10+ and Edge browsers **/
+/** making the 'X' icon and eye icon shown in the input invisible for IE10+ and Edge browsers **/
 ::-ms-clear,::-ms-reveal{
 
   display:none;
