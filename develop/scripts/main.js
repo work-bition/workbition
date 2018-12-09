@@ -55,7 +55,7 @@
 
    /** This event indicates that the alphabetic characters used for spelling Chinese words has been typed, **/
    /** but Chinese words are not generated **/
-   $('.prompt').on('compositionstart',function(){
+   $('#header .right.menu .ui.search input.prompt').on('compositionstart',function(){
 
        /** the state of combining Chinese words is not finished **/
        chineseInput_flag = false
@@ -64,7 +64,7 @@
 
    /** This event indicates that the alphabetic characters used for spelling Chinese words has been typed, **/
    /** and all the relative Chinese words are generated **/
-   $('.prompt').on('compositionend',function(){
+   $('#header .right.menu .ui.search input.prompt').on('compositionend',function(){
 
       /** the state of combining Chinese words is finished **/
        chineseInput_flag = true
@@ -90,7 +90,7 @@
 
          html += ''
 
-           + '<div class="header">没找到“<span>' + $('.ui.search').search('get value') + '</span>”的搜索结果</div>'
+           + '<div class="header">没找到“<span>' + $('#header .right.menu .ui.search').search('get value') + '</span>”的搜索结果</div>'
 
            + '<br />'
 
@@ -148,7 +148,7 @@
    ]
 
    /** activate the search feature **/
-   $('.ui.search')
+   $('#header .right.menu .ui.search')
 
      .search({
 
@@ -180,7 +180,7 @@
 
          if($.trim(query)==='') {
 
-           $('.ui.search .results').addClass('hide_results')
+           $('#header .right.menu .ui.search .results').addClass('hide_results')
 
          }
 
@@ -192,16 +192,16 @@
                /** if the state of combining Chinese words is not finished, do not show any search results **/
                if(!chineseInput_flag){
 
-                 $('.ui.search .results').addClass('hide_results')
+                 $('#header .right.menu .ui.search .results').addClass('hide_results')
 
                }
 
                /** if the state of combining Chinese words is finished, showing the relative search results **/
                else {
 
-                 $('.ui.search .results').removeClass('hide_results')
+                 $('#header .right.menu .ui.search .results').removeClass('hide_results')
 
-                 $('.ui.search').search('search local', $.trim(query))
+                 $('#header .right.menu .ui.search').search('search local', $.trim(query))
 
                }
 
@@ -214,7 +214,7 @@
      })
 
    /** when clicking on the search icon, make the search box visible **/
-   $('#header .right.menu .ui.search.item i.search.icon').click((event) => {
+   $('#header .right.menu .ui.search i.search.icon').click((event) => {
 
      /** if Android devices are detected, making the close icon a little bit larger **/
      /** the reason why doing this is because the small close icon on Android devices is very hard to click **/
@@ -231,7 +231,7 @@
 
      /** making search box visible **/
 
-     let search_input = $('#header .right.menu input.prompt')[0]
+     let search_input = $('#header .right.menu .ui.search input.prompt')[0]
 
      search_input.style.visibility = 'visible'
 
@@ -259,7 +259,7 @@
 
      /** making the close icon visible **/
 
-     $('#header .right.menu .ui.search.item i.close.icon')[0].style.display = 'inline-block'
+     $('#header .right.menu .ui.search i.close.icon')[0].style.display = 'inline-block'
 
      /** adding class to search icon for negative margin **/
 
@@ -274,15 +274,15 @@
    })
 
    /** when click on the close icon, closing the search results panels in two steps **/
-   $('#header .right.menu .ui.search.item i.close.icon').click((event) => {
+   $('#header .right.menu .ui.search i.close.icon').click((event) => {
 
      /** if search results panel is open, just close it and do nothing else **/
-     if ($('.ui.search').search('is visible')) {
+     if ($('#header .right.menu .ui.search').search('is visible')) {
 
-       $('.ui.search').search('hide results')
+       $('#header .right.menu .ui.search').search('hide results')
 
        /** clear the input in the search box **/
-       $('.ui.search .prompt').val('')
+       $('#header .right.menu .ui.search input.prompt').val('')
 
      }
 
@@ -291,7 +291,7 @@
 
        /* making search input invisible */
 
-       let search_input = $('#header .right.menu input.prompt')[0]
+       let search_input = $('#header .right.menu .ui.search input.prompt')[0]
 
        search_input.style.visibility = 'hidden'
 
@@ -318,17 +318,17 @@
        register_button[0].style.display='inline-block'
 
        /* adding 'link' class to search icon via jQuery */
-       $('#header .right.menu .ui.search.item i.search.icon').addClass('link')
+       $('#header .right.menu .ui.search i.search.icon').addClass('link')
 
        /* removing class from search icon for negative margin */
-       $('#header .right.menu .ui.search.item i.search.icon').removeClass('negative_mg_lft')
+       $('#header .right.menu .ui.search i.search.icon').removeClass('negative_mg_lft')
 
      }
 
    })
 
    /** preventing the body click event when click on search input **/
-   $('#header .right.menu .ui.search.item .prompt').click((event) => {
+   $('#header .right.menu .ui.search .prompt').click((event) => {
 
      /* stopping the propagation */
      event.stopPropagation()
@@ -336,13 +336,13 @@
    })
 
    /** When the keyboard is close, resize the height of the sidebar for Android devices **/
-   $('#header .right.menu .ui.search.item .prompt').blur(function(){
+   $('#header .right.menu .ui.search .prompt').blur(function(){
 
      if (isAndroid) {
 
        /** delay the display of the sidebar after resizing the height of it **/
        /** the reason why doing this is becasue only when the keyboard is close can you resize the height of the sidebar **/
-       setTimeout(" $('.ui.sidebar .content_wrapper').css('height', $(window).height())", 200)
+       setTimeout("$('#main_sidebar .content_wrapper').css('height', $(window).height())", 200)
 
      }
 
@@ -353,7 +353,7 @@
 
      /* making search input invisible */
 
-     let search_input = $('#header .right.menu input.prompt')[0]
+     let search_input = $('#header .right.menu .ui.search input.prompt')[0]
 
      search_input.style.visibility = 'hidden'
 
@@ -380,10 +380,10 @@
      register_button[0].style.display='inline-block'
 
      /* adding 'link' class to search icon via jQuery */
-     $('#header .right.menu .ui.search.item i.search.icon').addClass('link')
+     $('#header .right.menu .ui.search i.search.icon').addClass('link')
 
      /* removing class from search icon for negative margin */
-     $('#header .right.menu .ui.search.item i.search.icon').removeClass('negative_mg_lft')
+     $('#header .right.menu .ui.search i.search.icon').removeClass('negative_mg_lft')
 
    })
 
@@ -392,23 +392,23 @@
 
 
      /** clear the input in the search box **/
-     $('.ui.search .prompt').val('')
+     $('#header .right.menu .ui.search input.prompt').val('')
 
      /** making search input get foucs **/
-     let search_input = $('#header .right.menu input.prompt')[0]
+     let search_input = $('#header .right.menu .ui.search input.prompt')[0]
 
      search_input.focus()
 
     })
 
    /** hiding results panel of the search box  when clicking on it **/
-   $('.ui.search .results').click((event) => {
+   $('#header .right.menu .ui.search .results').click((event) => {
 
      /** hiding the results panel of the search bar **/
-     $('.ui.search').search('hide results')
+     $('#header .right.menu .ui.search').search('hide results')
 
      /** making search input get foucs **/
-     let search_input = $('#header .right.menu input.prompt')[0]
+     let search_input = $('#header .right.menu .ui.search input.prompt')[0]
 
      /** clear the input **/
      $(search_input).val('')
@@ -432,7 +432,7 @@
      /* resizing the height of the sidebar when the ios device is detected */
      if ( isiOS || isAndroid ) {
 
-       $('.ui.sidebar .content_wrapper').css('height', $(window).height())
+       $('#main_sidebar .content_wrapper').css('height', $(window).height())
 
      }
 
@@ -442,15 +442,15 @@
    $(window).on('orientationchange', function(event) {
 
      /* making the sidebar invisible */
-     $('.ui.sidebar .close_layer a').click()
+     $('#main_sidebar .close_layer a').click()
 
      /** making the results panel of the search box to be close **/
-     $('.ui.search').search('hide results')
+     $('#header .right.menu .ui.search').search('hide results')
 
    })
 
    /** toggling the display of the sidebar **/
-   $('.ui.sidebar')
+   $('#main_sidebar')
 
     .sidebar({
 
@@ -482,9 +482,9 @@
     .sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon')
 
     /** making the sidebar invisible **/
-    $('.ui.sidebar .close_layer a').click((event) => {
+    $('#main_sidebar .close_layer a').click((event) => {
 
-      $('.ui.sidebar')
+      $('#main_sidebar')
 
        .sidebar('hide')
 
@@ -496,9 +496,9 @@
 
       match() {
 
-        if ( $('.ui.sidebar').sidebar('is visible') ) {
+        if ( $('#main_sidebar').sidebar('is visible') ) {
 
-          $('.ui.sidebar .close_layer a').click()
+          $('#main_sidebar .close_layer a').click()
 
         }
 
