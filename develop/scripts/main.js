@@ -2,7 +2,11 @@
 
    'use strict'
 
+   /*****************************************************************************************************************************
 
+                                                           Helpers
+
+   ******************************************************************************************************************************/
 
    /** Clone Some Html Codes for Reducing the Page Size **/
 
@@ -44,9 +48,26 @@
 
 
 
+
+
+
+   /*****************************************************************************************************************************
+
+                                                           Header
+
+   ******************************************************************************************************************************/
+
    /**
-   * main navigation - search bar
-   */
+   * header - account modal
+   **/
+   $('#account_modal')
+     .modal('attach events', '#header .register.button', 'show')
+     .modal('attach events', '#header .login.button', 'show')
+
+
+   /**
+   * header - search bar
+   **/
 
    /** When using Chinese input, do not show search results before Chinese characters are spell out **/
 
@@ -241,7 +262,7 @@
 
      /** making login and register buttons invisible **/
 
-     let login_button = $('#header .right.menu .login_button')
+     let login_button = $('#header .right.menu .login.button')
 
      let divider = $('#header .right.menu .divider_item')
 
@@ -305,7 +326,7 @@
 
        /* making login and register buttons visible */
 
-       let login_button = $('#header .right.menu .login_button')
+       let login_button = $('#header .right.menu .login.button')
 
        let divider = $('#header .right.menu .divider_item')
 
@@ -367,7 +388,7 @@
 
      /* making login and register buttons visible */
 
-     let login_button = $('#header .right.menu .login_button')
+     let login_button = $('#header .right.menu .login.button')
 
      let divider = $('#header .right.menu .divider_item')
 
@@ -423,8 +444,8 @@
 
 
    /**
-   * main navigation - sidebar
-   */
+   * header - sidebar
+   **/
 
    /** Resizing the height for iOS and Android devices **/
    let resizeSidebarHeight = function(){
@@ -508,9 +529,18 @@
 
 
 
+
+
+
+    /*****************************************************************************************************************************
+
+                                                            Page Banners
+
+    ******************************************************************************************************************************/
+
     /**
     * Page Banners - Main Banner(featured carousel)
-    */
+    **/
 
     /** Solve the problem that the images after the first one show out there out of the carousel area **/
     /** befre the slick component takes effect when you refresh the page in the Chrome browser **/
@@ -590,7 +620,7 @@
 
     /**
     * Page Banners - Corner Banners
-    */
+    **/
 
     /** When hovering on the corner banner, chaging the shape of the image in it by using CSS commands **/
     $('#main_content .corner_banners .corner_banner').hover(

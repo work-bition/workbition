@@ -2,6 +2,10 @@
 
 (function () {
   'use strict';
+  /*****************************************************************************************************************************
+                                                           Helpers
+   ******************************************************************************************************************************/
+
   /** Clone Some Html Codes for Reducing the Page Size **/
 
   /** Cloning the logo section into sidebar **/
@@ -28,9 +32,18 @@
   var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //Android devices
 
   var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+  /*****************************************************************************************************************************
+                                                           Header
+   ******************************************************************************************************************************/
+
   /**
-  * main navigation - search bar
-  */
+  * header - account modal
+  **/
+
+  $('#account_modal').modal('attach events', '#header .register.button', 'show').modal('attach events', '#header .login.button', 'show');
+  /**
+  * header - search bar
+  **/
 
   /** When using Chinese input, do not show search results before Chinese characters are spell out **/
 
@@ -185,7 +198,7 @@
     search_input.focus();
     /** making login and register buttons invisible **/
 
-    var login_button = $('#header .right.menu .login_button');
+    var login_button = $('#header .right.menu .login.button');
     var divider = $('#header .right.menu .divider_item');
     var register_button = $('#header .right.menu .register_button');
     login_button[0].style.display = 'none';
@@ -226,7 +239,7 @@
         close_icon.style.display = 'none';
         /* making login and register buttons visible */
 
-        var login_button = $('#header .right.menu .login_button');
+        var login_button = $('#header .right.menu .login.button');
         var divider = $('#header .right.menu .divider_item');
         var register_button = $('#header .right.menu .register_button');
         login_button[0].style.display = 'inline-block';
@@ -269,7 +282,7 @@
     close_icon.style.display = 'none';
     /* making login and register buttons visible */
 
-    var login_button = $('#header .right.menu .login_button');
+    var login_button = $('#header .right.menu .login.button');
     var divider = $('#header .right.menu .divider_item');
     var register_button = $('#header .right.menu .register_button');
     login_button[0].style.display = 'inline-block';
@@ -309,8 +322,8 @@
     event.stopPropagation();
   });
   /**
-  * main navigation - sidebar
-  */
+  * header - sidebar
+  **/
 
   /** Resizing the height for iOS and Android devices **/
 
@@ -362,9 +375,13 @@
       }
     }
   });
+  /*****************************************************************************************************************************
+                                                           Page Banners
+   ******************************************************************************************************************************/
+
   /**
   * Page Banners - Main Banner(featured carousel)
-  */
+  **/
 
   /** Solve the problem that the images after the first one show out there out of the carousel area **/
 
@@ -416,7 +433,7 @@
   });
   /**
   * Page Banners - Corner Banners
-  */
+  **/
 
   /** When hovering on the corner banner, chaging the shape of the image in it by using CSS commands **/
 
