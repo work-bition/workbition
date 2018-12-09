@@ -1,6 +1,6 @@
 /** Page Banners Section **/
 
-/**Responsive Points: 1262px | 991px(Pad) | 579px(Mobile) **/
+/**Responsive Points: 1262px | 991px(Pad) | 579px(Mobile) | 360px(Extra Small Mobile) **/
 
 $pageBannersBorder: #f2f2f2 solid 1px;
 
@@ -384,6 +384,32 @@ $navDotsFromBottom: 2rem;
     }
 
   }
+  @media only screen and (max-width: 360px) {
+
+    .main_banner.featured_carousel {
+
+      .ui.button {
+
+        display: none!important;
+
+      }
+
+      .slick-list {
+
+        .image_holder .header {
+
+          font-size: 1rem;
+
+          padding: 0 20px;
+
+        }
+
+      }
+
+    }
+
+  }
+
 
   .corner_banners {
 
@@ -742,6 +768,40 @@ $navDotsFromBottom: 2rem;
               line-height: 1.5rem;
 
               letter-spacing: 1px;
+
+            }
+
+          }
+
+        }
+
+
+      }
+
+    }
+
+  }
+  @media only screen and (max-width: 360px) {
+
+    .corner_banners {
+
+      .corner_banner{
+
+        .card_area {
+
+          .card_content {
+
+            h6 {
+
+              text-align: center;
+
+              line-height: 1.2rem;
+
+            }
+
+            p {
+
+              line-height: 1.4rem;
 
             }
 

@@ -259,7 +259,7 @@ element in order to prevent the background layer from moving **/
     display: none; } }
 
 /** Page Banners Section **/
-/**Responsive Points: 1262px | 991px(Pad) | 579px(Mobile) **/
+/**Responsive Points: 1262px | 991px(Pad) | 579px(Mobile) | 360px(Extra Small Mobile) **/
 #main_content .page_banners {
   position: relative;
   box-shadow: none; }
@@ -404,6 +404,12 @@ element in order to prevent the background layer from moving **/
     #main_content .page_banners .main_banner.featured_carousel .slick-dots {
       top: calc(100% - 14rem - 1px - 2rem);
       bottom: auto; } }
+  @media only screen and (max-width: 360px) {
+    #main_content .page_banners .main_banner.featured_carousel .ui.button {
+      display: none !important; }
+    #main_content .page_banners .main_banner.featured_carousel .slick-list .image_holder .header {
+      font-size: 1rem;
+      padding: 0 20px; } }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -538,7 +544,19 @@ element in order to prevent the background layer from moving **/
             text-align: center;
             line-height: 1.5rem;
             letter-spacing: 1px; } }
+  @media only screen and (max-width: 360px) {
+    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content h6 {
+      text-align: center;
+      line-height: 1.2rem; }
+    #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
+      line-height: 1.4rem; } }
 
 /** making the 'X' icon and eye icon shown in the input invisible for IE10+ and Edge browsers **/
 ::-ms-clear, ::-ms-reveal {
   display: none; }
+
+/** Force set the background color of the body **/
+/** Set the min width of the body, not allow to lower than the width of iPhone 5 **/
+body.pushable {
+  background: #fff !important;
+  min-width: 320px; }
