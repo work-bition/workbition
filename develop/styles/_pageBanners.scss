@@ -431,6 +431,24 @@ $navDotsFromBottom: 2rem;
 
     right: 0;
 
+    .ui.right.ribbon.label {
+
+      font-size: 0.5rem;
+
+      opacity: 0.85;
+
+      position: absolute;
+
+      left: calc(100% + 1.2em);
+
+      &::after {
+
+        opacity: 0.85;
+
+      }
+
+    }
+
     .corner_banner {
 
       visibility: hidden;
@@ -643,6 +661,12 @@ $navDotsFromBottom: 2rem;
       top: auto;
 
       bottom: 0%;
+
+      .ui.right.ribbon.label {
+
+        display: none;
+
+      }
 
       .corner_banner {
 

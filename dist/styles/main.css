@@ -423,6 +423,13 @@ element in order to prevent the background layer from moving **/
     height: 100%;
     top: 0;
     right: 0; }
+    #main_content .page_banners .corner_banners .ui.right.ribbon.label {
+      font-size: 0.5rem;
+      opacity: 0.85;
+      position: absolute;
+      left: calc(100% + 1.2em); }
+      #main_content .page_banners .corner_banners .ui.right.ribbon.label::after {
+        opacity: 0.85; }
     #main_content .page_banners .corner_banners .corner_banner {
       visibility: hidden;
       padding-top: 0.5rem;
@@ -497,6 +504,8 @@ element in order to prevent the background layer from moving **/
       padding-right: 1rem;
       top: auto;
       bottom: 0%; }
+      #main_content .page_banners .corner_banners .ui.right.ribbon.label {
+        display: none; }
       #main_content .page_banners .corner_banners .corner_banner {
         width: 33.333%;
         height: auto;
