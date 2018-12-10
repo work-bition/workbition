@@ -1,3 +1,36 @@
+/** Account Modal Section **/
+#account_modal {
+  max-width: 30rem; }
+  #account_modal section.close_button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding-top: 0;
+    width: auto;
+    height: auto; }
+    #account_modal section.close_button .close.icon {
+      font-size: 1.3rem;
+      margin-right: 0;
+      opacity: 0.85; }
+  #account_modal .header {
+    padding: 4.286rem;
+    padding-bottom: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: none;
+    font-size: 1.8rem; }
+    #account_modal .header .icon {
+      margin: 1rem;
+      transform: translateX(-0.15rem); }
+    #account_modal .header .title {
+      transform: translateY(-0.2rem);
+      letter-spacing: 0.2rem; }
+  #account_modal .content {
+    padding-left: 4.286rem;
+    padding-right: 4.286rem; }
+
 /** Sidebar Section **/
 .ui.sidebar {
   /** animation speed for the popup of the sidebar **/
@@ -78,7 +111,6 @@ element in order to prevent the background layer from moving **/
   left: 0;
   right: 0; }
 
-/** Header Section **/
 /** Header Section **/
 #header .header_content {
   height: 5rem;
@@ -424,7 +456,8 @@ element in order to prevent the background layer from moving **/
     top: 0;
     right: 0; }
     #main_content .page_banners .corner_banners .ui.right.ribbon.label {
-      font-size: 0.5rem;
+      width: 5.5rem;
+      font-size: 1rem;
       opacity: 0.85;
       position: absolute;
       left: calc(100% + 1.2em); }
