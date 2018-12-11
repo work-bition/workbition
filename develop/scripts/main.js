@@ -483,7 +483,7 @@
 
   	 el: document.querySelector('#header .right.menu .ui.search input.prompt'),
 
-  	 sentences: [ '直接输入感兴趣的关键字...', '比如试试搜索...', 'Word, Excel, PPT', '1Password, Money Pro, MindNode'],
+  	 sentences: [ '直接输入感兴趣的关键字...', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 年度总结, 公众号引流'],
 
      options: {
 
@@ -493,7 +493,9 @@
 
        sentenceDelay: 1500,
 
-       startOnFocus: false
+       startOnFocus: false,
+
+       startOnFocus: true
 
      }
 
