@@ -35,7 +35,7 @@
 
 
 
-   /** Mobile Device Detection **/
+   /** Mobile Device and IE11 Detection **/
 
    /** detecting if it is iOS or Android devices **/
    let u = navigator.userAgent
@@ -46,6 +46,14 @@
    //Android devices
    let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1
 
+   /** detecting if it is IE11 browser **/
+   let isIE11 = false
+
+   if (window.matchMedia("screen and (-ms-high-contrast: active), (-ms-high-contrast: none)").matches) {
+
+     isIE11 = true
+
+   }
 
 
 
@@ -276,8 +284,13 @@
      search_input.style.visibility = 'visible'
 
      /** making search input get foucs **/
+     if (!isIE11) {
 
-     search_input.focus()
+       search_input.focus()
+
+     }
+
+
 
      /** making login and register buttons invisible **/
 
@@ -437,7 +450,12 @@
      /** making search input get foucs **/
      let search_input = $('#header .right.menu .ui.search input.prompt')[0]
 
-     search_input.focus()
+     /** in IE11, when the input is focused, placeholder can not be displayed **/
+     if (!isIE11) {
+
+       search_input.focus()
+
+     }
 
     })
 
@@ -457,6 +475,27 @@
 
      /* stopping the propagation */
      event.stopPropagation()
+
+   })
+
+   /** Dynamic Input Placeholder Display **/
+   superplaceholder({
+
+  	 el: document.querySelector('#header .right.menu .ui.search input.prompt'),
+
+  	 sentences: [ '直接输入感兴趣的关键字...', '比如试试搜索...', 'Word, Excel, PPT', '1Password, Money Pro, MindNode'],
+
+     options: {
+
+       loop: true,
+
+       letterDelay: 50,
+
+       sentenceDelay: 1500,
+
+       startOnFocus: false
+
+     }
 
    })
 
@@ -611,25 +650,27 @@
 
       $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
 
-        'background-color': `rgba(0,0,0,${overlayOpacity})`
+        'opacity': `${overlayOpacity}`
 
       })
 
     }
+
+    let initialMainBannerOverlay = $('#main_content .page_banners .main_banner .overlay').css('opacity')
 
     $('.featured_carousel .slick-list, .featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').hover(
 
       /** When the mouse enters into the carousel area, making the arrows fade in **/
       () => {
 
-        moveNavButtons_setOverlay('1.2rem', '1', '0.05')
+        moveNavButtons_setOverlay('1.2rem', 1, 0.05)
 
       },
 
       /** When the mouse leaves the carousel area, making the arrows fade out **/
       () => {
 
-        moveNavButtons_setOverlay('0.4rem', '0', '0.2')
+        moveNavButtons_setOverlay('0.4rem', 0, initialMainBannerOverlay)
 
       }
 

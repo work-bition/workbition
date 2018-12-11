@@ -23,7 +23,7 @@
   $('#header .right.menu .register_button').clone()
   /** optional parameter: includeEvents **/
   .appendTo('#main_sidebar .ui.menu .login_register_buttons');
-  /** Mobile Device Detection **/
+  /** Mobile Device and IE11 Detection **/
 
   /** detecting if it is iOS or Android devices **/
 
@@ -32,6 +32,13 @@
   var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //Android devices
 
   var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+  /** detecting if it is IE11 browser **/
+
+  var isIE11 = false;
+
+  if (window.matchMedia("screen and (-ms-high-contrast: active), (-ms-high-contrast: none)").matches) {
+    isIE11 = true;
+  }
   /*****************************************************************************************************************************
                                                            Header
    ******************************************************************************************************************************/
@@ -39,6 +46,7 @@
   /**
   * header - account modal
   **/
+
 
   $('#account_modal').modal({
     closable: false,
@@ -201,8 +209,11 @@
     search_input.style.visibility = 'visible';
     /** making search input get foucs **/
 
-    search_input.focus();
+    if (!isIE11) {
+      search_input.focus();
+    }
     /** making login and register buttons invisible **/
+
 
     var login_button = $('#header .right.menu .login.button');
     var divider = $('#header .right.menu .divider_item');
@@ -309,7 +320,11 @@
     /** making search input get foucs **/
 
     var search_input = $('#header .right.menu .ui.search input.prompt')[0];
-    search_input.focus();
+    /** in IE11, when the input is focused, placeholder can not be displayed **/
+
+    if (!isIE11) {
+      search_input.focus();
+    }
   });
   /** hiding results panel of the search box  when clicking on it **/
 
@@ -326,6 +341,18 @@
     /* stopping the propagation */
 
     event.stopPropagation();
+  });
+  /** Dynamic Input Placeholder Display **/
+
+  superplaceholder({
+    el: document.querySelector('#header .right.menu .ui.search input.prompt'),
+    sentences: ['直接输入感兴趣的关键字...', '比如试试搜索...', 'Word, Excel, PPT', '1Password, Money Pro, MindNode'],
+    options: {
+      loop: true,
+      letterDelay: 50,
+      sentenceDelay: 1500,
+      startOnFocus: false
+    }
   });
   /**
   * header - sidebar
@@ -424,18 +451,19 @@
       'opacity': "".concat(buttonOpacity)
     });
     $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
-      'background-color': "rgba(0,0,0,".concat(overlayOpacity, ")")
+      'opacity': "".concat(overlayOpacity)
     });
   }
 
+  var initialMainBannerOverlay = $('#main_content .page_banners .main_banner .overlay').css('opacity');
   $('.featured_carousel .slick-list, .featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').hover(
   /** When the mouse enters into the carousel area, making the arrows fade in **/
   function () {
-    moveNavButtons_setOverlay('1.2rem', '1', '0.05');
+    moveNavButtons_setOverlay('1.2rem', 1, 0.05);
   },
   /** When the mouse leaves the carousel area, making the arrows fade out **/
   function () {
-    moveNavButtons_setOverlay('0.4rem', '0', '0.2');
+    moveNavButtons_setOverlay('0.4rem', 0, initialMainBannerOverlay);
   });
   /**
   * Page Banners - Corner Banners
