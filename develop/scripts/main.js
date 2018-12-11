@@ -493,9 +493,7 @@
 
        sentenceDelay: 1500,
 
-       startOnFocus: false,
-
-       startOnFocus: true
+       startOnFocus: false
 
      }
 

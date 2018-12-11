@@ -1,7 +1,5 @@
 "use strict";
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 (function () {
   'use strict';
   /*****************************************************************************************************************************
@@ -349,12 +347,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   superplaceholder({
     el: document.querySelector('#header .right.menu .ui.search input.prompt'),
     sentences: ['直接输入感兴趣的关键字...', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 年度总结, 公众号引流'],
-    options: _defineProperty({
+    options: {
       loop: true,
       letterDelay: 50,
       sentenceDelay: 1500,
       startOnFocus: false
-    }, "startOnFocus", true)
+    }
   });
   /**
   * header - sidebar
