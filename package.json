@@ -21,7 +21,6 @@
   "dependencies": {
     "enquire.js": "^2.1.6",
     "jquery": "^3.3.1",
-    "slick-carousel": "^1.8.1",
-    "superplaceholder": "^0.1.2"
+    "slick-carousel": "^1.8.1"
   }
 }
