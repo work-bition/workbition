@@ -342,6 +342,28 @@
 
     event.stopPropagation();
   });
+  /** Solve the problem of when the 'esc' key is pressed, SUI search component does not work **/
+
+  $(window).on('keyup', function (evt) {
+    if (evt.which == 27) {
+      $(".prompt").blur();
+      $('#header .right.menu .ui.search i.close.icon').click();
+    }
+  });
+  /** Dynamic Input Placeholder Display **/
+
+  var searchQueries = ['自拍, 修图, 调色', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 公众号引流'];
+  superplaceholder({
+    el: document.querySelector('#header .right.menu .ui.search input.prompt'),
+    sentences: searchQueries,
+    options: {
+      loop: true,
+      letterDelay: 50,
+      sentenceDelay: 1500,
+      startOnFocus: false,
+      shuffle: true
+    }
+  });
   /**
   * header - sidebar
   **/
