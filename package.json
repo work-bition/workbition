@@ -2,9 +2,10 @@
   "name": "workbition",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -16,7 +17,9 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^8.0.0",
     "gulp-sass": "^4.0.2",
-    "semantic-ui": "^2.4.2"
+    "semantic-ui": "^2.4.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   },
   "dependencies": {
     "enquire.js": "^2.1.6",
