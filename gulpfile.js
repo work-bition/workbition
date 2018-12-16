@@ -3,6 +3,7 @@
         browserSync = require('browser-sync').create(),
         sass        = require('gulp-sass'),
         babel       = require('gulp-babel'),
+        run         = require('gulp-run-command').default,
         reload      = browserSync.reload
 
   //导入semantic UI框架的gulp任务
@@ -16,8 +17,6 @@
   gulp.task('clean-ui', clean)
   //构建semantic UI框架（确保清理任务完成后）
   gulp.task('build-ui', ['clean-ui'], build)
-  //确保清理任务完成后再进行构建
-  gulp.task('build', ['clean-ui', 'build-ui'])
 
   // scss编译后的css将注入到浏览器里实现更新
   gulp.task('sass', function() {
@@ -37,11 +36,7 @@
 
     gulp.src("./develop/scripts/**/*.js")
 
-  		.pipe(babel({
-
-  			presets: ['@babel/env']
-
-  		}))
+  		.pipe(babel())
 
   		.pipe(gulp.dest("./dist/scripts"))
 
@@ -55,7 +50,22 @@
       browserSync.init({
 
           server: {
-              baseDir: ["./dist/views", "./dist/styles", "./dist/scripts", "./dist/semantic-ui", "./node_modules", "./dist/images"]
+
+              baseDir: [
+
+                "./dist/views",
+
+                "./dist/styles",
+
+                "./dist/scripts",
+
+                "./dist/semantic-ui",
+
+                "./node_modules",
+
+                "./dist/images"
+
+              ]
           },
 
           files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"],
@@ -71,6 +81,9 @@
       gulp.watch("./develop/scripts/**/*.js", ['js'])
 
    })
+
+  //生成第三方js库（不易变动）
+  gulp.task('js-dll', run('webpack --config webpack.dll.config.js'))
 
   //监视入口指令
   gulp.task('serve', ["browser-sync", "watch-ui"])

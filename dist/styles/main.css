@@ -1,3 +1,14 @@
+/** Initial Setting for the Site **/
+/** making the 'X' icon and eye icon shown in the input invisible for IE10+ and Edge browsers **/
+::-ms-clear, ::-ms-reveal {
+  display: none; }
+
+/** Force set the background color of the body **/
+/** Set the min width of the body, not allow to lower than the width of iPhone 5 **/
+body.pushable {
+  background: #fff !important;
+  min-width: 320px; }
+
 /** Account Modal Section **/
 #account_modal {
   max-width: 30rem; }
@@ -603,13 +614,3 @@ element in order to prevent the background layer from moving **/
       line-height: 1.2rem; }
     #main_content .page_banners .corner_banners .corner_banner .card_area .card_content p {
       line-height: 1.4rem; } }
-
-/** making the 'X' icon and eye icon shown in the input invisible for IE10+ and Edge browsers **/
-::-ms-clear, ::-ms-reveal {
-  display: none; }
-
-/** Force set the background color of the body **/
-/** Set the min width of the body, not allow to lower than the width of iPhone 5 **/
-body.pushable {
-  background: #fff !important;
-  min-width: 320px; }

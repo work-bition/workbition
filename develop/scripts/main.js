@@ -1,3 +1,11 @@
+import enquire from  'enquire.js'
+
+import '../../dist/semantic-ui/semantic.min.js'
+
+import 'slick-carousel'
+
+import superplaceholder from  'superplaceholder'
+
 (function(){
 
    'use strict'
@@ -7,33 +15,6 @@
                                                            Helpers
 
    ******************************************************************************************************************************/
-
-   /** Clone Some Html Codes for Reducing the Page Size **/
-
-   /** Cloning the logo section into sidebar **/
-   $('#header .logo_section a.logo_link')
-
-      .clone()/** optional parameter: includeEvents **/
-
-      .appendTo('#main_sidebar section.sidebar_header')
-
-   /** Cloning the items of the main navigation into sidebar **/
-   $('#main_nav .left.menu a.item')
-
-      .clone()/** optional parameter: includeEvents **/
-
-      .appendTo('#main_sidebar section.ui.menu ul')
-
-      .wrap('<li></li>')
-
-   /** Cloning the register button into sidebar **/
-   $('#header .right.menu .register_button')
-
-      .clone()/** optional parameter: includeEvents **/
-
-      .appendTo('#main_sidebar .ui.menu .login_register_buttons')
-
-
 
    /** Mobile Device and IE11 Detection **/
 
@@ -531,6 +512,30 @@
    /**
    * header - sidebar
    **/
+
+   /** Clone Some Html Codes for Reducing the Page Size **/
+   /** Cloning the logo section into sidebar **/
+   $('#header .logo_section a.logo_link')
+
+      .clone()/** optional parameter: includeEvents **/
+
+      .appendTo('#main_sidebar section.sidebar_header')
+
+   /** Cloning the items of the main navigation into sidebar **/
+   $('#main_nav .left.menu a.item')
+
+      .clone()/** optional parameter: includeEvents **/
+
+      .appendTo('#main_sidebar section.ui.menu ul')
+
+      .wrap('<li></li>')
+
+   /** Cloning the register button into sidebar **/
+   $('#header .right.menu .register_button')
+
+      .clone()/** optional parameter: includeEvents **/
+
+      .appendTo('#main_sidebar .ui.menu .login_register_buttons')
 
    /** Resizing the height for iOS and Android devices **/
    let resizeSidebarHeight = function(){

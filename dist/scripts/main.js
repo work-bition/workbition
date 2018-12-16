@@ -1,28 +1,21 @@
 "use strict";
 
+var _enquire = _interopRequireDefault(require("enquire.js"));
+
+require("../../dist/semantic-ui/semantic.min.js");
+
+require("slick-carousel");
+
+var _superplaceholder = _interopRequireDefault(require("superplaceholder"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 (function () {
   'use strict';
   /*****************************************************************************************************************************
                                                            Helpers
    ******************************************************************************************************************************/
 
-  /** Clone Some Html Codes for Reducing the Page Size **/
-
-  /** Cloning the logo section into sidebar **/
-
-  $('#header .logo_section a.logo_link').clone()
-  /** optional parameter: includeEvents **/
-  .appendTo('#main_sidebar section.sidebar_header');
-  /** Cloning the items of the main navigation into sidebar **/
-
-  $('#main_nav .left.menu a.item').clone()
-  /** optional parameter: includeEvents **/
-  .appendTo('#main_sidebar section.ui.menu ul').wrap('<li></li>');
-  /** Cloning the register button into sidebar **/
-
-  $('#header .right.menu .register_button').clone()
-  /** optional parameter: includeEvents **/
-  .appendTo('#main_sidebar .ui.menu .login_register_buttons');
   /** Mobile Device and IE11 Detection **/
 
   /** detecting if it is iOS or Android devices **/
@@ -353,7 +346,7 @@
   /** Dynamic Input Placeholder Display **/
 
   var searchQueries = ['自拍, 修图, 调色', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 公众号引流'];
-  superplaceholder({
+  (0, _superplaceholder.default)({
     el: document.querySelector('#header .right.menu .ui.search input.prompt'),
     sentences: searchQueries,
     options: {
@@ -368,6 +361,23 @@
   * header - sidebar
   **/
 
+  /** Clone Some Html Codes for Reducing the Page Size **/
+
+  /** Cloning the logo section into sidebar **/
+
+  $('#header .logo_section a.logo_link').clone()
+  /** optional parameter: includeEvents **/
+  .appendTo('#main_sidebar section.sidebar_header');
+  /** Cloning the items of the main navigation into sidebar **/
+
+  $('#main_nav .left.menu a.item').clone()
+  /** optional parameter: includeEvents **/
+  .appendTo('#main_sidebar section.ui.menu ul').wrap('<li></li>');
+  /** Cloning the register button into sidebar **/
+
+  $('#header .right.menu .register_button').clone()
+  /** optional parameter: includeEvents **/
+  .appendTo('#main_sidebar .ui.menu .login_register_buttons');
   /** Resizing the height for iOS and Android devices **/
 
   var resizeSidebarHeight = function resizeSidebarHeight() {
@@ -411,7 +421,7 @@
   });
   /** when the width of the screen is greater than 768px, close the sidebar if it is open **/
 
-  enquire.register("screen and (min-width: 768px)", {
+  _enquire.default.register("screen and (min-width: 768px)", {
     match: function match() {
       if ($('#main_sidebar').sidebar('is visible')) {
         $('#main_sidebar .close_layer a').click();
@@ -429,6 +439,7 @@
   /** Solve the problem that the images after the first one show out there out of the carousel area **/
 
   /** befre the slick component takes effect when you refresh the page in the Chrome browser **/
+
 
   $(document).ready(function () {
     $('.featured_carousel .image_holder').css('visibility', 'visible');
