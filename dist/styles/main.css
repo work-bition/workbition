@@ -522,6 +522,7 @@ element in order to prevent the background layer from moving **/
       width: 5.5rem;
       font-size: 0.8rem; }
     #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
+      transform: translateY(1rem);
       width: 25.8%; }
     #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
       transform: translateY(-0.15rem); }
