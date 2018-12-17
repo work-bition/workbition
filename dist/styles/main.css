@@ -375,49 +375,51 @@ element in order to prevent the background layer from moving **/
           background-color: #ffea75; }
         #main_content .page_banners .main_banner.featured_carousel .slick-dots li button:before {
           content: ''; }
-    #main_content .page_banners .main_banner.featured_carousel .image_holder {
-      position: relative;
-      top: 0;
-      bottom: 0;
-      height: 100%;
-      display: block;
-      visibility: hidden;
-      background-size: cover !important;
-      width: 100%;
-      padding-top: 41.865%; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner1 {
-        background: url(featured_carousel/item1.png) 50% 50% no-repeat; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner2 {
-        background: url(featured_carousel/item2.png) 50% 50% no-repeat; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner3 {
-        background: url(featured_carousel/item3.png) 50% 50% no-repeat; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner4 {
-        background: url(featured_carousel/item4.png) 50% 50% no-repeat; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner5 {
-        background: url(featured_carousel/item5.png) 50% 50% no-repeat; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder.banner6 {
-        background: url(featured_carousel/item6.png) 50% 50% no-repeat; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder .overlay {
-        position: absolute;
+    #main_content .page_banners .main_banner.featured_carousel .item {
+      display: block !important; }
+      #main_content .page_banners .main_banner.featured_carousel .item .image_holder {
+        position: relative;
         top: 0;
         bottom: 0;
+        height: 100%;
+        display: block;
+        visibility: hidden;
+        background-size: cover !important;
         width: 100%;
-        transition: all .2s ease;
-        background-color: #000;
-        opacity: 0.2; }
-      #main_content .page_banners .main_banner.featured_carousel .image_holder .header {
-        width: 100%;
-        font-size: 2.6rem;
-        line-height: 1.5;
-        color: #fff;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 0 80px;
-        text-shadow: 1px 1px 10px #000;
-        text-align: center;
-        font-weight: bold; }
+        padding-top: 41.865%; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder.banner1 {
+          background: url(featured_carousel/item1.png) 50% 50% no-repeat; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder.banner2 {
+          background: url(featured_carousel/item2.png) 50% 50% no-repeat; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder.banner3 {
+          background: url(featured_carousel/item3.png) 50% 50% no-repeat; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder.banner4 {
+          background: url(featured_carousel/item4.png) 50% 50% no-repeat; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder.banner5 {
+          background: url(featured_carousel/item5.png) 50% 50% no-repeat; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder.banner6 {
+          background: url(featured_carousel/item6.png) 50% 50% no-repeat; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder .overlay {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          transition: all .2s ease;
+          background-color: #000;
+          opacity: 0.2; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder .header {
+          width: 100%;
+          font-size: 2.6rem;
+          line-height: 1.5;
+          color: #fff;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          padding: 0 80px;
+          text-shadow: 1px 1px 10px #000;
+          text-align: center;
+          font-weight: bold; }
   @media only screen and (max-width: 1262px) {
     #main_content .page_banners .main_banner.featured_carousel .slick-list .image_holder .header {
       font-size: 2.2rem; } }
