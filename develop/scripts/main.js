@@ -4,8 +4,6 @@ import '../../dist/semantic-ui/semantic.min.js'
 
 import 'slick-carousel'
 
-import superplaceholder from  'superplaceholder'
-
 (function(){
 
    'use strict'
@@ -485,28 +483,6 @@ import superplaceholder from  'superplaceholder'
 
    ]
 
-   superplaceholder({
-
-    el: document.querySelector('#header .right.menu .ui.search input.prompt'),
-
-    sentences: searchQueries,
-
-     options: {
-
-       loop: true,
-
-       letterDelay: 50,
-
-       sentenceDelay: 1500,
-
-       startOnFocus: false,
-
-       shuffle: true
-
-     }
-
-   })
-
 
 
    /**
@@ -645,13 +621,15 @@ import superplaceholder from  'superplaceholder'
     })
 
     /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
-    $('.featured_carousel').slick({
+    $('#main_content .page_banners .featured_carousel').slick({
 
         autoplay: true,
 
         autoplaySpeed: 2000,
 
         fade: true,
+
+        cssEase: 'linear',
 
         dots: true,
 

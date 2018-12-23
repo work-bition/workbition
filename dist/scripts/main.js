@@ -1,14 +1,6 @@
-"use strict";
-
-var _enquire = _interopRequireDefault(require("enquire.js"));
-
-require("../../dist/semantic-ui/semantic.min.js");
-
-require("slick-carousel");
-
-var _superplaceholder = _interopRequireDefault(require("superplaceholder"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+import enquire from 'enquire.js';
+import '../../dist/semantic-ui/semantic.min.js';
+import 'slick-carousel';
 
 (function () {
   'use strict';
@@ -20,14 +12,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   /** detecting if it is iOS or Android devices **/
 
-  var u = navigator.userAgent; //iOS devices
+  let u = navigator.userAgent; //iOS devices
 
-  var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //Android devices
+  let isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //Android devices
 
-  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+  let isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
   /** detecting if it is IE11 browser **/
 
-  var isIE11 = false;
+  let isIE11 = false;
 
   if (window.matchMedia("screen and (-ms-high-contrast: active), (-ms-high-contrast: none)").matches) {
     isIE11 = true;
@@ -45,7 +37,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     closable: false,
     transition: 'fade up'
   }).modal('attach events', '#header .register.button', 'show').modal('attach events', '#header .login.button', 'show');
-  $('#account_modal .close_button').click(function () {
+  $('#account_modal .close_button').click(() => {
     $('#account_modal').modal('hide');
   });
   /**
@@ -56,7 +48,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   /** flag showing whether Chinese characters are spell out **/
 
-  var chineseInput_flag = true;
+  let chineseInput_flag = true;
   /** This event indicates that the alphabetic characters used for spelling Chinese words has been typed, **/
 
   /** but Chinese words are not generated **/
@@ -78,8 +70,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   $.fn.search.settings.error.noResults = '抱歉～您的搜索没匹配到任何结果。';
   /** the html code generated when there's no search result returned **/
 
-  $.fn.search.settings.templates.message = function (message, type) {
-    var html = '';
+  $.fn.search.settings.templates.message = (message, type) => {
+    let html = '';
 
     if (message !== undefined && type !== undefined) {
       html += '' + '<div class="message ' + type + '">'; // when there's no result returned, the html code that should be generated
@@ -100,7 +92,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   /** local search data **/
 
 
-  var content = [{
+  let content = [{
     title: '还要啥男朋友？！白领自拍指南'
   }, {
     title: '不学你就out啦！财务工作必须掌握的20个Excel函数'
@@ -156,15 +148,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     fullTextSearch: true,
     transition: 'fade',
     maxResults: 10,
-    onResultsOpen: function onResultsOpen() {
+    onResultsOpen: () => {
       $('#main_content .page_banners')[0].style.zIndex = -1;
       $('#main_content .page_banners')[0].style.zIndex = -1;
     },
-    onResultsClose: function onResultsClose() {
+    onResultsClose: () => {
       $('#main_content .page_banners')[0].style.zIndex = 'auto';
       $('#main_content .page_banners')[0].style.zIndex = 'auto';
     },
-    onSearchQuery: function onSearchQuery(query) {
+    onSearchQuery: query => {
       if ($.trim(query) === '') {
         $('#header .right.menu .ui.search .results').addClass('hide_results');
       } else {
@@ -184,7 +176,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** when clicking on the search icon, make the search box visible **/
 
-  $('#header .right.menu .ui.search i.search.icon').click(function (event) {
+  $('#header .right.menu .ui.search i.search.icon').click(event => {
     /** if Android devices are detected, making the close icon a little bit larger **/
 
     /** the reason why doing this is because the small close icon on Android devices is very hard to click **/
@@ -198,7 +190,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     /** making search box visible **/
 
 
-    var search_input = $('#header .right.menu .ui.search input.prompt')[0];
+    let search_input = $('#header .right.menu .ui.search input.prompt')[0];
     search_input.style.visibility = 'visible';
     /** making search input get foucs **/
 
@@ -208,9 +200,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     /** making login and register buttons invisible **/
 
 
-    var login_button = $('#header .right.menu .login.button');
-    var divider = $('#header .right.menu .divider_item');
-    var register_button = $('#header .right.menu .register_button');
+    let login_button = $('#header .right.menu .login.button');
+    let divider = $('#header .right.menu .divider_item');
+    let register_button = $('#header .right.menu .register_button');
     login_button[0].style.display = 'none';
     divider[0].style.display = 'none';
     register_button[0].style.display = 'none';
@@ -229,7 +221,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** when click on the close icon, closing the search results panels in two steps **/
 
-  $('#header .right.menu .ui.search i.close.icon').click(function (event) {
+  $('#header .right.menu .ui.search i.close.icon').click(event => {
     /** if search results panel is open, just close it and do nothing else **/
     if ($('#header .right.menu .ui.search').search('is visible')) {
       $('#header .right.menu .ui.search').search('hide results');
@@ -240,18 +232,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     /** if search results panel is not open, make the search box invisble **/
     else {
         /* making search input invisible */
-        var search_input = $('#header .right.menu .ui.search input.prompt')[0];
+        let search_input = $('#header .right.menu .ui.search input.prompt')[0];
         search_input.style.visibility = 'hidden';
         search_input.style.width = '0';
         /* making close icon invisible */
 
-        var close_icon = event.currentTarget;
+        let close_icon = event.currentTarget;
         close_icon.style.display = 'none';
         /* making login and register buttons visible */
 
-        var login_button = $('#header .right.menu .login.button');
-        var divider = $('#header .right.menu .divider_item');
-        var register_button = $('#header .right.menu .register_button');
+        let login_button = $('#header .right.menu .login.button');
+        let divider = $('#header .right.menu .divider_item');
+        let register_button = $('#header .right.menu .register_button');
         login_button[0].style.display = 'inline-block';
         divider[0].style.display = 'inline-block';
         register_button[0].style.display = 'inline-block';
@@ -265,7 +257,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** preventing the body click event when click on search input **/
 
-  $('#header .right.menu .ui.search .prompt').click(function (event) {
+  $('#header .right.menu .ui.search .prompt').click(event => {
     /* stopping the propagation */
     event.stopPropagation();
   });
@@ -281,20 +273,20 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** when clicking the menu button, making the search bar invisible **/
 
-  $('#header .right.menu .menu_button .align.justify.icon').click(function (event) {
+  $('#header .right.menu .menu_button .align.justify.icon').click(event => {
     /* making search input invisible */
-    var search_input = $('#header .right.menu .ui.search input.prompt')[0];
+    let search_input = $('#header .right.menu .ui.search input.prompt')[0];
     search_input.style.visibility = 'hidden';
     search_input.style.width = '0';
     /* making close icon invisible */
 
-    var close_icon = $('#header .right.menu .ui.search .close.icon')[0];
+    let close_icon = $('#header .right.menu .ui.search .close.icon')[0];
     close_icon.style.display = 'none';
     /* making login and register buttons visible */
 
-    var login_button = $('#header .right.menu .login.button');
-    var divider = $('#header .right.menu .divider_item');
-    var register_button = $('#header .right.menu .register_button');
+    let login_button = $('#header .right.menu .login.button');
+    let divider = $('#header .right.menu .divider_item');
+    let register_button = $('#header .right.menu .register_button');
     login_button[0].style.display = 'inline-block';
     divider[0].style.display = 'inline-block';
     register_button[0].style.display = 'inline-block';
@@ -307,12 +299,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** when clicking in the viewport, making the search input get focus **/
 
-  $('body').click(function (event) {
+  $('body').click(event => {
     /** clear the input in the search box **/
     $('#header .right.menu .ui.search input.prompt').val('');
     /** making search input get foucs **/
 
-    var search_input = $('#header .right.menu .ui.search input.prompt')[0];
+    let search_input = $('#header .right.menu .ui.search input.prompt')[0];
     /** in IE11, when the input is focused, placeholder can not be displayed **/
 
     if (!isIE11) {
@@ -321,12 +313,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** hiding results panel of the search box  when clicking on it **/
 
-  $('#header .right.menu .ui.search .results').click(function (event) {
+  $('#header .right.menu .ui.search .results').click(event => {
     /** hiding the results panel of the search bar **/
     $('#header .right.menu .ui.search').search('hide results');
     /** making search input get foucs **/
 
-    var search_input = $('#header .right.menu .ui.search input.prompt')[0];
+    let search_input = $('#header .right.menu .ui.search input.prompt')[0];
     /** clear the input **/
 
     $(search_input).val('');
@@ -345,18 +337,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** Dynamic Input Placeholder Display **/
 
-  var searchQueries = ['自拍, 修图, 调色', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 公众号引流'];
-  (0, _superplaceholder.default)({
-    el: document.querySelector('#header .right.menu .ui.search input.prompt'),
-    sentences: searchQueries,
-    options: {
-      loop: true,
-      letterDelay: 50,
-      sentenceDelay: 1500,
-      startOnFocus: false,
-      shuffle: true
-    }
-  });
+  let searchQueries = ['自拍, 修图, 调色', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 公众号引流'];
   /**
   * header - sidebar
   **/
@@ -380,7 +361,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   .appendTo('#main_sidebar .ui.menu .login_register_buttons');
   /** Resizing the height for iOS and Android devices **/
 
-  var resizeSidebarHeight = function resizeSidebarHeight() {
+  let resizeSidebarHeight = function () {
     /* resizing the height of the sidebar when the ios device is detected */
     if (isiOS || isAndroid) {
       $('#main_sidebar .content_wrapper').css('height', $(window).height());
@@ -402,31 +383,32 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     transition: 'overlay',
     mobileTransition: 'overlay',
     dimPage: false,
-    onVisible: function onVisible() {
+    onVisible: () => {
       /** Resizing the height for iOS devices **/
       resizeSidebarHeight();
       /** when opening the sidebar, preventing the body layer from moving **/
 
       $('body').addClass('fixed_layer');
     },
-    onHidden: function onHidden() {
+    onHidden: () => {
       /** when closing the sidebar, releasing the original state of the body layer **/
       $('body').removeClass('fixed_layer');
     }
   }).sidebar('attach events', '#header .right.menu .menu_button .align.justify.icon');
   /** making the sidebar invisible **/
 
-  $('#main_sidebar .close_layer a').click(function (event) {
+  $('#main_sidebar .close_layer a').click(event => {
     $('#main_sidebar').sidebar('hide');
   });
   /** when the width of the screen is greater than 768px, close the sidebar if it is open **/
 
-  _enquire.default.register("screen and (min-width: 768px)", {
-    match: function match() {
+  enquire.register("screen and (min-width: 768px)", {
+    match() {
       if ($('#main_sidebar').sidebar('is visible')) {
         $('#main_sidebar .close_layer a').click();
       }
     }
+
   });
   /*****************************************************************************************************************************
                                                            Page Banners
@@ -440,7 +422,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   /** befre the slick component takes effect when you refresh the page in the Chrome browser **/
 
-
   $(document).ready(function () {
     $('.featured_carousel .image_holder').css('visibility', 'visible');
     $('#main_content .page_banners').css('box-shadow', '0 8px 24px 0 rgba(82,94,102,.15)');
@@ -448,10 +429,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
   });
   /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
 
-  $('.featured_carousel').slick({
+  $('#main_content .page_banners .featured_carousel').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
+    cssEase: 'linear',
     dots: true,
     prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
     nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
@@ -464,26 +446,26 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   function moveNavButtons_setOverlay(disToMove, buttonOpacity, overlayOpacity) {
     $('.featured_carousel .prev.button').css({
-      'transform': "translate(".concat(disToMove, ", -50%)"),
-      'opacity': "".concat(buttonOpacity)
+      'transform': `translate(${disToMove}, -50%)`,
+      'opacity': `${buttonOpacity}`
     });
     $('.featured_carousel .next.button').css({
-      'transform': "translate(-".concat(disToMove, ", -50%)"),
-      'opacity': "".concat(buttonOpacity)
+      'transform': `translate(-${disToMove}, -50%)`,
+      'opacity': `${buttonOpacity}`
     });
     $('.featured_carousel .slick-list .slick-slide .image_holder .overlay').css({
-      'opacity': "".concat(overlayOpacity)
+      'opacity': `${overlayOpacity}`
     });
   }
 
-  var initialMainBannerOverlay = $('#main_content .page_banners .main_banner .overlay').css('opacity');
+  let initialMainBannerOverlay = $('#main_content .page_banners .main_banner .overlay').css('opacity');
   $('.featured_carousel .slick-list, .featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').hover(
   /** When the mouse enters into the carousel area, making the arrows fade in **/
-  function () {
+  () => {
     moveNavButtons_setOverlay('1.2rem', 1, 0.05);
   },
   /** When the mouse leaves the carousel area, making the arrows fade out **/
-  function () {
+  () => {
     moveNavButtons_setOverlay('0.4rem', 0, initialMainBannerOverlay);
   });
   /**
@@ -494,13 +476,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
   $('#main_content .corner_banners .corner_banner').hover(
   /** When the mouse enters into the corner banner area, turning the shape of the image into cornered square from circle **/
-  function (event) {
+  event => {
     $(event.currentTarget).find('.card_image').css({
       'border-radius': '15%'
     });
   },
   /** When the mouse leave the corner banner area, turning the shape of the image into circle from cornered square **/
-  function (event) {
+  event => {
     $(event.currentTarget).find('.card_image').css({
       'border-radius': '50%'
     });

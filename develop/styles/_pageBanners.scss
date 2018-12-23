@@ -279,6 +279,23 @@ $navDotsFromBottom: 2rem;
     }
 
   }
+  @media only screen and (max-width: 1262px) {
+
+    .main_banner.featured_carousel {
+
+      .item {
+
+        .image_holder {
+
+          height: 22rem;
+
+        }
+
+      }
+
+    }
+
+  }
   @media only screen and (max-width: 991px) {
 
     .main_banner.featured_carousel {
@@ -315,6 +332,22 @@ $navDotsFromBottom: 2rem;
 
       }
 
+      .item {
+
+        .image_holder {
+
+          height: 20rem;
+
+          .header {
+
+            font-size: 1.8rem;
+
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -342,6 +375,22 @@ $navDotsFromBottom: 2rem;
 
       }
 
+      .item {
+
+        .image_holder {
+
+          height: 13rem;
+
+          .header {
+
+            font-size: 1.2rem;
+
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -352,6 +401,22 @@ $navDotsFromBottom: 2rem;
       .ui.button {
 
         display: none!important;
+
+      }
+
+      .item {
+
+        .image_holder {
+
+          height: 10rem;
+
+          .header {
+
+            font-size: 1rem;
+
+          }
+
+        }
 
       }
 
@@ -483,8 +548,6 @@ $navDotsFromBottom: 2rem;
 
           .card_image {
 
-            /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13); */
-
             box-shadow: 5px 3px 18px rgba(0, 0, 0, 0.2);
 
             border-radius: 50%;
@@ -572,7 +635,7 @@ $navDotsFromBottom: 2rem;
 
             .image_holder {
 
-              transform: translateY(1rem);
+              transform: translateY(0.5rem);
 
               width: 25.8%;
 

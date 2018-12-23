@@ -14,9 +14,7 @@ module.exports = {
 
       'enquire.js',
 
-      'slick-carousel',
-
-      'superplaceholder'
+      'slick-carousel'
 
     ]
 

@@ -101,9 +101,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _dist_semantic_ui_semantic_min_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_dist_semantic_ui_semantic_min_js__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! slick-carousel */ "./node_modules/slick-carousel/slick/slick.js");
 /* harmony import */ var slick_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(slick_carousel__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var superplaceholder__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! superplaceholder */ "./node_modules/superplaceholder/dist/superplaceholder.js");
-/* harmony import */ var superplaceholder__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(superplaceholder__WEBPACK_IMPORTED_MODULE_3__);
-
 
 
 
@@ -444,17 +441,6 @@ __webpack_require__.r(__webpack_exports__);
   /** Dynamic Input Placeholder Display **/
 
   var searchQueries = ['自拍, 修图, 调色', 'Word, Excel, PPT', '1Password, Money Pro, MindNode', '社群营销, 公众号引流'];
-  superplaceholder__WEBPACK_IMPORTED_MODULE_3___default()({
-    el: document.querySelector('#header .right.menu .ui.search input.prompt'),
-    sentences: searchQueries,
-    options: {
-      loop: true,
-      letterDelay: 50,
-      sentenceDelay: 1500,
-      startOnFocus: false,
-      shuffle: true
-    }
-  });
   /**
   * header - sidebar
   **/
@@ -545,10 +531,11 @@ __webpack_require__.r(__webpack_exports__);
   });
   /** Activating the functionality of the featured carousel with the customized previous and next arrow indicators **/
 
-  $('.featured_carousel').slick({
+  $('#main_content .page_banners .featured_carousel').slick({
     autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
+    cssEase: 'linear',
     dots: true,
     prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
     nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
@@ -3578,17 +3565,6 @@ module.exports = (__webpack_require__(/*! dll-reference _dll_vendor */ "dll-refe
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = (__webpack_require__(/*! dll-reference _dll_vendor */ "dll-reference _dll_vendor"))("./node_modules/slick-carousel/slick/slick.js");
-
-/***/ }),
-
-/***/ "./node_modules/superplaceholder/dist/superplaceholder.js":
-/*!*********************************************************************************************************!*\
-  !*** delegated ./node_modules/superplaceholder/dist/superplaceholder.js from dll-reference _dll_vendor ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference _dll_vendor */ "dll-reference _dll_vendor"))("./node_modules/superplaceholder/dist/superplaceholder.js");
 
 /***/ }),
 

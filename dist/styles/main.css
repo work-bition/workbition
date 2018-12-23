@@ -419,6 +419,9 @@ element in order to prevent the background layer from moving **/
           text-shadow: 1px 1px 10px #000;
           text-align: center;
           font-weight: bold; }
+  @media only screen and (max-width: 1262px) {
+    #main_content .page_banners .main_banner.featured_carousel .item .image_holder {
+      height: 22rem; } }
   @media only screen and (max-width: 991px) {
     #main_content .page_banners .main_banner.featured_carousel {
       width: 100%; }
@@ -432,7 +435,11 @@ element in order to prevent the background layer from moving **/
         right: calc(1px + 0.6rem); }
       #main_content .page_banners .main_banner.featured_carousel .slick-dots {
         top: calc(100% - 7.2rem - 1px - 2rem);
-        bottom: auto; } }
+        bottom: auto; }
+      #main_content .page_banners .main_banner.featured_carousel .item .image_holder {
+        height: 20rem; }
+        #main_content .page_banners .main_banner.featured_carousel .item .image_holder .header {
+          font-size: 1.8rem; } }
   @media only screen and (max-width: 579px) {
     #main_content .page_banners .main_banner.featured_carousel .ui.button {
       top: calc((100% - 14rem + 0.6rem) / 2); }
@@ -440,10 +447,18 @@ element in order to prevent the background layer from moving **/
       padding-bottom: 14rem; }
     #main_content .page_banners .main_banner.featured_carousel .slick-dots {
       top: calc(100% - 14rem - 1px - 2rem);
-      bottom: auto; } }
+      bottom: auto; }
+    #main_content .page_banners .main_banner.featured_carousel .item .image_holder {
+      height: 13rem; }
+      #main_content .page_banners .main_banner.featured_carousel .item .image_holder .header {
+        font-size: 1.2rem; } }
   @media only screen and (max-width: 360px) {
     #main_content .page_banners .main_banner.featured_carousel .ui.button {
-      display: none !important; } }
+      display: none !important; }
+    #main_content .page_banners .main_banner.featured_carousel .item .image_holder {
+      height: 10rem; }
+      #main_content .page_banners .main_banner.featured_carousel .item .image_holder .header {
+        font-size: 1rem; } }
   #main_content .page_banners .corner_banners {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -489,7 +504,6 @@ element in order to prevent the background layer from moving **/
       #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
         width: 27.315%; }
         #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder .card_image {
-          /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.13); */
           box-shadow: 5px 3px 18px rgba(0, 0, 0, 0.2);
           border-radius: 50%;
           float: left;
@@ -522,7 +536,7 @@ element in order to prevent the background layer from moving **/
       width: 5.5rem;
       font-size: 0.8rem; }
     #main_content .page_banners .corner_banners .corner_banner .card_area .image_holder {
-      transform: translateY(1rem);
+      transform: translateY(0.5rem);
       width: 25.8%; }
     #main_content .page_banners .corner_banners .corner_banner .card_area .card_content {
       transform: translateY(-0.15rem); }
