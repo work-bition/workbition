@@ -138,7 +138,8 @@ __webpack_require__.r(__webpack_exports__);
 
   $('#account_modal').modal({
     closable: false,
-    transition: 'fade up'
+    transition: 'zoom',
+    duration: 100
   }).modal('attach events', '#header .register.button', 'show').modal('attach events', '#header .login.button', 'show');
   $('#account_modal .close_button').click(function () {
     $('#account_modal').modal('hide');
@@ -539,6 +540,12 @@ __webpack_require__.r(__webpack_exports__);
     dots: true,
     prevArrow: '<button type="button" class="prev circular ui icon button"><i class="chevron left icon"></i></button>',
     nextArrow: '<button type="button" class="next circular ui icon button"><i class="chevron right icon"></i></button>'
+  });
+  /** Fix the problem that the slide pictures get in stuck temporarily when resizing the browser window **/
+
+  $(window).resize(function (event) {
+    var realtimeWidth = $('#main_content .page_banners .main_banner .slick-list').width();
+    $('#main_content .page_banners .main_banner .item .image_holder').css('width', realtimeWidth);
   });
   /** Fix the problem that the arrows doesn't fade out, **/
 

@@ -8,6 +8,8 @@ import 'slick-carousel'
 
    'use strict'
 
+
+
    /*****************************************************************************************************************************
 
                                                            Helpers
@@ -53,7 +55,9 @@ import 'slick-carousel'
 
        closable: false,
 
-       transition: 'fade up'
+       transition: 'zoom',
+
+       duration: 100
 
      })
 
@@ -639,6 +643,15 @@ import 'slick-carousel'
 
     })
 
+    /** Fix the problem that the slide pictures get in stuck temporarily when resizing the browser window **/
+    $(window).resize((event) => {
+
+      let realtimeWidth =  $('#main_content .page_banners .main_banner .slick-list').width()
+
+      $('#main_content .page_banners .main_banner .item .image_holder').css('width', realtimeWidth)
+
+    })
+
     /** Fix the problem that the arrows doesn't fade out, **/
     /** when the mouse hovers on the carousel area, navigation dots and left and right arrows, making the left and right arrows showing out there with fade animation effects **/
     /** and make the color of the overlay on the slick slides change between lighter and darker **/
@@ -667,7 +680,7 @@ import 'slick-carousel'
     }
 
     let initialMainBannerOverlay = $('#main_content .page_banners .main_banner .overlay').css('opacity')
-
+    
     $('.featured_carousel .slick-list, .featured_carousel .prev.button, .featured_carousel .next.button, .featured_carousel .slick-dots').hover(
 
       /** When the mouse enters into the carousel area, making the arrows fade in **/
