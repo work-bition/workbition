@@ -582,7 +582,7 @@ $('body').click(function (event) {
     search_input.focus();
   }
 });
-/** hiding results panel of the search box  when clicking on it **/
+/** hiding results panel of the search box when clicking on it **/
 
 $('#header .right.menu .ui.search .results').click(function (event) {
   /** hiding the results panel of the search bar **/

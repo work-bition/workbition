@@ -1,10 +1,15 @@
-  //导入gulp, browserSync, sass和Babel模块
+  //导入必须模块gulp, browserSync, gulp-sass和gulp-babel模块
+  //gulp-run-command模块可以运行命令行指令
+  //gulp-watch可以用来监视文件的删、改、增操作
   const gulp = require('gulp'),
         browserSync = require('browser-sync').create(),
         sass        = require('gulp-sass'),
         babel       = require('gulp-babel'),
         run         = require('gulp-run-command').default,
+        wholeWatch   = require('gulp-watch'),
         reload      = browserSync.reload
+
+
 
   //导入semantic UI框架的gulp任务
   const watch = require('./semantic/tasks/watch'),
@@ -44,7 +49,7 @@
 
    )
 
-  // browserSync创建静态服务器并监视文件变化
+  //browserSync创建静态服务器并监视文件变化
   gulp.task('browser-sync', function() {
 
       browserSync.init({
@@ -68,20 +73,37 @@
               ]
           },
 
-          //当文件改动时，刷新浏览器
+          //当这些文件发生改动时，刷新浏览器
           files: ["./dist/views/index.html", "./dist/semantic-ui/**/*", "./dist/scripts/*.bundle.js"],
 
           browser: ["google chrome", "firefox", "safari"]
 
       })
 
-      //监听sass文件和js文件变动
-      // 添加 browserSync.reload 到任务队列里
-      // 所有的浏览器重载后任务完成
-      gulp.watch("./develop/styles/**/*.scss", ['sass'])
-      gulp.watch("./develop/scripts/**/*.js", ['js-business'])
+   })
+
+  //监视scss文件的删改增
+  gulp.task('scssWholeWatch', function () {
+
+    return wholeWatch('./develop/styles/**/*.scss', function () {
+
+        gulp.start('sass')	//执行js-business任务
+
+    })
 
    })
+
+  //监视js文件的删改增
+  gulp.task('jsWholeWatch', function () {
+
+    return wholeWatch('./develop/scripts/**/*.js', function () {
+
+        gulp.start('js-business')	//执行js-business任务
+
+    })
+
+   })
+
 
   //使用webpack生成第三方js库（不易变动）
   gulp.task('js-vendor', run('webpack --config webpack.dll.config.js'))
@@ -90,4 +112,4 @@
   gulp.task('js-business', run('webpack --config webpack.config.js'))
 
   //监视入口指令
-  gulp.task('serve', ["browser-sync", "watch-ui"])
+  gulp.task('serve', ["browser-sync", "watch-ui", "jsWholeWatch", "scssWholeWatch"])
