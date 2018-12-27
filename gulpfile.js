@@ -68,7 +68,8 @@
               ]
           },
 
-          files: ["./dist/views/index.html", "./dist/semantic-ui/**/*"],
+          //当文件改动时，刷新浏览器
+          files: ["./dist/views/index.html", "./dist/semantic-ui/**/*", "./dist/scripts/*.bundle.js"],
 
           browser: ["google chrome", "firefox", "safari"]
 
@@ -78,12 +79,15 @@
       // 添加 browserSync.reload 到任务队列里
       // 所有的浏览器重载后任务完成
       gulp.watch("./develop/styles/**/*.scss", ['sass'])
-      gulp.watch("./develop/scripts/**/*.js", ['js'])
+      gulp.watch("./develop/scripts/**/*.js", ['js-business'])
 
    })
 
-  //生成第三方js库（不易变动）
-  gulp.task('js-dll', run('webpack --config webpack.dll.config.js'))
+  //使用webpack生成第三方js库（不易变动）
+  gulp.task('js-vendor', run('webpack --config webpack.dll.config.js'))
+
+  //使用webpack编译业务代码
+  gulp.task('js-business', run('webpack --config webpack.config.js'))
 
   //监视入口指令
   gulp.task('serve', ["browser-sync", "watch-ui"])
